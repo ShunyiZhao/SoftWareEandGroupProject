@@ -19,8 +19,10 @@ class RectButton{
     
     void draw(){
         stroke(strokeColor.readR(), strokeColor.readG(), strokeColor.readB());
+        
         strokeWeight(thisWeight);
-        fill(buttonColor.readR(), buttonColor.readG(), buttonColor.readB());
+        noFill();
+        //fill(buttonColor.readR(), buttonColor.readG(), buttonColor.readB());
         rect(x, y, width, height);
     }
     
