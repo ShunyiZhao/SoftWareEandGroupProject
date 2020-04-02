@@ -1,0 +1,26 @@
+1.Targeted users:
+Teenagers and young adults
+
+2.Design of product:
+ (1).Idea:
+There are 3 different combinations of food:
+> Breakfast - house-made breads and rolls, scrambled farm-egg, chicken sausages, skim milks, freahly sliced fruit, including avocado, banana, grapes and blueberry.
+> Lunch -  beef, fish pie, tomatoes&basil soup,treacle sponge
+> Supper - broccolo rice, lean lamb, onions, yogurts 
+Each contains necessary nutrition for daily life, such as fat, protein, vitamin and trace elements.
+
+Game rule: first, the player should choose one of the provided food package and he can see the image and score of each piece of food. Once the player hits that food comes from the screen, he will win the corresponding score. Only when the player get full score in one round of game, he will win. Then the player can choose to continue a new game or exit the game.
+
+ (2).Motivation
+Firstly, this game aims to teach people how to choose daily food according to their nutrients and thus convey the improtance of healthy food.
+Secondly, this game trains people's short-term memory by remembering images of each piece of food and choose the correct food while playing game.
+
+ (3).User interface
+Illustrations about animations, control states, and what actions to perform when a button is pressed.
+
+Designers should know:
+a.Are controls always visible and/or enabled? 
+b.Under what conditions do their states change?
+c.What transitions occur between these states and views? And how should they be animated?
+@Du kehan&Alex
+
