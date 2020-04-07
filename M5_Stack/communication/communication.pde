@@ -6,8 +6,14 @@ Serial port_1;
 
 float InitAngle[] = {0, 0, 0};
 
+int rect_x, rect_y;
+
+int rectWidth = 20, rectHeight = 20;
+float speed_x = 0.0, speed_y = 0.0;
+
 void setup(){
     port_1 = new Serial(this, "COM5", 115200);
+    size(1280, 720);
     while(true){
         String inputString = port_1.readStringUntil('q');
         println("loop");
@@ -23,6 +29,9 @@ void setup(){
             break;
         }
     }
+    textSize(16);
+    rect_x = 1280 / 2;
+    rect_y = 720 / 2;
 }
 
 void draw(){
@@ -42,6 +51,27 @@ void draw(){
         fdatas[5] = Float.parseFloat(datas[5]);
         float[] finalAccs = convertCoorSystem(fdatas);
         //delay(50);
+        //draw a rect
+        rect(rect_x, rect_y, rectHeight, rectWidth);
+        float dis_1 = finalAccs[0] - fdatas[3];
+        float dis_2 = finalAccs[1] - fdatas[4];
+        float dis_3 = finalAccs[2] - fdatas[5];
+
+        //println(dis_1 + " , " + dis_2 + " , " + dis_3);
+        dis_1 = dis_1 * 9.8;
+        if(abs(dis_1) > 1){
+            speed_x += dis_1;
+        }
+        //println( speed_x + "         " + rect_x + "         " + rect_y)
+        rect_x += speed_x;
+        background(0);
+        text(finalAccs[0], 200, 140);
+        text(fdatas[3], 200, 160);
+        text(dis_1, 200, 180);
+        text(rect_x, 200, 200);
+        text(speed_x, 200, 220);
+        rect(rect_x, rect_y, rectHeight, rectWidth);
+
     }
 }
 
@@ -53,16 +83,19 @@ float[] convertCoorSystem(float[] datas){
     //graMat.printDatas();
     simpleMat matRoll = new simpleMat(3, 3, rollData);
     simpleMat matPitch = new simpleMat(3, 3, pitchData);
-    matRoll.printDatas();
-    println("-----------");
-    matPitch.printDatas();
-    println("-----------");
+    //matRoll.printDatas();
+    //println("-----------");
+    //matPitch.printDatas();
+    //println("-----------");
     simpleMat product_1 = matRoll.calMatProduct(graMat);
     simpleMat product_2 = matPitch.calMatProduct(product_1);
-    product_1.printDatas();
-    println("----------");
-    product_2.printDatas();
-    
+    //product_1.printDatas();
+    //println("----------");
+    //product_2.printDatas();
+    finalDatas[0] = product_2.getDatas().get(0).get(0);
+    finalDatas[1] = product_2.getDatas().get(1).get(0);
+    finalDatas[2] = product_2.getDatas().get(2).get(0);
+    //println(finalDatas);
     return finalDatas;
 }
 
@@ -78,7 +111,7 @@ simpleMat getGravityMat(){
     graData.add(row_2);
     
     ArrayList<Float> row_3 = new ArrayList<Float>();
-    row_3.add(1.08);
+    row_3.add(1.0);
     graData.add(row_3);
     
     return new simpleMat(3, 1, graData);
