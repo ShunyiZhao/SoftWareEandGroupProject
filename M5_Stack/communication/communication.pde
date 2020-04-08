@@ -58,12 +58,15 @@ void draw(){
         float dis_3 = finalAccs[2] - fdatas[5];
 
         //println(dis_1 + " , " + dis_2 + " , " + dis_3);
-        dis_1 = dis_1 * 9.8;
+        /*dis_1 = dis_1 * 9.8;
         if(abs(dis_1) > 1){
             speed_x += dis_1;
-        }
+        }*/
         //println( speed_x + "         " + rect_x + "         " + rect_y)
-        rect_x += speed_x;
+        //rect_x += speed_x;
+        if(fdatas[3] > 0.2 || fdatas[3] < -0.2){
+            rect_x -= fdatas[3] * 20;
+        }
         background(0);
         text(finalAccs[0], 200, 140);
         text(fdatas[3], 200, 160);
