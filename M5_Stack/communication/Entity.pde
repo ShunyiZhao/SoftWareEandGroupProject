@@ -1,24 +1,20 @@
 import java.util.ArrayList;
 
 class Entity{
-    int initX;
-    int initY;
-    int height;
-    int width;
+    private int initX;
+    private int initY;
+
+    private boolean printableMark;
 
     Entity(){
         initX = 0;
         initY = 0;
-        height = 100;
-        width = 100;
+        printableMark = false;
     }
 
-    Entity(int inputInitX, int inputInitY, int inputHeight, int inputWidth){
+    Entity(int inputInitX, int inputInitY, boolean inputMark){
         initX = inputInitX;
         initY = inputInitY;
-        height = inputHeight;
-        width = inputWidth;
+        printableMark = inputMark;
     }
-
-    
 }

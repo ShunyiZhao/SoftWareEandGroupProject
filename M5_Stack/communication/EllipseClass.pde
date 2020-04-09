@@ -15,6 +15,6 @@ public class EllipseClass extends ShapeClass {
     }
 
     public void drawEllipse(int referenceX, int referenceY){
-        ellipse( referenceX + super.getinitX(), referenceY + super.getinitY(), this.width, this.height);
+        ellipse( referenceX + super.getinitX(), referenceY + super.getinitY(), this.semiAxisX, this.semiAxisY);
     }
 }
