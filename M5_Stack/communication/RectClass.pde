@@ -4,8 +4,8 @@ public class RectClass extends ShapeClass {
 
     RectClass(){
         super();
-        height = 10;
-        width = 10;
+        height = 20;
+        width = 20;
     }
 
     RectClass(int inputX, int inputY, int inputHeight, int inputWidth){

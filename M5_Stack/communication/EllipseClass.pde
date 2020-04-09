@@ -4,8 +4,8 @@ public class EllipseClass extends ShapeClass {
 
     public EllipseClass(){
         super();
-        semiAxisX = 10;
-        semiAxisY = 10;
+        semiAxisX = 20;
+        semiAxisY = 20;
     }
 
     public EllipseClass(int inputX, int inputY, int inputAxisX, int inputAxisY){

@@ -17,4 +17,20 @@ class Entity{
         initY = inputInitY;
         printableMark = inputMark;
     }
+
+    public int getInitX(){
+        return initX;
+    }
+
+    public int getInitY(){
+        return initY;
+    }
+
+    public void setInitX(int inputX){
+        initX = inputX;
+    }
+
+    public void setInitY(int inputY){
+        initY = inputY;
+    }
 }
