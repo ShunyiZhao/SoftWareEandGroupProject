@@ -14,7 +14,7 @@ function clickNextButton () {
 }
 
 function clickPrevButton () {
-   var getValue = nextButton.getAttribute('value');
+    var getValue = nextButton.getAttribute('value');
     if (getValue == 0) { nextButton.setAttribute('value', 4); }
     else {
         --getValue;
