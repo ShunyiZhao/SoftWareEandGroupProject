@@ -11,6 +11,8 @@ int rect_x, rect_y;
 int rectWidth = 20, rectHeight = 20;
 float speed_x = 0.0, speed_y = 0.0;
 
+int systState;
+
 void setup(){
     port_1 = new Serial(this, "COM5", 115200);
     size(1280, 720);
@@ -20,6 +22,7 @@ void setup(){
         if(inputString != null){
             //Init angles
             String[] data = inputString.split(" ");
+            data[0] = data[0].substring(1, data[0].length());
             InitAngle[0] = Float.parseFloat(data[0]);
             InitAngle[1] = Float.parseFloat(data[1]);
             InitAngle[2] = Float.parseFloat(data[2]);
@@ -32,6 +35,7 @@ void setup(){
     textSize(16);
     rect_x = 1280 / 2;
     rect_y = 720 / 2;
+    systState = 0;
 }
 
 void draw(){
@@ -39,6 +43,8 @@ void draw(){
         String inputString = port_1.readStringUntil('q');
         String[] datas = inputString.split(" ");
         //split String and do some other things
+        char inputState = datas[0].charAt(0);
+        datas[0] = datas[0].substring(1, datas[0].length());
         datas[5] = datas[5].substring(0, datas[5].length() - 1);
         //println(datas[5]);
         println(inputString);
@@ -64,17 +70,39 @@ void draw(){
         }*/
         //println( speed_x + "         " + rect_x + "         " + rect_y)
         //rect_x += speed_x;
+        /*if(fdatas[3] > 0.2 || fdatas[3] < -0.2){
+            rect_x -= fdatas[3] * 20;
+        }*/
+        //add some button function
+        //state switch
+        if(inputState == 'a'){
+            if(systState == 0){
+                systState = 1;
+            }
+            else{
+                systState = 0;
+            }
+        }
+        //state switch ends
         if(fdatas[3] > 0.2 || fdatas[3] < -0.2){
             rect_x -= fdatas[3] * 20;
         }
+        if(systState == 0){
+            
+        }
+        else {
+            if(fdatas[4] > 0.2 || fdatas[4] < -0.2){
+                rect_y += fdatas[4] * 20;
+            }
+        }
         background(0);
+        text(inputState, 200, 120);
         text(finalAccs[0], 200, 140);
         text(fdatas[3], 200, 160);
         text(dis_1, 200, 180);
         text(rect_x, 200, 200);
         text(speed_x, 200, 220);
         rect(rect_x, rect_y, rectHeight, rectWidth);
-        //add the function of button on M5 Stack
 
     }
 }
