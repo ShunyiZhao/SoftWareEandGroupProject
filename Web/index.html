@@ -23,7 +23,7 @@
                 -ms-user-select: none;
                 user-select: none;
             }
-        
+
             @media (min-width: 768px) {
                 .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -65,10 +65,10 @@
                         </a>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/test.png" alt="First slide">
+                                <img class="d-block w-100" src="img/BigEater.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="img/test.png" alt="Second slide">
+                                <img class="d-block w-100" src="img/HealthTips.png" alt="Second slide">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="img/test.png" alt="Third slide">
@@ -80,7 +80,7 @@
         </div>
         <div class="site-main container py-1">
             <div class="row py-3" id="introstory">
-            <div class="col-md-12" 
+            <div class="col-md-12"
                 style="background-color: #dedef8;
                 box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
                 height: 20em;">
@@ -92,11 +92,40 @@
                 <canvas id="gameCanvas" data-processing-sources="/src/move.pde"></canvas>
             </div>
             <div class="row py-3" id="instruction">
-                <div class="col-md-12" 
+                <div class="col-md-12"
                 style="background-color: #dedef8;
-                box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
-                height: 20em;">
-                <p>Instruction/Device</p></div>
+                box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <!--height: 20em;">-->
+                <div style="position: relative; text-align: center;">
+                    <div class="col-md-12">
+                        <img src = img/instruction.png style ="width:100%; height:auto">
+                        <div id="carouselExampleControls" class="carousel slide scrollImage"  data-interval="false">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100 border border-secondary" src="img/M5Stack.png" alt="M5 Stack">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 border border-secondary" src="img/Movement.png" alt="Movement">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 border border-secondary" src="img/getPoint.png" alt="Get Point">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 border border-secondary" src="img/Escape.png" alt="Escape">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 border border-secondary" src="img/Shoot.png" alt="Shoot">
+                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" onclick="clickPrevButton()"></a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" value="0" onclick="clickNextButton()"></a>
+                            <p class = "instruction"> In this game, you have to use M5 Stack in order to play the game.
+                                You are able to use M5 Stack to control the (Name's) movement and to shoot the "flying present" for getting bonus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
         <footer class="site-footer container py-5">
@@ -139,6 +168,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
         <script src="js/index.js"></script>
         <script src="/js/processing.js"></script>
     </body>

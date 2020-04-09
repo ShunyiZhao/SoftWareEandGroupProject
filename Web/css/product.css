@@ -4,7 +4,7 @@ body {
   /*
    * Custom translucent site header
    */
-  
+
   .site-header {
     background-color: #ffbf00ab;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -39,7 +39,7 @@ body {
   /*
    * Extra utilities
    */
-  
+
   .flex-equal > * {
     -ms-flex: 1;
     flex: 1;
@@ -50,5 +50,16 @@ body {
       flex: 1;
     }
   }
-  
+
   .overflow-hidden { overflow: hidden; }
+
+  /*
+  * Scrolling Image
+  */
+
+  .scrollImage {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
