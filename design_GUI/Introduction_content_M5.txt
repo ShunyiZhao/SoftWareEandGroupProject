@@ -1,0 +1,7 @@
+M5 Stack has 3 functional buttons. we decide use the left button to start the game, suspend the game when the character of player in status 1, and fetch in this area in status 2.
+
+the middle button will be used to switch status.
+
+the right button will be used to quit the game.
+
+The score, last food the player eat, will appear on screen.
