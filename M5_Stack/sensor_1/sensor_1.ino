@@ -59,8 +59,14 @@ void loop() {
   drawRect(10, 10);
   char strOutput_1[50];
   char strOutput_2[50];
-  sprintf(strOutput_1, "%f %f %f ", angle_1, angle_2, angle_3);
-  sprintf(strOutput_2, "%f %f %fq", accX, accY, accZ);
+  if (M5.BtnA.wasReleased()){
+    sprintf(strOutput_1, "a%f %f %f ", angle_1, angle_2, angle_3);
+    sprintf(strOutput_2, "%f %f %fq", accX, accY, accZ);
+  }
+  else {
+    sprintf(strOutput_1, "b%f %f %f ", angle_1, angle_2, angle_3);
+    sprintf(strOutput_2, "%f %f %fq", accX, accY, accZ);  
+  }
   Serial.print(strOutput_1);
   Serial.print(strOutput_2);
   
