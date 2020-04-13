@@ -27,24 +27,25 @@ public abstract class Drop {
         this.currentTrack = currentTrack;
         int topSpace = topNode.get(1) - topNode.get(0);
         int bottomSpace = bottomNode.get(1) - bottomNode.get(0);
-        this.startX = topNode.get(currentTrack - 1) + topSpace / 2 - startSize / 2;
-        this.endX = bottomNode.get(currentTrack - 1) + bottomSpace / 2 - endSize / 2;
-        getDifferential();      }
+        this.startX = topNode.get(currentTrack) + topSpace / 2 - startSize / 2;
+        this.endX = bottomNode.get(currentTrack) + bottomSpace / 2 - endSize / 2;
+        getDifferential();      
+    }
         
     protected void getDifferential() {
         float x = (startX - endX) / speed;
-        dx = (currentTrack == 1 || currentTrack == 2) ? x : x * (-1);
+        dx = (currentTrack == 0 || currentTrack == 1) ? x : x * (-1);
         dy = (endY - startY) / speed;
-        dsize = (endSize - startSize) / speed;
-        
+        dsize = (endSize - startSize) * 15 / speed;
     }
     
-    public void display() {
-        if (frameCount % speed == speed - 1) reachEnd = true; 
-        float distance = frameCount % speed * dx;
-        float currentX = (currentTrack == 1 || currentTrack == 2) ? startX - distance : startX + distance;
-        float currentY = startY + frameCount % speed * dy;
-        float currentSize = startSize + frameCount % speed * dsize;
+    public void display(int startFrameCount) {
+        if ((frameCount - startFrameCount) % (speed + 1) == speed) 
+            this.reachEnd = true; 
+        float distance = (frameCount - startFrameCount) % speed * dx;
+        float currentX = (currentTrack == 0 || currentTrack == 1) ? startX - distance : startX + distance;
+        float currentY = startY + (frameCount - startFrameCount) % speed * dy;
+        float currentSize = startSize + (frameCount - startFrameCount) % speed * dsize / 15;
         
         if (currentY <= endY && !reachEnd) 
             shape(svg, currentX, currentY, currentSize, currentSize);
