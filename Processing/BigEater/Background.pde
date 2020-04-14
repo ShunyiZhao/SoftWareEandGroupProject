@@ -16,7 +16,7 @@ class Background {
     
     public void drawBackground(int trackNumber) {
         this.trackNumber = trackNumber;
-        background(251, 230, 163);
+        background(255, 255, 255);
         strokeWeight(6);
         stroke(0, 0, 0);
         drawScreen();
@@ -47,11 +47,12 @@ class Background {
     private void drawScreen() {
         int screenRadius = 5;
         int screenLength = length - 2 * screenMarginLeft;
-        fill(251, 230, 163);
-        rect(screenMarginLeft, screenMarginTop, screenLength, screenHeight,
-            screenRadius, screenRadius, screenRadius, screenRadius);
-        line(screenMarginLeft, screenHeight / 2,
-            length - screenMarginLeft, screenHeight / 2);
+        fill(248, 182, 81);
+        rect(screenMarginLeft, screenMarginTop, screenLength, screenHeight / 2,
+            screenRadius, screenRadius, 0, 0);
+        fill(255, 241, 0);
+        rect(screenMarginLeft, screenMarginTop + screenHeight / 2, screenLength, screenHeight / 2,
+            0, 0, screenRadius, screenRadius);
     }
     
     private void drawRouteBoundaries() {
@@ -64,12 +65,45 @@ class Background {
         int topGap = (length - screenMarginLeft * 2) / trackNumber;
         int bottomGap = (length - trackBottomMarginLeft * 2) / trackNumber;
         
-        for (int i = 0; i <= trackNumber; ++i) {
-            line(screenMarginLeft + i * topGap, trackUpMarginTop,
-                trackBottomMarginLeft + i * bottomGap, trackBottomMarginTop);
-            line(trackBottomMarginLeft + i * bottomGap, trackBottomMarginTop,
-                trackBottomMarginLeft + i * bottomGap, height);
-        }  
+        fill(209, 206, 189);
+        quad(screenMarginLeft, trackUpMarginTop, 
+             screenMarginLeft + topGap, trackUpMarginTop,
+             trackBottomMarginLeft + bottomGap, trackBottomMarginTop, 
+             trackBottomMarginLeft, trackBottomMarginTop);
+             
+        fill(246, 238, 223);
+        quad(screenMarginLeft + 1 * topGap, trackUpMarginTop, 
+             screenMarginLeft + 2 * topGap, trackUpMarginTop,
+             trackBottomMarginLeft + 2 * bottomGap, trackBottomMarginTop, 
+             trackBottomMarginLeft + 1 * bottomGap, trackBottomMarginTop);
+        
+        fill(209, 206, 189);
+        quad(screenMarginLeft + 2 * topGap, trackUpMarginTop, 
+             screenMarginLeft + 3 * topGap, trackUpMarginTop,
+             trackBottomMarginLeft + 3 * bottomGap, trackBottomMarginTop, 
+             trackBottomMarginLeft + 2 * bottomGap, trackBottomMarginTop);
+        
+        fill(246, 238, 223);
+        quad(screenMarginLeft + 3 * topGap, trackUpMarginTop, 
+             screenMarginLeft + 4 * topGap, trackUpMarginTop,
+             trackBottomMarginLeft + 4 * bottomGap, trackBottomMarginTop, 
+             trackBottomMarginLeft + 3 * bottomGap, trackBottomMarginTop);
+        
+        fill(251, 230, 163);
+        rect(trackBottomMarginLeft, trackBottomMarginTop, 
+              bottomGap, height - trackBottomMarginTop - trackBottomMarginLeft);
+        
+        fill(251, 230, 163);
+        rect(trackBottomMarginLeft + bottomGap, trackBottomMarginTop, 
+              bottomGap, height - trackBottomMarginTop - trackBottomMarginLeft);
+        
+        fill(251, 230, 163);
+        rect(trackBottomMarginLeft + 2 * bottomGap, trackBottomMarginTop, 
+              bottomGap, height - trackBottomMarginTop - trackBottomMarginLeft);
+        
+        fill(251, 230, 163);
+        rect(trackBottomMarginLeft + 3 * bottomGap, trackBottomMarginTop, 
+              bottomGap, height - trackBottomMarginTop - trackBottomMarginLeft);
     }
     
     public int[] getTrackBottomMargin() { 

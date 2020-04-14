@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
+private int status;
 private Background bg;
 private Eater eater;
+private PlayerData data;
 private int mode = 4;
 private int startY = 95;
 private int endY = 590;
@@ -17,28 +19,35 @@ private String[] names = {"cheese", "crab", "eggplant", "fish",
 public void setup() {
     size(1280, 720);
     bg = new Background(startY, endY);
+    data = new PlayerData(names);
     initialiseVariables();
+    status = 0;
 }
 
-public void draw() {  
-    bg.drawBackground(mode);
-    eater = new Eater(bg.getEatterAreaMargin());
-    eater.drawEater();
-    for (int i = 0; i < mode; ++i) {
-        if ((frameCount == startCount[i] || trackUsed[i]) && !tracks[i].reachEnd) {
-            trackUsed[i] = true;
-            frameCountLock[i] = false;
-            displayClass(i);
-        }
-        else if (!frameCountLock[i]) {
-            lastCount[i] = frameCount;
-            frameCountLock[i] = true;
-            trackUsed[i] = false;
-            startCount[i] = lastCount[i] + (int) random(200);
-            tracks[i] = createNewClassRandomly();
-        }
-    }  
+public void draw() { 
+    switch (status) {
+        case 0:
+            image(loadImage("data/BigEater.png"), 0, 0, 1280, 720);
+            if (keyPressed) status++;
+            break;
+        case 1: 
+            setGameStatus();
+            if (keyPressed) status++;
+            break;
+        default:
+            image(loadImage("data/BigEater.png"), 0, 0, 1280, 720);
+    }
+  
+}
+
+private boolean detectDropCollision(int i) {
+    ArrayList<Integer> node = bg.getTrackBottomNode();
+    int[] eaterArea = eater.getAvailEater();
+    int[] trackArea = new int[2];
+    trackArea[0] = node.get(i);
+    trackArea[1] = node.get(i + 1);
     
+    return (eaterArea[0] >= trackArea[0] && eaterArea[1] <= trackArea[1]);
 }
 
 private void initialiseVariables() {
@@ -47,13 +56,13 @@ private void initialiseVariables() {
     lastCount = new int[mode];
     Arrays.fill(lastCount, 0);
     frameCountLock = new boolean[mode];
-    Arrays.fill(frameCountLock, false);
+    Arrays.fill(frameCountLock, true);
     trackUsed = new boolean[mode];
     Arrays.fill(trackUsed, false);
     tracks = new Drop[mode];
-    
+
     for (int i = 0; i < mode; ++i) {
-        startCount[i] = (int) random(200);
+        startCount[i] = (int) random(300);
         tracks[i] = createNewClassRandomly();
     }
 }
@@ -77,4 +86,40 @@ private Drop createNewClassRandomly() {
         case "virusB": return new VirusB(mode, startY, endY, speed, "data/virus2.svg");
         default: return null;
     }
+}
+
+private void displayScoreAndHealth() {
+    String score = Integer.toString(data.getScore());
+    String health = Integer.toString(data.getHealth());
+    textSize(48);
+    fill(0, 0, 0);
+    text(score, 80, 80);
+    text(health, 1200, 80);
+}
+
+private void setGameStatus() {
+    bg.drawBackground(mode);
+    eater = new Eater(bg.getEatterAreaMargin());
+    eater.drawEater();
+    displayScoreAndHealth();
+    for (int i = 0; i < mode; ++i) {
+        if ((frameCount == startCount[i] || trackUsed[i]) && !tracks[i].reachEnd) {
+            trackUsed[i] = true;
+            frameCountLock[i] = false;
+            displayClass(i);
+        }  
+        else if (!frameCountLock[i]) {
+            lastCount[i] = frameCount;
+            frameCountLock[i] = true;
+            trackUsed[i] = false;
+            startCount[i] = lastCount[i] + (int) random(300);
+            
+            if (detectDropCollision(i)) 
+                data.recordPlayerMove(tracks[i]);
+            else if (!data.checkBadDropping(tracks[i].getClassName())) 
+                data.loseHealth();
+            
+            tracks[i] = createNewClassRandomly();
+        }
+    }  
 }

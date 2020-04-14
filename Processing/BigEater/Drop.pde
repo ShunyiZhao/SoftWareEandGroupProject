@@ -13,6 +13,8 @@ public abstract class Drop {
     protected float dsize;
     public boolean reachEnd;
     protected PShape svg;
+    protected float currentX;
+    protected float currentY;
     
     public Drop(int mode, float startY, float endY, int speed, String filename) {
         this.mode = mode;
@@ -22,6 +24,7 @@ public abstract class Drop {
         this.reachEnd = false;
         this.svg = loadShape(filename);
     }
+    
     
     public void getStartEndX(int currentTrack, ArrayList<Integer> topNode, ArrayList<Integer> bottomNode) {
         this.currentTrack = currentTrack;
@@ -40,15 +43,22 @@ public abstract class Drop {
     }
     
     public void display(int startFrameCount) {
-        if ((frameCount - startFrameCount) % (speed + 1) == speed) 
-            this.reachEnd = true; 
+        if ((frameCount - startFrameCount) % (speed + 1) == speed) {
+            this.reachEnd = true;
+        }
         float distance = (frameCount - startFrameCount) % speed * dx;
-        float currentX = (currentTrack == 0 || currentTrack == 1) ? startX - distance : startX + distance;
-        float currentY = startY + (frameCount - startFrameCount) % speed * dy;
+        if (!reachEnd) {
+            currentX = (currentTrack == 0 || currentTrack == 1) ? startX - distance : startX + distance;
+            currentY = startY + (frameCount - startFrameCount) % speed * dy;
+        }
         float currentSize = startSize + (frameCount - startFrameCount) % speed * dsize / 15;
-        
-        if (currentY <= endY && !reachEnd) 
+    
+        if (currentY <= endY && !reachEnd) {
             shape(svg, currentX, currentY, currentSize, currentSize);
+        } 
+        
     }
+    
+    public String getClassName() { return " "; }
     
 }

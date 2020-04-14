@@ -7,6 +7,7 @@ public class Eater {
     private int leftBoundary;
     private int rightBoundary;
     private int eaterMarginTop;
+    private int eaterMarginLeft;
     
     
     public Eater(int[] boundary) {
@@ -18,7 +19,6 @@ public class Eater {
     }
     
     public void drawEater() {
-        int eaterMarginLeft;
         if (mouseX < leftBoundary) 
             eaterMarginLeft = leftBoundary;
         else if (mouseX > rightBoundary - bodyHeight) 
@@ -86,5 +86,12 @@ public class Eater {
         stroke(0, 59, 138);
         rect(leftMargin, eaterMarginTop, bodyHeight, bodyHeight,
             bodyRedius, bodyRedius, bodyRedius, bodyRedius);
+    }
+    
+    public int[] getAvailEater() {
+        int[] area = new int[2];
+        area[0] = eaterMarginLeft;
+        area[1] = eaterMarginLeft + bodyHeight;
+        return area;
     }
 }
