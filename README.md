@@ -1,9 +1,12 @@
 # TEAM6 -- BIG EATTER
 
 ### **Content**
+ * [Introduction](#Intro)
  * [System Design](#LinkToPart1)
  * [System Implementation](#LinkToPart2)
  * [Project Evaluation](#LinkToPart3)
+
+## <span id="Intro">Introduction
 
 ## <span id="LinkToPart1">System Design</ span>
 
