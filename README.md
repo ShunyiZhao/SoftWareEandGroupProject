@@ -1,9 +1,9 @@
 # TEAM6 -- BIG EATTER
 
 **Content**
-> *System Design
-> *System Implementation
-> *Project Evaluation
+ *System Design
+ *System Implementation
+ *Project Evaluation
 
 ## System Design
 
