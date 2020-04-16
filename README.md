@@ -1,6 +1,6 @@
 # TEAM6 -- BIG EATTER
 
-**Content**
+*** **Content**
  *System Design
  *System Implementation
  *Project Evaluation
