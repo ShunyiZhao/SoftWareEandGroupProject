@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">-->
+    <meta name="keywords" content="轻量级MiTang后台管理框架-MiTang|Mi咪糖|jetamiett@163.com">
+    <meta name="description" content="轻量级MiTang后台管理框架-MiTang|Mi咪糖|jetamiett@163.com">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/init.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <title>Bigeater后台管理</title>
+</head>
+<body class="bg-light text-dark">
+<article>
+    <header>
+        <div class="bg-dark text-white p-3">
+            <h4 class="d-inline"><i class="fa fa-book"></i><span class="pl-2">Bigeater Manage System</span></h4>
+            <div class="d-inline pull-right dropdown pr-5">
+                <i class="fa fa-user-circle"></i>
+                <span id="mi-span-drop" class="pl-2 dropdown-toggle" data-toggle="dropdown">
+                    Welcome admin
+                </span>
+                <div class="dropdown-menu mr-4 mt-2">
+                    <a class="dropdown-item " href="#"><small>Change Login</small></a>
+                    <a class="dropdown-item" href="#"><small>Logout</small></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article id="setHeight">
+        <div class="float-left col-lg-2 col-md-2 col-sm-2 p-0 mi-menu bg-primary pt-5">
+            <ul class="navbar-nav">
+                <li class="mi-item nav-item  pl-2" data-href="./page/bookManager.html">
+                    <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">Account Management</span></a>
+                </li>
+                <li class="mi-item nav-item  pl-2" data-href="./page/bookManager.html">
+                    <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">User Preference</span></a>
+                </li>
+                <li class="mi-item nav-item  pl-2" data-href="./page/bookManager.html">
+                    <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">Manage Notes</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="float-right col-lg-10  col-md-10 col-sm-10 p-0 " id="mi-content">
+            <div class="bg-black p-1 pl-3 text-white">
+                <i class="fa fa-home"></i><i class="fa fa-angle-right pl-2"></i>
+                <small class="pl-1" id="mi-show-location"></small>
+                <div id="mi-course" class="d-none">
+                    <i class="fa fa-angle-right pl-2"></i>
+                    <small class="pl-1" id="mi-show-location-sub"></small>
+                </div>
+            </div>
+            <div class="p-2 pl-3" id="mi-page"></div>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <footer id="foot" class="pr-5 mr-4 pb-1">
+        <small>&copy;2018.4<i class="fa fa-caret-right pl-2 pr-2"></i>Mi咪糖</small>
+    </footer>
+</article>
+</body>
+<script type="text/javascript" src="js/init.js"></script>
+</html>

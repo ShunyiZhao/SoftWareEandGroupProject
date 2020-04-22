@@ -1,0 +1,25 @@
+#mi-content{
+    height: inherit;
+    overflow: auto;
+    background: #dbdbdb;
+}
+#mi-span-drop{
+    cursor: pointer;
+}
+.mi-menu{
+    height: 100%;
+}
+.bg-black{
+    background: #f0a500 !important;
+}
+.bg-dark{
+    background: #000000 !important;
+}
+.bg-primary{
+    background: #f0a500 !important;
+}
+#foot{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
