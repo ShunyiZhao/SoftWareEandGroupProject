@@ -79,55 +79,153 @@
             </div>
         </div>
         <div class="site-main container py-1">
+
             <div class="row py-3" id="introstory">
-            <div class="col-md-12"
-                style="background-color: #dedef8;
-                box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
-                height: 20em;">
-                <p>IntroStory</p>
+                <div class="col-md-12"
+                    style="background-color: #dedef8;
+                    box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+                    height: 20em;">
+                    <p>IntroStory</p>
+                </div>
             </div>
-            </div>
+             
             <div class="row py-3" id="game">
                 <h2>This is game</h2>
                 <canvas id="gameCanvas" data-processing-sources="/src/move.pde"></canvas>
             </div>
+
             <div class="row py-3" id="instruction">
                 <div class="col-md-12"
                 style="background-color: #dedef8;
                 box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
                 <!--height: 20em;">-->
-                <div style="position: relative; text-align: center;">
-                    <div class="col-md-12">
-                        <img src = img/instruction.png style ="width:100%; height:auto">
-                        <div id="carouselExampleControls1" class="carousel slide scrollImage"  data-interval="false">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100 border border-secondary" src="img/M5Stack.png" alt="M5 Stack">
+                    <div style="position: relative; text-align: center;">
+                        <div class="col-md-12">
+                            <img src = img/instruction.png style ="width:100%; height:auto">
+                            <div id="carouselExampleControls1" class="carousel slide scrollImage"  data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100 border border-secondary" src="img/M5Stack.png" alt="M5 Stack">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 border border-secondary" src="img/Movement.png" alt="Movement">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 border border-secondary" src="img/getPoint.png" alt="Get Point">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 border border-secondary" src="img/Escape.png" alt="Escape">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 border border-secondary" src="img/Shoot.png" alt="Shoot">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 border border-secondary" src="img/Points.png" alt="Point">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100 border border-secondary" src="img/Movement.png" alt="Movement">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100 border border-secondary" src="img/getPoint.png" alt="Get Point">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100 border border-secondary" src="img/Escape.png" alt="Escape">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100 border border-secondary" src="img/Shoot.png" alt="Shoot">
-                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev" onclick="clickPrevButton()"></a>
+                                <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next" value="0" onclick="clickNextButton()"></a>
+                                <p class = "instruction"> In this game, you have to use M5 Stack in order to play the game.
+                                    You are able to use M5 Stack to control the (Name's) movement and to shoot the "flying gift".
+                                </p>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev" onclick="clickPrevButton()"></a>
-                            <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next" value="0" onclick="clickNextButton()"></a>
-                            <p class = "instruction"> In this game, you have to use M5 Stack in order to play the game.
-                                You are able to use M5 Stack to control the (Name's) movement and to shoot the "flying present" for getting bonus.
-                            </p>
                         </div>
                     </div>
                 </div>
-              </div>
+            </div>
+
+            <div class="row py-3" id="instruction">
+                <div class="col-md-12"
+                style="background-color: #dedef8;
+                box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <!--height: 20em;">-->
+                    <div style="position: relative; text-align: center;">
+                        <div class="col-md-12">
+                            <img src = "img/HealthTipBG.png" style ="width:100%; height:auto">
+                            <div class="filpcardSection">
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Pineapple.png" alt="pienapple" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style = "background-color: rgb(250, 243, 157);">
+                                        <h1>Pienapple</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Crab.png" alt="crab" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style="background-color: rgb(249, 209, 158)">
+                                        <h1>Crab</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+            
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Eggplant.png" alt="eggplant" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style="background-color: #F4D4FC;">
+                                        <h1>Eggplant</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+            
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Salad.png" alt="salad" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style="background-color: rgb(181, 242, 181);">
+                                        <h1>Salad</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+            
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Fish.png" alt="fish" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style="background-color: rgb(199, 218, 255);">
+                                        <h1>Fish</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+            
+                                <div class="flipCard">
+                                    <div class="flipcardPosition">
+                                      <div class="flip-card-front">
+                                        <img src="img/Cheese.png" alt="cheese" style="width:300px; height:300px;">
+                                      </div>
+                                      <div class="flip-card-back" style="background-color: #FBEECE;">
+                                        <h1>Cheese</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <footer class="site-footer container py-5">
             <div class="row" id="about">
                 <div class="col-12 col-md">
