@@ -8,9 +8,10 @@
 
 ## <span id="Intro">Introduction
 
-## <span id="LinkToPart1">System Design</ span>
+## <span id="LinkToPart1">System Design
 
-At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting
+At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game, and the processing 
+prototype is in the folder with path ./example/example_1
 
 The struct of our project is shown as below *fig.1*:
 
@@ -19,7 +20,7 @@ The struct of our project is shown as below *fig.1*:
 
 
 
-## <span id="LinkToPart2">System Implementation</ span>
+## <span id="LinkToPart2">System Implementation
 
 Because of the unforseen circumstances of COVID-19, we have to work together online.
 
@@ -33,7 +34,7 @@ Because of the unforseen circumstances of COVID-19, we have to work together onl
  * Communication between desktop application and web application
 
 
-## <span id="LinkToPart3">Project Evaluation</ span>
+## <span id="LinkToPart3">Project Evaluation
 Though we have made xxxxx
 
 ---
