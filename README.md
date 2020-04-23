@@ -13,7 +13,7 @@
 At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game, and the processing 
 prototype is in the folder with path ./example/example_1
 
-picture here
+![main GUI](./example/example_1/image_0.jpg)
 
 The structure of our project is shown as below *fig.1*:
 
