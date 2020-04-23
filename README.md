@@ -10,8 +10,8 @@
 
 ## <span id="LinkToPart1">System Design
 
-At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game, and the processing 
-prototype is in the folder with path ./example/example_1
+At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game. The paper prototype and
+processing prototype is in the folder with path ./example/example_1
 
 ![main GUI](./example/example_1/image_0.jpg)
 
