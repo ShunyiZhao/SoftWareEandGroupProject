@@ -4,7 +4,7 @@ var carousel = document.getElementsByClassName("scrollImage")[0]
 
 function clickNextButton () {
     var getValue = nextButton.getAttribute('value');
-    if (getValue == 4) { nextButton.setAttribute('value', 0);} 
+    if (getValue == 5) { nextButton.setAttribute('value', 0);} 
     else {
         ++getValue;
         nextButton.setAttribute('value', getValue);
@@ -15,7 +15,7 @@ function clickNextButton () {
 
 function clickPrevButton () {
     var getValue = nextButton.getAttribute('value');
-    if (getValue == 0) { nextButton.setAttribute('value', 4); }
+    if (getValue == 0) { nextButton.setAttribute('value', 5); }
     else {
         --getValue;
         nextButton.setAttribute('value', getValue);
@@ -26,7 +26,7 @@ function clickPrevButton () {
 
 function changeTextImg (getValue) {
     if (getValue == 0) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "In this game, you have to use M5 Stack in order to play the game. You are able to use M5 Stack to control the (Name's) movement and to shoot the \"flying present\" for getting bonus.";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "In this game, you have to use M5 Stack in order to play the game. You are able to use M5 Stack to control the (Name's) movement and to shoot the \"flying gift\".";
     }
     else if (getValue == 1) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "You are able to control (Name) to move to left (right) with pressing the left (right) button of M5 Stack.";
@@ -38,7 +38,10 @@ function changeTextImg (getValue) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "Keep away from the bomb otherwise you will die!!";
     }
     else if (getValue == 4) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "If you see the present appears, use M5 Stack to point to the present and press the middle button for shooting. You will get extra points.";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "If you see the gift appears, use M5 Stack to point to the gift and press the middle button for shooting. You will get extra points.";
+    }
+    else if (getValue == 5) {
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "Each food has a corresponding points.";
     }
 }
 
