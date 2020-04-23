@@ -12,9 +12,12 @@ We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler 
 
 A simple function called Serial.print() is used to send the string above.
 
+Communication Protocol:
+> add some characters at the end of string
+
 ## Processing - Serial Communication
 
-
+We use a function caller xxx to listen the string sent by M5 Stack.
 
 ## Processing - Character Control
 
