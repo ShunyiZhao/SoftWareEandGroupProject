@@ -13,7 +13,9 @@
 At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game, and the processing 
 prototype is in the folder with path ./example/example_1
 
-The struct of our project is shown as below *fig.1*:
+picture here
+
+The structure of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
