@@ -25,7 +25,11 @@ The structure of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
+The structure of our project is shown as update *fig.2*:
 
+![uml](./design_GUI/SE_UML.png)
+
+-  [Details of web application](Web/README.md)
 
 
 ## <span id="LinkToPart2">System Implementation
