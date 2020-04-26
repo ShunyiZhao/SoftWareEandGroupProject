@@ -4,6 +4,7 @@ private int status;
 private Background bg;
 private Eater eater;
 private PlayerData data;
+private Gift gift;
 private int mode = 4;
 private int startY = 95;
 private int endY = 590;
@@ -20,6 +21,7 @@ public void setup() {
     size(1280, 720);
     bg = new Background(startY, endY);
     data = new PlayerData(names);
+    gift = new Gift();
     initialiseVariables();
     status = 0;
 }
@@ -34,10 +36,19 @@ public void draw() {
             setGameStatus();
             if (keyPressed) status++;
             break;
-        default:
-            image(loadImage("data/BigEater.png"), 0, 0, 1280, 720);
+        case 2:
+            analyseData();
     }
   
+}
+
+private void analyseData(){
+    int score = data.getScore();
+    
+    if (score > 0) image(loadImage("data/Clear.png"), 0, 0, 1280, 720);
+    else image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
+    
+    stop();
 }
 
 private boolean detectDropCollision(int i) {
@@ -102,6 +113,8 @@ private void setGameStatus() {
     eater = new Eater(bg.getEatterAreaMargin());
     eater.drawEater();
     displayScoreAndHealth();
+    displayGift();
+    
     for (int i = 0; i < mode; ++i) {
         if ((frameCount == startCount[i] || trackUsed[i]) && !tracks[i].reachEnd) {
             trackUsed[i] = true;
@@ -116,10 +129,24 @@ private void setGameStatus() {
             
             if (detectDropCollision(i)) 
                 data.recordPlayerMove(tracks[i]);
-            else if (!data.checkBadDropping(tracks[i].getClassName())) 
+            else if (!data.checkBadDropping(tracks[i].getClassName())) {
                 data.loseHealth();
+                if (!data.isAlive()) {
+                    status++;
+                    break;
+                }
+            }
             
             tracks[i] = createNewClassRandomly();
         }
     }  
+}
+
+private void displayGift() {
+    if (gift.getGiftStatus(data)) {
+        gift.display();
+        if (gift.pickUpGift()) {
+            data.getBonus();
+        }
+    }
 }

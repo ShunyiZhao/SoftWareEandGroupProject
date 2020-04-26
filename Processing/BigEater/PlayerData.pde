@@ -1,13 +1,26 @@
+import java.io.*;
+import java.util.*;
+
 class PlayerData {
     private int score;
     private int health;
+    private int bonus;
     private HashMap<String, Integer> count = new HashMap<String, Integer>();
+    private int highestScore;
+    private final String FILE_NAME = "user_preference.txt";
     
     public PlayerData(String[] names) {
         score = 0;
-        health = 10;
+        health = 3;
+        bonus = 0;
         setCountMap(names);
     }
+    
+    public void updateHighestScore(int that) {
+        highestScore = Math.max(this.score, that);
+    }
+    
+    public boolean isAlive() { return health > 0; }
     
     public void recordPlayerMove(Drop currentClass) {
         modifyCount(currentClass.getClassName());
@@ -45,8 +58,16 @@ class PlayerData {
     
     public void loseHealth() { health--; }
     
+    public void getBonus() { 
+        bonus++;
+        int num = (int) random(3);
+        if (num == 1) health++;  
+        else score += 2;
+    }
+    
     private boolean checkBadDropping(String name) {
         return "virusA".equals(name) || "virusB".equals(name)||
                 "bomb".equals(name);
     }
+    
 }
