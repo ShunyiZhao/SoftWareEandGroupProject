@@ -6,8 +6,7 @@ class PlayerData {
     private int health;
     private int bonus;
     private HashMap<String, Integer> count = new HashMap<String, Integer>();
-    private int highestScore;
-    private final String FILE_NAME = "user_preference.txt";
+    private String username;
     
     public PlayerData(String[] names) {
         score = 0;
@@ -16,8 +15,9 @@ class PlayerData {
         setCountMap(names);
     }
     
-    public void updateHighestScore(int that) {
-        highestScore = Math.max(this.score, that);
+    public void getCurrentUser(String filename) {
+        JSONObject json = loadJSONObject("signup" + File.separator + filename);
+        this.username = json.getString("username");
     }
     
     public boolean isAlive() { return health > 0; }
@@ -61,13 +61,43 @@ class PlayerData {
     public void getBonus() { 
         bonus++;
         int num = (int) random(3);
-        if (num == 1) health++;  
-        else score += 2;
+        
+        if (num == 1) {
+            health += 1;
+        }   
+        else {
+            score += 2;
+        } 
     }
     
     private boolean checkBadDropping(String name) {
         return "virusA".equals(name) || "virusB".equals(name)||
                 "bomb".equals(name);
+    }
+    
+    public void saveUserData() throws IOException {
+        JSONObject json = new JSONObject();
+        json.setInt("score", score);
+        for (String attribute : count.keySet()) {
+            json.setInt(attribute, count.get(attribute));
+        }
+        json.setInt("bonus", bonus);
+        String fileName = "user" + File.separator + username + ".json";
+        saveJSONObject(json, fileName);
+        
+        String rankFile = "user" + File.separator + "rank.json";
+        json = loadJSONObject(rankFile);
+        json.setInt(username, score);
+        int previousScore = json.getInt("highest_score");
+        json.setInt("highest_score", Math.max(score, previousScore));
+        saveJSONObject(json, rankFile);
+    }
+    
+    public boolean compareScore(int score) {
+        JSONObject json = loadJSONObject("user" + File.separator + "rank.json");
+        int previousScore = json.getInt("highest_score");
+        
+        return score > previousScore;
     }
     
 }

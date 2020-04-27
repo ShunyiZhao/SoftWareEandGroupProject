@@ -16,11 +16,13 @@ private boolean[] trackUsed;
 private boolean[] frameCountLock;
 private String[] names = {"cheese", "crab", "eggplant", "fish", 
                           "pineapple", "salad", "virusA", "virusB"};
+private String filename = "user3.json";
 
 public void setup() {
     size(1280, 720);
     bg = new Background(startY, endY);
     data = new PlayerData(names);
+    data.getCurrentUser(filename);
     gift = new Gift();
     initialiseVariables();
     status = 0;
@@ -37,18 +39,27 @@ public void draw() {
             if (keyPressed) status++;
             break;
         case 2:
-            analyseData();
+            try {
+                analyseData();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stop();
     }
   
 }
 
-private void analyseData(){
+private void analyseData() throws IOException {
     int score = data.getScore();
+   
+    if (data.compareScore(score)) {
+        image(loadImage("data/Clear.png"), 0, 0, 1280, 720);
+    } 
+    else {
+        image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
+    } 
     
-    if (score > 0) image(loadImage("data/Clear.png"), 0, 0, 1280, 720);
-    else image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
-    
-    stop();
+    data.saveUserData();
 }
 
 private boolean detectDropCollision(int i) {
