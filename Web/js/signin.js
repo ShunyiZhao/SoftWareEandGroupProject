@@ -1,7 +1,6 @@
 function add_richtext() {
     window.location.href='index2.html';
 }
-var jsonData = 
 $(function() {
 	$("#check").click (function() {
 		if($('#inputEmail').val()=='abc@qq.com'&& $('#inputPassword').val()=='123'){
@@ -16,3 +15,18 @@ $(function() {
         }
 	});
 });
+var obj;
+function getResult(obj){
+    $.ajax({
+    type:"GET",
+    url: "json/admin.json",
+    dataType: "json",
+    async: false,
+    success:function(data){
+            obj = JSON.parse(data) 
+        }
+    });
+    return obj;
+}
+obj = getResult(obj)
+console.log(obj.admin[1].name)

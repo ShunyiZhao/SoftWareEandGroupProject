@@ -27,11 +27,7 @@ $(function () {
 })
 $("li").click(function() {
     var val=$(this).attr("id");
-    if(val=="account"){
-        $('#mi-account').show();
-        $('#mi-note').hide();
-        $('#mi-chart').hide();
-    }else if(val=="chart"){
+    if(val=="chart"){
         $('#mi-chart').show();
         $('#mi-note').hide();
         $('#mi-account').hide();
