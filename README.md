@@ -19,6 +19,8 @@
   
   Gaming is a traditional entertainment medium and live game broadcast is rising and becoming quite popular in recent years, we would like to combine them in our software and we think that it is a new and interesting idea to let watchers interact with gamers. Additionally, data analysts can obtain the processed data to continuously perfect the gaming system.  
 
+  Kehan Du, Rao Hu, Alex Lee, Ben Jin, Yuxuan Qiu and Shunyi Zhao compose our team.
+
 ## <span id="LinkToPart1">System Design
 
 At the beginning of this term, We want to design a game like Fruit Ninja. It will be an interesting game. The paper prototype and
@@ -46,7 +48,8 @@ Shunyi Zhao do the works about M5 Stack and the communications between the M5 St
 Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and Alex Lee 
 designed the layout of our website and developed the web pages. All group members are collaborators of this
 repository. They could push works they done to the dev branch of this repository directly without review of
-changes in file, but a pull request from dev branch to master branch
+changes in file, but a pull request from dev branch to master branch is needed. We held an online at least
+once a week with Skype for business to communicate.
 
 ### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
  * M5 Stack GUI design
@@ -59,6 +62,15 @@ changes in file, but a pull request from dev branch to master branch
 
 ### IoT Device - M5 Stack
 
+Our IoT Device is M5 Stack.
+
+- [Details of M5 Stack](M5_Stack/README.md)
+
+### Desktop Application - Processing
+
+### Web Application
+
+-  [Details of web application](Web/README.md)
 
 ## <span id="LinkToPart3">Project Evaluation
 Group memebers test the part they made by themselves, and the M5 Stack holder test the whole system.
