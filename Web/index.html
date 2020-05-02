@@ -88,6 +88,43 @@
                     <p>IntroStory</p>
                 </div>
             </div>
+
+            <div class="row py-3" id="checkBox">
+                <div class="col-md-12 checkBoxContainer"
+                    style="background-color: #dedef8;
+                    box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+                    height: 20em;">
+                    <p class = "checkBoxTitle"> CheckBox</p>
+                    <div class = "foodCategory">
+                        <header class = "checkBoxTitle"> Main Course </header>
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main1"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main2"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main3"></img>
+                        <input type="checkbox" class = "checkBox">
+                    </div>
+                    <div class = "foodCategory">
+                        <header class = "checkBoxTitle"> Meat </header>
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat1"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat2"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat3"></img>
+                        <input type="checkbox" class = "checkBox">
+                    </div>
+                    <div class = "foodCategory">
+                        <header class = "checkBoxTitle"> Vegetable </header>
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg1"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg2"></img>
+                        <input type="checkbox" class = "checkBox">
+                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg3"></img>
+                        <input type="checkbox" class = "checkBox">
+                    </div>
+                    <button class = "checkBoxButton" type="submit"> Submit </button>
+                </div>
+            </div>
              
             <div class="row py-3" id="game">
                 <h2>This is game</h2>
@@ -268,6 +305,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
         <script src="js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+        <script src="js/MQTT-client.js"></script>
         <script src="/js/processing.js"></script>
     </body>
 </html>
