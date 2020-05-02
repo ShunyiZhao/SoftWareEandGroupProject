@@ -1,3 +1,4 @@
+var title=new Array();
 var result=new Array();
 function getResult(result){
     $.ajax({
@@ -6,36 +7,47 @@ function getResult(result){
     dataType: "json",
     async: false,
     success:function(data){
-            var i=0;
             $.each(data,function(name,value) {
-                result[i] = value;
-                i++;
+                result.push(value)
             }); 
         }
     });
+    result.shift()
     return result;
 }
-result = getResult(result);
-var myChart = echarts.init($('#mi-chart')[0]);
-        // 指定图表的配置项和数据
-var option = 
-{
-            title: {
-                text: 'User preference'
-            },
-            tooltip: {},
-            legend: {
-                data:['number']
-            },
-            xAxis: {
-                data: ["salad","pineapple","fish","virus","crab","eggplant","cheese"]
-            },
-            yAxis: {},
-            series: [{
-                name: 'number',
-                type: 'bar',
-                data: result[0]
-            }]
-};
-// show
-myChart.setOption(option);
+$('#chart').click(function(){
+    result = getResult(result);
+    console.log(result)
+    var myChart = echarts.init($('#mi-chart')[0]);
+    var option1 = 
+    {
+        title: {
+            text: 'User preference'
+        },
+        tooltip: {},
+        xAxis: {
+            data: ["salad","pineapple","fish","virus","crab","eggplant","cheese"]
+        },
+        yAxis: {},
+        series: [{
+        name: 'number',
+        type: 'bar',
+        data: result
+        }],
+        visualMap: {
+            orient: 'horizontal',
+            left: 'center',
+            min: 0,
+            max: 10,
+            text: ['High Score', 'Low Score'],
+            // Map the score column to color
+            dimension: 0,
+            inRange: {
+                color: ['#D7DA8B', '#E15457']
+            }
+        },
+        backgroundColor: 'rgba(248,241,230,0.7)'
+
+    };
+    myChart.setOption(option1);
+});

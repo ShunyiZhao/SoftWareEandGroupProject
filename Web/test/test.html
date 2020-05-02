@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>HELLO!</h1>
+    </div>
+</body>
+</html>
+<script>
+    const options = {
+        connectTimeout: 4000, // 超时时间
+        // 认证信息
+        clientId: 'clientId-sX3vwI6Jjs',
+        username: 'clientId-sX3vwI6Jjs',
+        password: 'clientId-sX3vwI6Jjs',
+    }
+    const client = mqtt.connect('wss://broker.mqttdashboard.com:8000/mqtt', options)
+    client.on('reconnect', (error) => {
+        console.log('正在重连:', error)
+    })
+    client.on('error', (error) => {
+        console.log('连接失败:', error)
+    })
+</script>
