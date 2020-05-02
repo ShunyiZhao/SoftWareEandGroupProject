@@ -134,3 +134,38 @@ body {
     color: rgb(23, 22, 22);
     transform: rotateY(180deg);
   }
+
+  /* Check Box */
+  .checkBoxContainer {
+    overflow: auto;
+  }
+
+  .foodCategory {
+    display: inline-block;
+    height: auto;
+    width: 30%;
+    background-color: skyblue;
+    margin-left: 2.5%;
+  }
+
+  .checkBoxTitle {
+    text-align: center;
+    font-size: 2vw;
+  }
+
+  .checkBoxImage {
+    margin-left: 20%;
+    width: 50%;
+  }
+
+  .checkBoxButton {
+    float: right;
+    margin-top: 3%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+
+  .checkBox {
+
+  }
+  
