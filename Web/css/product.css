@@ -62,9 +62,6 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*overflow: auto;
-    height: 60%;
-    width: 70%;*/
     height: 40%;
     width: 50%;
   }
@@ -150,6 +147,7 @@ body {
   .checkBoxTitle {
     text-align: center;
     font-size: 2vw;
+    font-weight: bold;
   }
 
   .checkBoxImage {
