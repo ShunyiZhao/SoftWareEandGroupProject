@@ -18,13 +18,13 @@ public class Eater {
         this.eaterMarginTop = eaterMarginTopFromBoundary + topBoundary;
     }
     
-    public void drawEater() {
-        if (mouseX < leftBoundary) 
+    public void drawEater(int xInput) {
+        if (xInput < leftBoundary) 
             eaterMarginLeft = leftBoundary;
-        else if (mouseX > rightBoundary - bodyHeight) 
+        else if (xInput > rightBoundary - bodyHeight) 
             eaterMarginLeft = rightBoundary - bodyHeight;
         else 
-            eaterMarginLeft = mouseX; 
+            eaterMarginLeft = xInput; 
 
         pushMatrix();
         drawFeet(eaterMarginLeft);

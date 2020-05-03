@@ -1,5 +1,14 @@
 import java.util.Arrays;
+import processing.serial.*;
 
+//parameters in communication
+private Serial serialPort;
+private float initAngle[] = {0, 0, 0};
+private int initX = 1280 / 2, initY = 720 / 2;
+private boolean buttonFlag = false;
+
+
+//parameters for 
 private int status;
 private Background bg;
 private Eater eater;
@@ -26,17 +35,41 @@ public void setup() {
     gift = new Gift();
     initialiseVariables();
     status = 0;
+    
+    //init the port
+    serialPort = new Serial(this, "COM5", 115200);
+    while(true){
+        String inputString = serialPort.readStringUntil('q');
+        println("loop");
+        if(inputString != null){
+            //Init angles
+            String[] data = inputString.split(" ");
+            data[0] = data[0].substring(1, data[0].length());
+            initAngle[0] = Float.parseFloat(data[0]);
+            initAngle[1] = Float.parseFloat(data[1]);
+            initAngle[2] = Float.parseFloat(data[2]);
+            println(initAngle);
+            break;
+        }
+    }
 }
 
-public void draw() { 
+public void draw() {
+    detectButton();
     switch (status) {
         case 0:
             image(loadImage("data/BigEater.png"), 0, 0, 1280, 720);
-            if (keyPressed) status++;
+            if (keyPressed || buttonFlag) {
+                status++;
+                buttonFlag = false;
+            }
             break;
         case 1: 
             setGameStatus();
-            if (keyPressed) status++;
+            if (keyPressed || buttonFlag) {
+                status++;
+                buttonFlag = false;
+            }
             break;
         case 2:
             try {
@@ -122,7 +155,10 @@ private void displayScoreAndHealth() {
 private void setGameStatus() {
     bg.drawBackground(mode);
     eater = new Eater(bg.getEatterAreaMargin());
-    eater.drawEater();
+    //input the X
+    //getXandY();
+    rect(initX, initY, 15, 15);
+    eater.drawEater(initX);
     displayScoreAndHealth();
     displayGift();
     
@@ -156,8 +192,86 @@ private void setGameStatus() {
 private void displayGift() {
     if (gift.getGiftStatus(data)) {
         gift.display();
-        if (gift.pickUpGift()) {
+        if (gift.pickUpGift(initX, initY)) {
             data.getBonus();
         }
+    }
+}
+
+private void getXandY(){
+    if(serialPort.available() > 0){
+        String inputString = serialPort.readStringUntil('q');
+        String[] datas = inputString.split(" ");
+        //split String and do some other things
+        datas[0] = datas[0].substring(1, datas[0].length());
+        datas[5] = datas[5].substring(0, datas[5].length() - 1);
+        //println(datas[5]);
+        //println(inputString);
+        float[] fdatas = {0, 0, 0, 0, 0, 0};
+        fdatas[0] = Float.parseFloat(datas[0]);
+        fdatas[1] = Float.parseFloat(datas[1]);
+        fdatas[2] = Float.parseFloat(datas[2]);
+        fdatas[3] = Float.parseFloat(datas[3]);
+        fdatas[4] = Float.parseFloat(datas[4]);
+        fdatas[5] = Float.parseFloat(datas[5]);
+        
+        int dis_x = 0, dis_y = 0;
+        if(fdatas[3] > 0.2 || fdatas[3] < -0.2){
+            dis_x = (int) (fdatas[3] * 50);
+        }
+        if(fdatas[4] > 0.2 || fdatas[4] < -0.2){
+                dis_y = (int) (fdatas[4] * 50);
+        }
+        initX -= dis_x;
+        initY += dis_y;
+    }
+}
+
+private void detectButton(){
+    if(serialPort.available() > 0){
+        String inputString = serialPort.readStringUntil('q');
+        char buttonCharacter = inputString.charAt(0);
+        if(buttonCharacter == 'a'){
+            buttonFlag = true;
+        }
+        getXandY(inputString);
+    }
+}
+
+private void getXandY(String strInput){
+    String[] datas = strInput.split(" ");
+    //split String and do some other things
+    datas[0] = datas[0].substring(1, datas[0].length());
+    datas[5] = datas[5].substring(0, datas[5].length() - 1);
+    //println(datas[5]);
+    //println(inputString);
+    float[] fdatas = {0, 0, 0, 0, 0, 0};
+    fdatas[0] = Float.parseFloat(datas[0]);
+    fdatas[1] = Float.parseFloat(datas[1]);
+    fdatas[2] = Float.parseFloat(datas[2]);
+    fdatas[3] = Float.parseFloat(datas[3]);
+    fdatas[4] = Float.parseFloat(datas[4]);
+    fdatas[5] = Float.parseFloat(datas[5]);
+    
+    int dis_x = 0, dis_y = 0;
+    if(fdatas[3] > 0.2 || fdatas[3] < -0.2){
+        dis_x = (int) (fdatas[3] * 50);
+    }
+    if(fdatas[4] > 0.2 || fdatas[4] < -0.2){
+        dis_y = (int) (fdatas[4] * 50);
+    }
+    initX -= dis_x;
+    if (initX < 0){
+        initX = 0;
+    }
+    if (initX > 1280){
+        initX = 1280;
+    }
+    initY += dis_y;
+    if (initY < 0){
+        initY = 0;
+    }
+    if (initY > 720){
+        initY = 720;
     }
 }
