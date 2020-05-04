@@ -38,9 +38,6 @@ The structure of our project is shown as update *fig.2*:
 
 ![uml](./design_GUI/SE_UML.png)
 
--  [Details of web application](Web/README.md)
-
-
 ## <span id="LinkToPart2">System Implementation
 
 Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder,
@@ -70,7 +67,7 @@ Our IoT Device is M5 Stack.
 
 ### Web Application
 
--  [Details of web application](Web/README.md)
+- [Details of web application](Web/README.md)
 
 ## <span id="LinkToPart3">Project Evaluation
 Group memebers test the part they made by themselves, and the M5 Stack holder test the whole system.
