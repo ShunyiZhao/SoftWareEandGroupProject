@@ -39,7 +39,7 @@ processing programme will wait to this connection, and print "loop" to the comma
 
 ## Processing - Character Control
 
-Due to an unknown problem, the yaw of this sensor increases automaticlly. So although We have complete a series of simple version codes of matrix computation, we can not ues them to calculate the true acceleration of the movements. So We used accelerations caused by angles and gravity to control the characters in processing.
+Due to an unknown problem, the yaw of this sensor increases automaticlly. So although we have completed a series of simple version codes of matrix computation, we can not use them to calculate the true acceleration of the movements. So we used accelerations caused by angles and gravity to control the character in processing.
 
 I use a rectangle to simulate the character, and a circle is uesd to represent the pointer.
 
