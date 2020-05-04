@@ -11,11 +11,11 @@ We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler 
 ## M5 Stack - Serial Communication
 
 A simple function called Serial.print() is used to send the string.
-The format of this this string is shown below:
+The format of this string is shown below:
 
 ![command string](./images/image_4.png)
 
-In this string, the letter 'b' represent the button of the Stack, if the first button is pressed, this letter will be changed to 'a',
+In this string, the letter 'b' represents the button of the Stack. If the first button is pressed, this letter will be changed to 'a',
 shown below:
 
 ![button press](./images/image_5.png)
