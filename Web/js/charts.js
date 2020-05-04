@@ -1,19 +1,10 @@
-/* client.onMessageArrived = function (message) {
-    console.log("Theme: "+message.destinationName);
-    let msgObj = JSON.parse(message.payloadString);
-    console.log(msgObj.datatype+"  "+msgObj.main['username']+msgObj.main['password']);
+client.onMessageArrived = function (message)  {
+    console.log(message.payloadString);
+    var temp = jQuery.parseJSON(message.payloadString);
+    if(temp.datatype == "checkbox"){
+        console.log("checkbox")
+    }
 }
-
-client.connect({onSuccess: function() {
-    //submit user information when the button is clicked
-    let messageBody = {
-        username: username.value,
-        password: password.value,
-        status: 2
-    };
-    let message = buildMessage('web_login', messageBody);
-        client.send(message);
-}}); */
 
 var result=new Array();
 function getResult(path,result){
