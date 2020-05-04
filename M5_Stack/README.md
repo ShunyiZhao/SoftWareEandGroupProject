@@ -76,7 +76,7 @@ In these two files above, some functions are used to transfrom the coordinate.
 ### Combine M5 Stack with Desktop Application
 The video below shows the game which combine the Desktop Application and M5 Stack.
 
-![video](./piece.mp4)
+<video src="./piece.mp4" width="500" height="300"></video>
 
 ## <span id="limitations">Problems and Limitations
 one of the angle increase itself, shown in below image:
