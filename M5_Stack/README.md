@@ -35,15 +35,12 @@ The main works are in the file called communication.pde
 We planned to use the posture angles to transform the accelerations to ground coordinate system. 
 
 The rotation and translation matrix is shown below:
+
 ![matrix_1](./images/matrix_1.svg)
 
-![matrix_2](./images/matrix_2.svg)
-
-![matrix_3](./images/matrix_3.svg)
 Cite from wikepedia - [wikepedia matrix](https://en.wikipedia.org/wiki/Rotation_matrix)
 
-In the file 
-- [communication.pde](./communication/communication.pde)
+
 
 
 ## Problems Found in This Project
