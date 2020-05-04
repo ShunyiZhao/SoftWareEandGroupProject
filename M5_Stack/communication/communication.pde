@@ -58,7 +58,7 @@ void draw(){
         datas[0] = datas[0].substring(1, datas[0].length());
         datas[5] = datas[5].substring(0, datas[5].length() - 1);
         //println(datas[5]);
-        //println(inputString);
+        println(inputString);
         float[] fdatas = {0, 0, 0, 0, 0, 0};
         fdatas[0] = Float.parseFloat(datas[0]);
         fdatas[1] = Float.parseFloat(datas[1]);
@@ -127,12 +127,15 @@ void draw(){
             arrCharacter.get(0).drawCharacter();
             arrCharacter.get(1).drawCharacter();
         }
+        text("InputState:", 70, 120);
         text(inputState, 200, 120);
+        text("Acceleration:", 70, 140);
         text(finalAccs[0], 200, 140);
-        text(fdatas[3], 200, 160);
         text(dis_1, 200, 180);
         text(rect_x, 200, 200);
         text(speed_x, 200, 220);
+        text("The Yaw:", 70, 240);
+        text(fdatas[2], 200, 240);
         //rect(rect_x, rect_y, rectHeight, rectWidth);
         //some test line
         //add more test line
