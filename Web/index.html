@@ -83,9 +83,13 @@
             <div class="row py-3" id="introstory">
                 <div class="col-md-12"
                     style="background-color: #dedef8;
-                    box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
-                    height: 20em;">
-                    <p>IntroStory</p>
+                    box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                    <div style="position: relative; text-align: center;">
+                        <div class="col-md-12">
+                            <p style = "font-weight: bold; font-size: 3vw; color: orange; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Introduction of Story</p>
+                            <img src = img/IntroStory.png alt = "IntroStory" style ="width:100%; height:auto"></img>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -94,32 +98,26 @@
                     style="background-color: #dedef8;
                     box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
                     height: 20em;">
-                    <p class = "checkBoxTitle"> CheckBox</p>
+                    <p class = "checkBoxTitle" style="color: blue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 3vw;"> CheckBox</p>
                     <div class = "foodCategory">
-                        <header class = "checkBoxTitle"> Main Course </header>
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main1"></img>
+                        <header class = "checkBoxTitle"> Fresh Ingredients </header>
+                        <img class = "img-fluid checkBoxImage" src = img/pienapple_food.png alt = "pienapple"></img>
                         <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main2"></img>
-                        <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "main3"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/eggplant_food.png alt = "eggplant"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
                     <div class = "foodCategory">
-                        <header class = "checkBoxTitle"> Meat </header>
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat1"></img>
+                        <header class = "checkBoxTitle"> SeaFood </header>
+                        <img class = "img-fluid checkBoxImage" src = img/fish_food.png alt = "fish"></img>
                         <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat2"></img>
-                        <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "meat3"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/crab_food.png alt = "crab"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
                     <div class = "foodCategory">
                         <header class = "checkBoxTitle"> Vegetable </header>
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg1"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/salad_food.png alt = "salad"></img>
                         <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg2"></img>
-                        <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cake.png alt = "veg3"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/cheese_food.png alt = "cheese"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
                     <button class = "checkBoxButton" type="submit"> Submit </button>
@@ -135,7 +133,6 @@
                 <div class="col-md-12"
                 style="background-color: #dedef8;
                 box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-                <!--height: 20em;">-->
                     <div style="position: relative; text-align: center;">
                         <div class="col-md-12">
                             <img src = img/instruction.png style ="width:100%; height:auto">
@@ -162,8 +159,7 @@
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev" onclick="clickPrevButton()"></a>
                                 <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next" value="0" onclick="clickNextButton()"></a>
-                                <p class = "instruction"> In this game, you have to use M5 Stack in order to play the game.
-                                    You are able to use M5 Stack to control the (Name's) movement and to shoot the "flying gift".
+                                <p class = "instruction"> In this game, you have to use M5 Stack in order to play the game. You are able to use M5 Stack to control the character's movement and to shoot the "flying gift".
                                 </p>
                             </div>
                         </div>
@@ -182,77 +178,98 @@
                             <div class="filpcardSection">
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Pineapple.png" alt="pienapple" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style = "background-color: rgb(250, 243, 157);">
-                                        <h1>Pienapple</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style = "background-color: rgb(250, 243, 157);">
+                                        <h1 style = "text-align: center;">Pienapple</h1>
+                                        <p>Increasing the consumption of pineapples, it will help decrease...</p>
+                                        <lu>
+                                            <li> The risk of obesity </li>
+                                            <li> Overall mortality </li>
+                                            <li> Diabetes</li>
+                                            <li> Heart disease</li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Crab.png" alt="crab" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style="background-color: rgb(249, 209, 158)">
-                                        <h1>Crab</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style="background-color: rgb(249, 209, 158)">
+                                        <h1 style = "text-align: center;">Crab</h1>
+                                        <p>Contain Minerals that support the immune system</p>
+                                        <lu>
+                                            <li> Copper </li>
+                                            <li> Zinc </li>
+                                            <li> Selenium </li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
             
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Eggplant.png" alt="eggplant" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style="background-color: #F4D4FC;">
-                                        <h1>Eggplant</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style="background-color: #F4D4FC;">
+                                        <h1 style = "text-align: center;">Eggplant</h1>
+                                        <p>Eggplant contains chlorogenic acid, it can help decrease ...</p>
+                                        <lu>
+                                            <li> Levels of low density lipoprotein </li>
+                                            <li> “Bad” cholesterol </li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
             
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Salad.png" alt="salad" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style="background-color: rgb(181, 242, 181);">
-                                        <h1>Salad</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style="background-color: rgb(181, 242, 181);">
+                                        <h1 style = "text-align: center;">Salad</h1>
+                                        <p>Having salads (raw vegetables with dressing) are more likely to meet recommended intakes for...</p>
+                                        <lu>
+                                            <li> Vitamins C </li>
+                                            <li> Vitamins E </li>
+                                            <li> Folic acid </li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
             
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Fish.png" alt="fish" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style="background-color: rgb(199, 218, 255);">
-                                        <h1>Fish</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style="background-color: rgb(199, 218, 255);">
+                                        <h1 style = "text-align: center;">Fish</h1>
+                                        <p>Fish is including...</p>
+                                        <lu>
+                                            <li> Vitamin D (fat-soluble nutrient): many people are lacking </li>
+                                            <li> Omega-3 fatty acids: important for optimal body and brain function  </li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
             
                                 <div class="flipCard">
                                     <div class="flipcardPosition">
-                                      <div class="flip-card-front">
+                                      <div class="frontFlipCard">
                                         <img src="img/Cheese.png" alt="cheese" style="width:300px; height:300px;">
                                       </div>
-                                      <div class="flip-card-back" style="background-color: #FBEECE;">
-                                        <h1>Cheese</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
+                                      <div class="backFlipCard" style="background-color: #FBEECE;">
+                                        <h1 style = "text-align: center;">Cheese</h1>
+                                        <lu>
+                                            <li> It is a great source of calcium, fat, and protein </li>
+                                            <li> It could work to protect peoples' teeth from cavities </li>
+                                        <lu>
                                       </div>
                                     </div>
                                 </div>
@@ -272,12 +289,12 @@
                 <div class="col-6 col-md">
                     <h5>Team</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Kehan Du</a></li>
-                        <li><a class="text-muted" href="#">Rao Hu</a></li>
-                        <li><a class="text-muted" href="#">Ben Jin</a></li>
-                        <li><a class="text-muted" href="#">HoCheung Lee</a></li>
-                        <li><a class="text-muted" href="#">Yuxuan Qu</a></li>
-                        <li><a class="text-muted" href="#">Shunyi Zhao</a></li>
+                        <li><a class="text-muted" href="https://github.com/lele1307">Kehan Du</a></li>
+                        <li><a class="text-muted" href="https://github.com/RAO-HU">Rao Hu</a></li>
+                        <li><a class="text-muted" href="https://github.com/benjin1998">Ben Jin</a></li>
+                        <li><a class="text-muted" href="https://github.com/HCLEE1017">HoCheung Lee</a></li>
+                        <li><a class="text-muted" href="https://github.com/yxqiu1997">Yuxuan Qu</a></li>
+                        <li><a class="text-muted" href="https://github.com/ShunyiZhao">Shunyi Zhao</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
@@ -306,7 +323,8 @@
         <script src="js/script.js"></script>
         <script src="js/index.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/MQTT-client.js"></script>
-        <script src="/js/processing.js"></script>
+        <script src="js/processing.js"></script>
     </body>
 </html>
