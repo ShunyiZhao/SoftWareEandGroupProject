@@ -28,6 +28,9 @@ of the end of one commmand.
 Due to an unknown problem, the yaw of this sensor increases automaticlly. So although We have complete a series of simple version codes of matrix computation, we can not ues them to calculate the true acceleration of the movements. So We used accelerations caused by angles and gravity to control the characters in processing.
 
 ### Space Coordinate transformation
+The main works are in the file called communication.pde
+- [communication.pde](./communication/communication.pde)
+
 
 We planned to use the posture angles to transform the accelerations to ground coordinate system. 
 
@@ -37,8 +40,10 @@ The rotation and translation matrix is shown below:
 ![matrix_2](./images/matrix_2.svg)
 
 ![matrix_3](./images/matrix_3.svg)
-Cite from wikepedia - [wikepedia matrix]()
+Cite from wikepedia - [wikepedia matrix](https://en.wikipedia.org/wiki/Rotation_matrix)
 
+In the file 
+- [communication.pde](./communication/communication.pde)
 
 
 ## Problems Found in This Project

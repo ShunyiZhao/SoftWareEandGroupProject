@@ -67,7 +67,7 @@ Our IoT Device is M5 Stack.
 
 ### Web Application
 
--  [Details of web application](Web/README.md)
+- [Details of web application](Web/README.md)
 
 ## <span id="LinkToPart3">Project Evaluation
 Group memebers test the part they made by themselves, and the M5 Stack holder test the whole system.
