@@ -133,6 +133,7 @@ void draw(){
         text(dis_1, 200, 180);
         text(rect_x, 200, 200);
         text(speed_x, 200, 220);
+        text(fdatas[2], 200, 240);
         //rect(rect_x, rect_y, rectHeight, rectWidth);
         //some test line
         //add more test line

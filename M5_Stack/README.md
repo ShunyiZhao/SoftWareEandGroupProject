@@ -47,3 +47,7 @@ In the file
 
 
 ## Problems Found in This Project
+one of the angle increase itself, shown in below image:
+![image_1](./images/image_1.png)
+
+![image_2](./images/image_2.png)
