@@ -91,30 +91,35 @@
 
             <div class="row py-3" id="checkBox">
                 <div class="col-md-12 checkBoxContainer"
-                    style="background-color: #f0a50090;height: 20em;">
+                    style="background-color: #f0a50090;height: 25em;">
                     <p class = "checkBoxTitle" style="color: #005CAF; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 3vw;"> CheckBox</p>
                     <div class = "foodCategory">
                         <header class = "checkBoxTitle"> Fresh Ingredients </header>
-                        <img class = "img-fluid checkBoxImage" src = img/pienapple_food.png alt = "pienapple"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/pienapple_food.png alt = "Pienapple"></img>
                         <input type="checkbox" class = "checkBox" name="item">
-                        <img class = "img-fluid checkBoxImage" src = img/eggplant_food.png alt = "eggplant"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/eggplant_food.png alt = "Eggplant"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
                     <div class = "foodCategory">
                         <header class = "checkBoxTitle"> SeaFood </header>
-                        <img class = "img-fluid checkBoxImage" src = img/fish_food.png alt = "fish"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/fish_food.png alt = "Fish"></img>
                         <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/crab_food.png alt = "crab"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/crab_food.png alt = "Crab"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
                     <div class = "foodCategory">
                         <header class = "checkBoxTitle"> Vegetable </header>
-                        <img class = "img-fluid checkBoxImage" src = img/salad_food.png alt = "salad"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/salad_food.png alt = "Salad"></img>
                         <input type="checkbox" class = "checkBox">
-                        <img class = "img-fluid checkBoxImage" src = img/cheese_food.png alt = "cheese"></img>
+                        <img class = "img-fluid checkBoxImage" src = img/cheese_food.png alt = "Cheese"></img>
                         <input type="checkbox" class = "checkBox">
                     </div>
-                    <button class = "checkBoxButton" type="button"> Submit </button>
+                    <div class="submit d-flex justify-content-end">
+                        <div class="checkBoxInformation alert alert-danger" style="display: none;" role="alert">
+                            Check Box only can choose 2 or 3 items for combine!!
+                        </div>
+                        <button class = "checkBoxButton btn btn-primary" type="button"> Submit </button>
+                    </div>
                 </div>
             </div>
 
