@@ -32,6 +32,13 @@ Due to an unknown problem, the yaw of this sensor increases automaticlly. So alt
 We planned to use the posture angles to transform the accelerations to ground coordinate system. 
 
 The rotation and translation matrix is shown below:
+![matrix_1](./images/matrix_1.svg)
+
+![matrix_2](./images/matrix_2.svg)
+
+![matrix_3](./images/matrix_3.svg)
+Cite from wikepedia - [wikepedia matrix]()
+
 
 
 ## Problems Found in This Project
