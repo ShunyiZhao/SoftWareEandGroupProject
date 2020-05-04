@@ -5,9 +5,9 @@ client.onMessageArrived = function (message)  {
         console.log("chart")
         console.log(temp.main)
         var result=getResult(temp);
-        console.log(result)
-        setPreference(result);
+        //console.log(result)
         setScore(result);
+        setPreference(result);
     }
 }
 
@@ -22,7 +22,8 @@ function getResult(temp){
 function setScore(result){
     var score = result.slice(0,3)
     var max = Math.max(...score)+1
-    var myChart = echarts.init($('#mi-score')[0]);
+    console.log(score)
+    var myChart1 = echarts.init($('#mi-score')[0]);
     var option = 
     {
             title: {
@@ -32,28 +33,32 @@ function setScore(result){
             xAxis: {
                 data: ["score","bonus","combo"]
             },
-            yAxis: {},
+            yAxis: {
+                min: 0,
+                max: max,
+            },
             series: [{
-            name: 'number',
-            type: 'bar',
-            data: score
+                name: 'number',
+                type: 'bar',
+                data: score
             }],
             visualMap: {
+                type: 'continuous',
                 orient: 'horizontal',
                 left: 'center',
                 min: 0,
                 max: max,
                 text: ['High Score', 'Low Score'],
                 // Map the score column to color
-                dimension: 0,
+                dimension: 1,
                 inRange: {
                     color: ['#D7DA8B', '#E15457']
-                }
+                },
             },
             backgroundColor: 'rgba(248,241,230,0.7)'
     
     };
-    myChart.setOption(option);
+    myChart1.setOption(option);
 }
 
 function setPreference(result){
@@ -61,6 +66,7 @@ function setPreference(result){
     result.shift()
     result.shift()
     var max = Math.max(...result)+1
+    console.log(max)
     var myChart = echarts.init($('#mi-chart')[0]);
     var option1 = 
     {
@@ -71,11 +77,14 @@ function setPreference(result){
             xAxis: {
                 data: ["salad","pineapple","fish","virus","crab","eggplant","cheese"]
             },
-            yAxis: {},
+            yAxis: {
+                min: 0,
+                max: max
+            },
             series: [{
-            name: 'number',
-            type: 'bar',
-            data: result
+                name: 'number',
+                type: 'bar',
+                data: result
             }],
             visualMap: {
                 orient: 'horizontal',
@@ -84,7 +93,7 @@ function setPreference(result){
                 max: max,
                 text: ['High Score', 'Low Score'],
                 // Map the score column to color
-                dimension: 0,
+                dimension: 1,
                 inRange: {
                     color: ['#D7DA8B', '#E15457']
                 }

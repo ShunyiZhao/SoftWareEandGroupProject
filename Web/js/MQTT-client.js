@@ -16,8 +16,8 @@ function onConnect() {
     console.log("onConnect_init");
     client.subscribe("/BigEater");
     //test admin pass--will be del after connect with processing
-    //subLogin();
-    subChart();
+    subLogin();
+    //subChart();
 }
 
 // called when the client loses its connection
@@ -73,16 +73,14 @@ function subChart(){
   data = buildMessage("chart",mainMsg)
   message = new Paho.MQTT.Message(data);
   message.destinationName = "/BigEater";
-  message.retained = true;
   client.send(message);
 }
 
 function subLogin(){
-  var mainMsg = buildLoginJson("mz19460@bristol.ac.uk","123")
+  var mainMsg = buildLoginJson("mz19460@bristol.ac.uk","1234567")
   data = buildMessage("admin",mainMsg)
   message = new Paho.MQTT.Message(data);
   message.destinationName = "/BigEater";
-  message.retained = true;
   client.send(message);
 }
 
