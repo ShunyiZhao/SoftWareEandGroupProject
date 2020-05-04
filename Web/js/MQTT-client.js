@@ -28,8 +28,26 @@ function checkTickedItems () {
       }
   }
   onSubmit(JSON.stringify(Text));
-  location.reload();
+  loadURLWithTip("./index.html#test1", "#checkBox", true, Text);
 }
+
+function loadURLWithTip(url, panel, tip, choseItems){
+	$.ajax({
+		url:url,
+    cache:false,
+		success: function(){
+      location.reload();
+  },
+		error: function() {
+      alert("Failed !! Please try again !!");
+    }
+	}).done(function(){
+		if(tip == true){
+			alert("You have chosen " + choseItems ,false);
+		}
+	});
+}
+
 
 // called when the client connects
 function onSubmit(payload) {
@@ -65,7 +83,6 @@ function onConnectionLost(responseObject) {
 
 // called when a message arrives
 function onMessageArrived(message) {
-  console.log("Message is " + message);
   console.log("onMessageArrived:"+message.payloadString);
 }
 
