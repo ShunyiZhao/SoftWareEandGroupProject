@@ -7,7 +7,6 @@ class Adapter implements MQTTListener {
   
     public String message = null;
     public List<String> userChoice = new ArrayList<String>();
-    private int cnt = 0;
   
     private void getUserChoice() {
         int left = -1;
@@ -17,10 +16,10 @@ class Adapter implements MQTTListener {
             if (message.charAt(i) == ']') { right = i; }
             if (left != -1 && right != -1) { break; }
         }
-        //if (left == -1 || right == -1) {
-        //    client.publish("/yiduzhiren", printErrorMessage("Lack of brackets"));
-        //    return;
-        //}
+        if (left == -1 || right == -1) {
+            //client.publish("/yiduzhiren", printErrorMessage("Lack of brackets"));
+            return;
+        }
         setChoiceList(left, right);
         //if (userChoice.size() < 2) {
         //    client.publish("/yiduzhiren", printErrorMessage("Too few arguments"));
@@ -55,26 +54,23 @@ class Adapter implements MQTTListener {
         }
     }
   
-    private String printErrorMessage(String info) {
-        JSONObject json = new JSONObject();
-        json.setString("datatype", "error");
-        json.setString("main", info);
-        return json.toString();
-    }
+    //private String printErrorMessage(String info) {
+    //    JSONObject json = new JSONObject();
+    //    json.setString("datatype", "error");
+    //    json.setString("main", info);
+    //    return json.toString();
+    //}
   
     void clientConnected() {
       println("client connected");
 
-      client.subscribe("/yiduzhiren");
+      client.subscribe("/BigEater");
     }
 
     void messageReceived(String topic, byte[] payload) {
       println("new message: " + topic + " - " + new String(payload));
       message = new String(payload);
-      if (cnt == 0) {
-          getUserChoice();
-          cnt++;
-      }
+      getUserChoice();
     }
 
     void connectionLost() {

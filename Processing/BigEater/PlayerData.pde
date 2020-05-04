@@ -88,25 +88,23 @@ class PlayerData {
     }
     
     public void saveUserData() {
-        JSONObject json = new JSONObject();
-        json.setString("datatype", "chart");
-        
         StringBuilder sb = new StringBuilder();
-        sb.append("{\"score\": " + score + ", ");
-        sb.append("\"bonus\": " + bonus + ", ");
-        sb.append("\"combo\": " + combo + ", ");
+        sb.append("{\"datatype\":\"chart\",\"main\"::");
+        sb.append("{\"score\":" + score + ",");
+        sb.append("\"bonus\":" + bonus + ",");
+        sb.append("\"combo\":" + combo + ",");
         int cnt = 0;
         for (String attribute : count.keySet()) {
             if ((cnt++) != 6) {
-                sb.append("\"" + attribute + "\": " + count.get(attribute) + ", ");
+                sb.append("\"" + attribute + "\":" + count.get(attribute) + ",");
             }
             else {
-                sb.append("\"" + attribute + "\": " + count.get(attribute) + "}");
+                sb.append("\"" + attribute + "\":" + count.get(attribute) + "}");
             }
         }
-        json.setString("main", sb.toString());
+        sb.append("}");
         
-        client.publish("/yiduzhiren", processMessageToBePublished(json.toString()));
+        client.publish("/BigEater", processMessageToBePublished(sb.toString()), 0, true);
     }
     
     
