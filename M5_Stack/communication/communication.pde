@@ -127,12 +127,15 @@ void draw(){
             arrCharacter.get(0).drawCharacter();
             arrCharacter.get(1).drawCharacter();
         }
+        text("InputState:", 70, 120);
         text(inputState, 200, 120);
+        text("Acceleration:", 70, 140);
         text(finalAccs[0], 200, 140);
-        text(fdatas[3], 200, 160);
         text(dis_1, 200, 180);
         text(rect_x, 200, 200);
         text(speed_x, 200, 220);
+        text("The Yaw:", 70, 240);
+        text(fdatas[2], 200, 240);
         //rect(rect_x, rect_y, rectHeight, rectWidth);
         //some test line
         //add more test line
