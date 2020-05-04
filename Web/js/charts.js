@@ -1,22 +1,40 @@
-var title=new Array();
+/* client.onMessageArrived = function (message) {
+    console.log("Theme: "+message.destinationName);
+    let msgObj = JSON.parse(message.payloadString);
+    console.log(msgObj.datatype+"  "+msgObj.main['username']+msgObj.main['password']);
+}
+
+client.connect({onSuccess: function() {
+    //submit user information when the button is clicked
+    let messageBody = {
+        username: username.value,
+        password: password.value,
+        status: 2
+    };
+    let message = buildMessage('web_login', messageBody);
+        client.send(message);
+}}); */
+
 var result=new Array();
-function getResult(result){
+function getResult(path,result){
     $.ajax({
     type:"GET",
-    url: "json/chart.json",
+    url: path,
     dataType: "json",
     async: false,
     success:function(data){
-            $.each(data,function(name,value) {
+            result.splice(0,result.length);
+            $.each(data.main,function(name,value) {
                 result.push(value)
             }); 
         }
-    });
-    result.shift()
+    }); 
     return result;
 }
+
 $('#chart').click(function(){
-    result = getResult(result);
+    result = getResult("json/chart.json",result);
+    result.shift()
     console.log(result)
     var myChart = echarts.init($('#mi-chart')[0]);
     var option1 = 
@@ -50,4 +68,8 @@ $('#chart').click(function(){
 
     };
     myChart.setOption(option1);
+});
+
+$('#note').click(function(){
+    console.log(111)
 });
