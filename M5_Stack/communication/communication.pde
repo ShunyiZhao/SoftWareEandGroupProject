@@ -58,7 +58,7 @@ void draw(){
         datas[0] = datas[0].substring(1, datas[0].length());
         datas[5] = datas[5].substring(0, datas[5].length() - 1);
         //println(datas[5]);
-        //println(inputString);
+        println(inputString);
         float[] fdatas = {0, 0, 0, 0, 0, 0};
         fdatas[0] = Float.parseFloat(datas[0]);
         fdatas[1] = Float.parseFloat(datas[1]);

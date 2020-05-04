@@ -14,13 +14,10 @@ client.connect({onSuccess:onConnect});
 function onConnect() {
     // Once a connection has been made report.
     console.log("onConnect_init");
+    client.subscribe("/BigEater");
     //test admin pass--will be del after connect with processing
-    client.subscribe("Big Eater");
-    var mainMsg = buildLoginJson("mz19460@bristol.ac.uk","123")
-    data = buildMessage("admin",mainMsg)
-    message = new Paho.MQTT.Message(data);
-    message.destinationName = "Big Eater";
-    client.send(message);
+    //subLogin();
+    subChart();
 }
 
 // called when the client loses its connection
@@ -55,11 +52,52 @@ function buildMessage(datatype,main) {
   return data;
 }
 
+function requireStop(payload){
+  client.subscribe("/BigEater");
+  message = new Paho.MQTT.Message(payload);
+  message.destinationName = "/BigEater";
+  client.send(message);
+}
+
 //This is test function for building json type
 function buildLoginJson(name,password){
   let main = {
     username: name,
     password: password
+  };
+  return main;
+}
+
+function subChart(){
+  var mainMsg = buildChartJson();
+  data = buildMessage("chart",mainMsg)
+  message = new Paho.MQTT.Message(data);
+  message.destinationName = "/BigEater";
+  message.retained = true;
+  client.send(message);
+}
+
+function subLogin(){
+  var mainMsg = buildLoginJson("mz19460@bristol.ac.uk","123")
+  data = buildMessage("admin",mainMsg)
+  message = new Paho.MQTT.Message(data);
+  message.destinationName = "/BigEater";
+  message.retained = true;
+  client.send(message);
+}
+
+function buildChartJson(){
+  let main = {
+      score: 3,
+      bonus:2,
+      combo:5,
+      salad: 1,
+      pineapple: 0,
+      fish: 2,
+      virus: 3,
+      crab: 10,
+      eggplant: 0,
+      cheese: 0
   };
   return main;
 }
