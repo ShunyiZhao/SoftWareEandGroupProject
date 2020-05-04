@@ -13,31 +13,13 @@ function checkTickedItems () {
           var getAltName = getImgAltTag[j].getAttribute("alt");
           if (reviewCheckBox[j].checked == true) {
               Text.push(getAltName);
+              reviewCheckBox[j].checked = false
           }
       }
   }
   var data = buildMessage("checkbox",Text)
   onSubmit(data);
-  loadURLWithTip("./index.html#test1", "#checkBox", true, Text);
 }
-
-function loadURLWithTip(url, panel, tip, choseItems){
-	$.ajax({
-		url:url,
-    cache:false,
-		success: function(){
-      location.reload();
-  },
-		error: function() {
-      alert("Failed !! Please try again !!");
-    }
-	}).done(function(){
-		if(tip == true){
-			alert("You have chosen " + choseItems ,false);
-		}
-	});
-}
-
 
 // called when the client connects
 function onSubmit(payload) {
@@ -47,13 +29,4 @@ function onSubmit(payload) {
   message = new Paho.MQTT.Message(payload);
   message.destinationName = "Big Eater";
   client.send(message);
-}
-
-function updateTable(payload){
-	var tr;
-	tr = $('<tr/>');
-	tr.append("<td>" + json[0].order_id + "</td>");
-	tr.append("<td>" + json[1].status + "</td>");
-	tr.append("<td>" + json[4].delivery_address + "</td>");
-	$('table').append(tr);
 }
