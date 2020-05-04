@@ -26,10 +26,10 @@ function clickPrevButton () {
 
 function changeTextImg (getValue) {
     if (getValue == 0) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "In this game, you have to use M5 Stack in order to play the game. You are able to use M5 Stack to control the (Name's) movement and to shoot the \"flying gift\".";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "In this game, you have to use M5 Stack in order to play the game. You are able to use M5 Stack to control the character's movement and to shoot the \"flying gift\".";
     }
     else if (getValue == 1) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "You are able to control (Name) to move to left (right) with pressing the left (right) button of M5 Stack.";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "You are able to control the character to move to left (right) with pressing the left (right) button of M5 Stack.";
     }
     else if (getValue == 2) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "Eat as much as you can in order to increase your points. Each food do have a corresponding point, your points will not be deduced if you miss the food.";
