@@ -6,19 +6,32 @@ The Ardunio API webpage of M5 Stack:
 
 [M5 Stack Ardunio API](https://docs.m5stack.com/#/en/arduino/arduino_api)
 
-We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is sent to send button signal.
+We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is set to send button signal. 
 
 ## M5 Stack - Serial Communication
 
-A simple function called Serial.print() is used to send the string above.
+A simple function called Serial.print() is used to send the string.
 
 Communication Protocol:
-> add some characters at the end of string
+> add a special letter at the end of string, and then use this letter to read the whole line in processing programme.
+> split the string by the space character.
+
+These string will be sent to the USB buffer, so perhaps some commands will accumulate in the buffer.
 
 ## Processing - Serial Communication
 
-We use a function caller xxx to listen the string sent by M5 Stack.
+We use a function Class Serial.readStringUntil() to listen the string sent by M5 Stack. In the above string, the letter 'q' is the symbol 
+of the end of one commmand.
 
 ## Processing - Character Control
 
-Due to an unknown problem, the yaw angle of this sensor added automaticlly. So although We have complete a series of simple version codes of matrix computation, we can not ues them to calculate the true acceleration of the movements. So We used accelerations caused by angles and gravity to control the characters in processing.
+Due to an unknown problem, the yaw of this sensor increases automaticlly. So although We have complete a series of simple version codes of matrix computation, we can not ues them to calculate the true acceleration of the movements. So We used accelerations caused by angles and gravity to control the characters in processing.
+
+### Space Coordinate transformation
+
+We planned to use the posture angles to transform the accelerations to ground coordinate system. 
+
+The rotation and translation matrix is shown below:
+
+
+## Problems Found in This Project
