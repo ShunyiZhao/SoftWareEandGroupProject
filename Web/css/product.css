@@ -158,10 +158,16 @@ body {
   }
 
   .checkBoxButton {
-    float: right;
     margin-top: 3%;
     margin-right: 2%;
     margin-bottom: 2%;
+  }
+
+  .checkBoxInformation {
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    text-align: center;
   }
 
 
