@@ -29,11 +29,9 @@ $("li").click(function() {
     var val=$(this).attr("id");
     if(val=="chart"){
         $('#mi-chart').show();
-        $('#mi-note').hide();
-        $('#mi-account').hide();
+        $('#mi-score').hide();
     }else if(val=="note"){
-        $('#mi-note').show();
-        $('#mi-account').hide();
+        $('#mi-score').show();
         $('#mi-chart').hide();
     }
 })

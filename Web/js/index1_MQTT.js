@@ -17,16 +17,22 @@ function checkTickedItems () {
           }
       }
   }
-  var data = buildMessage("checkbox",Text)
-  onSubmit(data);
+  console.log(Text.length)
+  if(Text.length>1&&Text.length<4){
+    $(".checkBoxInformation").hide();
+    var data = buildMessage("checkbox",Text)
+    onSubmit(data);
+    return;
+  }
+  $(".checkBoxInformation").show();
 }
 
 // called when the client connects
 function onSubmit(payload) {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onSubmit");
-  client.subscribe("Big Eater");
+  client.subscribe("/BigEater");
   message = new Paho.MQTT.Message(payload);
-  message.destinationName = "Big Eater";
+  message.destinationName = "/BigEater";
   client.send(message);
 }

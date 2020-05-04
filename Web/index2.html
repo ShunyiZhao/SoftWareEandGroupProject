@@ -34,11 +34,11 @@
     <article id="setHeight">
         <div class="float-left col-lg-2 col-md-2 col-sm-2 p-0 mi-menu bg-primary pt-5">
             <ul class="navbar-nav">
-                <li class="mi-item nav-item pl-2" id="note">
-                    <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">User Analysis</span></a>
-                </li>
                 <li class="mi-item nav-item pl-2" id="chart">
                     <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">User Preference</span></a>
+                </li>
+                <li class="mi-item nav-item pl-2" id="note">
+                    <a class="nav-link text-white p-2" href="#"><i class="fa fa-book"></i><span class="pl-1">User Score</span></a>
                 </li>
             </ul>
         </div>
@@ -52,8 +52,8 @@
                 </div>
             </div>
             <div class="p-2 pl-3" id="mi-page">
-                <div id="mi-note" style="display: block;"></div>
-                <div id="mi-chart" style="display: none;"></div>
+                <div id="mi-chart" style="display: block;"></div>
+                <div id="mi-score" style="display: none;"></div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -63,7 +63,6 @@
     </footer>
 </body>
 <script type="text/javascript" src="js/MQTT-client.js"></script>
-<!-- <script type="text/javascript"  src="/js/login_connection.js"></script> -->
 <script type="text/javascript" src="js/init.js"></script>
-<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/charts_MQTT.js"></script>
 </html>
