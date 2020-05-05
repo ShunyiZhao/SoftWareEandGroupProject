@@ -9,69 +9,15 @@ client.onMessageArrived = onMessageArrived;
 // connect the client
 client.connect({onSuccess:onConnect});
 
-var checkBoxContainer = document.getElementsByClassName('checkBoxContainer')[0];
-var copyCheckBoxContainer = checkBoxContainer.cloneNode();
-var checkBoxButton = checkBoxContainer.getElementsByClassName("checkBoxButton")[0];
-checkBoxButton.addEventListener('click', checkTickedItems);
-
-function checkTickedItems () {
-  let Text = [];
-  var getFoodCategory = checkBoxContainer.getElementsByClassName("foodCategory");
-  for (var i = 0; i < getFoodCategory.length; i++) {
-      var reviewCheckBox = getFoodCategory[i].getElementsByClassName("checkBox")
-      var getImgAltTag = getFoodCategory[i].getElementsByClassName("checkBoxImage");
-      for (var j = 0; j < reviewCheckBox.length; j++) {
-          var getAltName = getImgAltTag[j].getAttribute("alt");
-          if (reviewCheckBox[j].checked == true) {
-              Text.push(getAltName);
-          }
-      }
-  }
-  onSubmit(JSON.stringify(Text));
-  loadURLWithTip("./index.html#test1", "#checkBox", true, Text);
-}
-
-function loadURLWithTip(url, panel, tip, choseItems){
-	$.ajax({
-		url:url,
-    cache:false,
-		success: function(){
-      location.reload();
-  },
-		error: function() {
-      alert("Failed !! Please try again !!");
-    }
-	}).done(function(){
-		if(tip == true){
-			alert("You have chosen " + choseItems ,false);
-		}
-	});
-}
-
-
-// called when the client connects
-function onSubmit(payload) {
-  // Once a connection has been made, make a subscription and send a message.
-  console.log("onSubmit");
-  client.subscribe("Big Eater");
-  message = new Paho.MQTT.Message(payload);
-  message.destinationName = "Big Eater";
-  client.send(message);
-}
-
-function updateTable(payload){
-	var tr;
-	tr = $('<tr/>');
-	tr.append("<td>" + json[0].order_id + "</td>");
-	tr.append("<td>" + json[1].status + "</td>");
-	tr.append("<td>" + json[4].delivery_address + "</td>");
-	$('table').append(tr);
-}
 
 // called when the client connects
 function onConnect() {
-  // Once a connection has been made report.
-  console.log("Connected");
+    // Once a connection has been made report.
+    console.log("onConnect_init");
+    client.subscribe("/BigEater");
+    //test admin pass--will be del after connect with processing
+    subLogin();
+    //subChart();
 }
 
 // called when the client loses its connection
@@ -88,11 +34,68 @@ function onMessageArrived(message) {
 
 // called to generate the IDs
 function makeid(length) {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+function buildMessage(datatype,main) {
+  let dataObj = {
+      datatype: datatype,
+      main:main
+  };
+  let data = JSON.stringify(dataObj);
+  return data;
+}
+
+function requireStop(payload){
+  client.subscribe("/BigEater");
+  message = new Paho.MQTT.Message(payload);
+  message.destinationName = "/BigEater";
+  client.send(message);
+}
+
+//This is test function for building json type
+function buildLoginJson(name,password){
+  let main = {
+    username: name,
+    password: password
+  };
+  return main;
+}
+
+function subChart(){
+  var mainMsg = buildChartJson();
+  data = buildMessage("chart",mainMsg)
+  message = new Paho.MQTT.Message(data);
+  message.destinationName = "/BigEater";
+  client.send(message);
+}
+
+function subLogin(){
+  var mainMsg = buildLoginJson("mz19460@bristol.ac.uk","1234567")
+  data = buildMessage("admin",mainMsg)
+  message = new Paho.MQTT.Message(data);
+  message.destinationName = "/BigEater";
+  client.send(message);
+}
+
+function buildChartJson(){
+  let main = {
+      score: 3,
+      bonus:2,
+      combo:5,
+      salad: 1,
+      pineapple: 0,
+      fish: 2,
+      virus: 3,
+      crab: 10,
+      eggplant: 0,
+      cheese: 0
+  };
+  return main;
 }

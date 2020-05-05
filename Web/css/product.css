@@ -140,7 +140,7 @@ body {
     display: inline-block;
     height: auto;
     width: 30%;
-    background-color: skyblue;
+    background-color: #58b2dce3;
     margin-left: 2.5%;
   }
 
@@ -158,10 +158,16 @@ body {
   }
 
   .checkBoxButton {
-    float: right;
     margin-top: 3%;
     margin-right: 2%;
     margin-bottom: 2%;
+  }
+
+  .checkBoxInformation {
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    text-align: center;
   }
 
 
