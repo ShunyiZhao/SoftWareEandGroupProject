@@ -8,7 +8,7 @@ Processing in Java is used as the main development tool in our BigEater game, ha
 - Data Statistics
 - Data Communication with Web Application
 
-This folder consists of two versions of the BigEater game, where names of sub-folders have shown the type of game controller. In the mouse-controlled version, the left-top corner of the screen becomes the original point. Moves of the character are computed by positions of the mouse. It is normally an easier version of the game because of the flexibility and familiarity of the mouse. Introduction of the M5Stack-controlled version can be seen at [M5_Stack_Control_Instruction](..\M5_Stack\README.md). It is considered as an advanced version by game developers. We highly recommend users to get familiar with the game logic through the former one. 
+This folder consists of two versions of the BigEater game, where names of sub-folders have shown the type of game controller. In the mouse-controlled version, the left-top corner of the screen becomes the original point. Moves of the character are computed by positions of the mouse. It is normally an easier version of the game because of the flexibility and familiarity of the mouse. Introduction of the M5Stack-controlled version can be seen at [M5_Stack_Control_Instruction](../M5_Stack/README.md). It is considered as an advanced version by game developers. We highly recommend users to get familiar with the game logic through the former one. 
 
 
 ## Developers
@@ -25,7 +25,7 @@ Scores for each objective are as follows:
 - combo: When the combo is reached, the player will get nine extra points as a reward.
 
 ## Code Structure
-This introduction will mainly focus on the implementation of the BigEater game. Codes that realise the work of communicating with M5-Stack will be ignored. For more details of how M5-Stack works, please refer to  [M5_Stack_Control_Instruction](..\M5_Stack\README.md).
+This introduction will mainly focus on the implementation of the BigEater game. Codes that realise the work of communicating with M5-Stack will be ignored. For more details of how M5-Stack works, please refer to  [M5_Stack_Control_Instruction](../M5_Stack/README.md).
 
 All used classes of the game are following the structure below:
 ```
@@ -156,7 +156,7 @@ A: The exception is thrown because of the loss of valid reference caused by re-i
 **Q: Functions of the project are unclear because of the lack of face-to-face talk.**
 A: Due to the pandemic of COVID-19, we lost opportunities of joining formal workshops, causing the uncertainty on the structures and functions of the whole group work. The solution is to increase the frequency of online meeting via Skype-for-Business.  
 
-## Limitation
+## Limitations
 
 **1. Code Quality**  
 There is still a lot of room for improving code quality. Because of the particularity of Processing, convenience appears with troubles. The draw() method is not friendly for variable passing, causing a large number of tricky issues. We have to use flags in boolean type to mitigate the effect brought by repeatedly calling the same method, which reduces the readability and dryness of the code.
