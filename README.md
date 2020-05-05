@@ -65,6 +65,8 @@ Our IoT Device is M5 Stack.
 
 ### Desktop Application - Processing
 
+- [Details of M5 Stack](Processing/README.md)
+
 ### Web Application
 
 - [Details of web application](Web/README.md)
