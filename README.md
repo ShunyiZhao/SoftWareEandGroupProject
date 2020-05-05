@@ -19,7 +19,7 @@
   
   Gaming is a traditional entertainment medium and live game broadcast is rising and becoming quite popular in recent years, we would like to combine them in our software and we think that it is a new and interesting idea to let watchers interact with gamers. Additionally, data analysts can obtain the processed data to continuously perfect the gaming system.  
 
-  Kehan Du, Rao Hu, Alex Lee, Ben Jin, Yuxuan Qiu and Shunyi Zhao compose our team.
+  Kehan Du, Rao Hu, HoCheung Lee, Ben Jin, Yuxuan Qiu and Shunyi Zhao compose our team.
 
 ## <span id="LinkToPart1">System Design
 
@@ -42,7 +42,7 @@ The structure of our project is shown as update *fig.2*:
 
 Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder,
 Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application.
-Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and Alex Lee 
+Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee 
 designed the layout of our website and developed the web pages. All group members are collaborators of this
 repository. They could push works they done to the dev branch of this repository directly without review of
 changes in file, but a pull request from dev branch to master branch is needed. We held an online at least
@@ -64,6 +64,8 @@ Our IoT Device is M5 Stack.
 - [Details of M5 Stack](M5_Stack/README.md)
 
 ### Desktop Application - Processing
+
+- [Details of Processing](Processing/README.md)
 
 ### Web Application
 

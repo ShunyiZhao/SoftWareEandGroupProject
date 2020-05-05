@@ -11,11 +11,11 @@ We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler 
 ## M5 Stack - Serial Communication
 
 A simple function called Serial.print() is used to send the string.
-The format of this this string is shown below:
+The format of this string is shown below:
 
 ![command string](./images/image_4.png)
 
-In this string, the letter 'b' represent the button of the Stack, if the first button is pressed, this letter will be changed to 'a',
+In this string, the letter 'b' represents the button of the Stack. If the first button is pressed, this letter will be changed to 'a',
 shown below:
 
 ![button press](./images/image_5.png)
@@ -39,9 +39,9 @@ processing programme will wait to this connection, and print "loop" to the comma
 
 ## Processing - Character Control
 
-Due to an unknown problem, the yaw of this sensor increases automaticlly. So although We have complete a series of simple version codes of matrix computation, we can not ues them to calculate the true acceleration of the movements. So We used accelerations caused by angles and gravity to control the characters in processing.
+Due to an unknown problem, the yaw of this sensor increases automaticlly. Although we have completed a series of simple version codes of matrix computation, we can not use them to calculate the true acceleration of the movements. So we used accelerations caused by angles and gravity to control the character in processing.
 
-I use a rectangle to simulate the character, and a circle is uesd to represent the pointer.
+We use a rectangle to simulate the character, and a circle is uesd to represent the pointer.
 
 The inital Interface of this communication program is shown below:
 
