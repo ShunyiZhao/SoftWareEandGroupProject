@@ -164,7 +164,7 @@ There is still a lot of room for improving code quality. Because of the particul
 **2. System Design**  
 The design of code structure can be further optimised. In current program, the computer needs to do a lot of calculations at the same time in one frame. Therefore, situations of delay and crash occur at a medium frequency. By making good use of the infinite draw() method, more work can be parallel done.
 
-**3. Communication**
+**3. Communication**  
 In the current stage, communication with other applications stays at a low level. String is not an effective data structure to transfer information. Serialisation may become a better message carrier, for the higher capacity ability brought by its unique encoding method. A real-time system is also an option for improvement, where the message received from MQTT client can be processed immediately and affect the game in progress. It will improve the complexity of the game system and bring a better gaming experience for players. 
 
 
