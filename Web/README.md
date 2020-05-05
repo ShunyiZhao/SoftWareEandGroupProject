@@ -20,14 +20,14 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
   
 2. Users
    * Users can know the background of the game (in the part of "Intro Story")
-      ##### Used a comic style to display the background of story
+      > * Used a comic style to display the background of story
    * Users are able to choose their favorite food that appear in the game (in the part of "CheckBox")
-      ##### Used a check box style allow user to select the food they like and also, user can submit and send the data via  MQTT in JSON format
+      > * Used a check box style allow user to select the food they like and also, user can submit and send the data via  MQTT in JSON format
    * Users able to join the game (in the part of "Game")
    * Users can know the instructions of the game (in the part of "Instruction")
-      ##### Used slideshow style to display the instruction, the text below the picture will be moved with the picture simultaneously
+      > * Used slideshow style to display the instruction, the text below the picture will be moved with the picture simultaneously
    * User can learn some health tips (in the part of "Health Tips")
-      ##### Used flipcard style to display the healthy tip for each food
+      > * Used flipcard style to display the healthy tip for each food
   
 ## Application Structure
  ```
