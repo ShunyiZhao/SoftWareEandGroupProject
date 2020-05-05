@@ -153,7 +153,7 @@ A: The problem is caused by the floating rule of Processing. In this case, only 
 **Q: Runtime Exception is thrown when connecting to HiveMQ.**  
 A: The exception is thrown because of the loss of valid reference caused by re-initialising and reconnecting MQTT client within the publishMessage() method. The solution is to move the initialisation routines to the global scope so that the MQTT client is persistent. 
 
-**Q: Functions of the project are unclear because of the lack of face-to-face talk.**
+**Q: Functions of the project are unclear because of the lack of face-to-face talk.**  
 A: Due to the pandemic of COVID-19, we lost opportunities of joining formal workshops, causing the uncertainty on the structures and functions of the whole group work. The solution is to increase the frequency of online meeting via Skype-for-Business.  
 
 ## Limitations
