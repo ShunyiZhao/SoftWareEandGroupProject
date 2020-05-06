@@ -124,9 +124,9 @@ One of the angle increase or decrease itself, shown in images below (The M5 Stac
 
 After about 10 seconds, it changed from about -163 to -172, lebeled with title "The Yaw" in these two pictures.
 
-We thought the reason of this problem is some errors of the sensors in Stack. Thus, 
+We thought some errors of lead to this problem. Thus, we gave up this transformation. But the codes were remained in files.
 
 ### Limitations
 1. Sometimes, the serial communication would slow the processing application.
-2. The communication would accumulate at the buffer of serial, it would lead the delay of controlling.
-3. A rectangle is placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which makes user difficult to see the rectangle.
+2. The communication would accumulate at the buffer of serial port, and it would lead to the delay of controlling.
+3. A rectangle is placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which makes user difficult to see it.
