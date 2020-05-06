@@ -38,10 +38,10 @@ In the beginning, we are supposed to design a body sensing version of FRUIT NINJ
 the game would track the movement of M5 stack and cut fruits in the game.The paper prototype and processing prototype is in the folder with path ./example/example_1
 
 ![main GUI](./example/example_1/image_0.jpg)
-
 Then, we found that maybe this game is improper as it is not our own idea and therefore, we brought the idea to build a   
 really open game platform. Any game developers can register the accounts on our platform and are freely allowed to upload 
-their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has  become quite popular in recent years.
+their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has become quite popular in recent years.
+
 However, through rounds of discussion and with the problems we met in the designing process, we found that it is too 
 difficult for us to realize such a platform. Hence, we went back to our original idea and designed a game BIGEATER.
 There are five conveyor belts for food. The character stands at the bottom of the conveyor belt and can only move left and 
@@ -124,7 +124,8 @@ Although our analysis is simple currently, we would love to develop more advance
 data. Then, the data analysis system can be more significant and we hope it could provide useful information for analysts who 
 work in game industry or health management industry.
 ## <span id="LinkToPart3">Project Evaluation
-Group memebers test the part they made by themselves, and the M5 Stack holder test the whole system.
+Group memebers test the part they made by themselves separately, and the M5 Stack holder test the whole system.
+
 
 ### Test Methodology
 

@@ -1,6 +1,6 @@
 # Web Application
 
-Our website is mainly focusing on the **description of the game**, playing a **interact with desktop game** and providing a **visualized data** about analyzing player‘s behavior and preference.
+Our website is mainly focusing on the **description of the game**, playing a **interaction with desktop game** and providing a **visualized data** about analyzing player‘s behavior and preference.
 
 The entire web application partly relies on the Bootstrap4 layout and references some font Awesome icons
 
@@ -8,9 +8,9 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
 
 ## Authors
 
-**HoCheung Lee**
+**@ HoCheung Lee (ja19025)**
 
-**Kehan Du**
+**@ Kehan Du (mz19460)**
 
 ## Function
 
@@ -22,7 +22,7 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
    * Users can know the background of the game (in the part of "Intro Story")
       > * Used a comic style to display the background of story
    * Users are able to choose their favorite food that appear in the game (in the part of "CheckBox")
-      > * Used a check box style allow user to select the food they like and also, user can submit and send the data via  MQTT in JSON format
+      > * Used a check box style allow interactive players to select the food they like and also, they can submit and send the data via  MQTT in JSON format, which the food they chose will appear in the game
    * Users able to join the game (in the part of "Game")
    * Users can know the instructions of the game (in the part of "Instruction")
       > * Used slideshow style to display the instruction, the text below the picture will be moved with the picture simultaneously
@@ -63,6 +63,7 @@ The files described in the structure are original parts, and other unmentioned f
    "main":["Pienapple","Crab","Salad"]
 }
 ```
+The above json format is an example of the list of food, which are chosen by the interactive players in the Web Page, send from the **check box (website)** to **the desktop (processing)**. The food that have been chosen will appear in the game. And also, these data will also be transferred to the back-end analysis, which analysing the player's food preference.
 
 ```json
 {
@@ -106,11 +107,11 @@ After the player ends the game, the desktop application will send the player's p
 
 2.Structural integrity
 
-- We tried to build a game background management system. due to the small size of the game, the structure of the parameters is not complex, so the collection and visualization of user information is relatively simple.
+- We tried to build a game background management system. Due to the small size of the game, the structure of the parameters is not complex, so the collection and visualization of user information is relatively simple.
 
 - The administrator's account cannot be registered.
 
-- For the part of Check Box, we haven't restricted only the player could submit the list of food that he/she chose. Thus, it will be a problem that everyone can submit the form.
+- For the part of Check Box, we have restricted to receive the first and the last submission of the list of food that the interactive player chose, if there are mutliple submissions.
 
 3.Design maturity
 
