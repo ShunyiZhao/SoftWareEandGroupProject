@@ -129,5 +129,4 @@ We thought the reason of this problem is some errors of the sensors in Stack. Th
 ### Limitations
 1. Sometimes, the serial communication would slow the processing application.
 2. The communication would accumulate at the buffer of serial, it would lead the delay of controlling.
-3. A rectangle are placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which
-make user difficult to see the rectangle.
+3. A rectangle is placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which makes user difficult to see the rectangle.
