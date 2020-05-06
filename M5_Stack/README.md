@@ -99,8 +99,7 @@ The programme will switch between this two states. In state1, the rectangle will
 ![circle state](./images/image_3.png)
 
 ### Space Coordinate transformation
-The main works are in the file called [communication.pde](./communication/communication.pde) and [simpleMat.pde](./communication/simpleMat.pde)
-
+The main works of coordinate transformation are placed in the file called [communication.pde](./communication/communication.pde) and [simpleMat.pde](./communication/simpleMat.pde)
 
 We planned to use the posture angles to transform the accelerations to ground coordinate system. 
 
@@ -117,10 +116,18 @@ The video below shows the game which combine the Desktop Application and M5 Stac
 [The link to video](./piece.mp4)
 
 ## <span id="limitations">Problems and Limitations
-One of the angle increase or decrease itself, shown in images below:
+One of the angle increase or decrease itself, shown in images below (The M5 Stack are put on the desk):
 
 ![image_1](./images/image_1.png)
 
 ![image_2](./images/image_2.png)
 
-After about 10 seconds, it changed from -163 to -172.
+After about 10 seconds, it changed from about -163 to -172, lebeled with title "The Yaw" in these two pictures.
+
+We thought the reason of this problem is some errors of the sensors in Stack. Thus, 
+
+### Limitations
+1. Sometimes, the serial communication would slow the processing application.
+2. The communication would accumulate at the buffer of serial, it would lead the delay of controlling.
+3. A rectangle are placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which
+make user difficult to see the rectangle.
