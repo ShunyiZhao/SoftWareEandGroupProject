@@ -8,6 +8,9 @@
  * [Character Control](#control)
  * [Problems & limitations](#limitations)
 
+## Developer
+Shunyi Zhao (vt19049)
+
 ## <span id="structure">Folder Structure
 
 The M5_stack folder are following the structure below:
