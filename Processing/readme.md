@@ -1,4 +1,0 @@
-# TEAM6 BIG EATER - Processing
-1. Codes in this file are meant to load game pages and to realize game rules. Loaded game pages include loading page and ending page, background page and objects moving pages when user playing, the main character, foods(current foods include cheese, crab, eggplant, fish, pineapple, salad, water, and hamburger), some fitness equipment, bomb, and virus.
-2. Game rules include how the foods, bombs, and viruses move from top to bottom, how the main character moves from left to right and vice verse in the bottom of the page and how he eats foods to get scores, however, if the main character touches the bombs or viruses accidentally then he will lose one life(he has 10 lives in total).
-3. Later, we will add more functions, for example, the main character can get gift boxes to get a bonus, and he can get a higher score if he eats food according to the provided food set. Stay tuned for updates.

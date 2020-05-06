@@ -1,0 +1,13 @@
+{
+    "datatype":"web_chart",
+    "main":{
+        "score": 3,
+        "salad": 1,
+        "pineapple": 0,
+        "fish": 2,
+        "virus": 3,
+        "crab": 0,
+        "eggplant": 0,
+        "cheese": 0
+    }
+}

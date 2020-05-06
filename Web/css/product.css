@@ -62,9 +62,6 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*overflow: auto;
-    height: 60%;
-    width: 70%;*/
     height: 40%;
     width: 50%;
   }
@@ -93,25 +90,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
-
   }
 
   .flipCard {
     background-color: transparent;
     width:300px;
     height: 300px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
-    margin-left: 2%;
+    border: 1px solid #f1f1f1;
     margin-top: 1%;
     margin-bottom: 1%;
+    margin-left: 2%;
   }
 
   .flipcardPosition {
-    position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
+    position: relative;
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
@@ -121,16 +116,59 @@ body {
   }
   
   /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+  .frontFlipCard, .backFlipCard {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
   
   /* Style the back side */
-  .flip-card-back {
+  .backFlipCard {
+    padding-left: 5%;
+    text-align: left;
     color: rgb(23, 22, 22);
     transform: rotateY(180deg);
   }
+
+  /* Check Box */
+  .checkBoxContainer {
+    overflow: auto;
+  }
+
+  .foodCategory {
+    display: inline-block;
+    height: auto;
+    width: 30%;
+    background-color: #58b2dce3;
+    margin-left: 2.5%;
+  }
+
+  .checkBoxTitle {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .checkBoxImage {
+    margin-left: 20%;
+    width: 50%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .checkBoxButton {
+    margin-top: 3%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+
+  .checkBoxInformation {
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+  }
+
+
+  
