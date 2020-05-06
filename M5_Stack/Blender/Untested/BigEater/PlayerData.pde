@@ -31,7 +31,7 @@ class PlayerData {
                 cnt++;
             }
         }
-        cnt = 0;
+        else cnt = 0;
         modifyCount(currentClass.getClassName());
         modifyScoreAndHealth(currentClass.getClassName());
     }
