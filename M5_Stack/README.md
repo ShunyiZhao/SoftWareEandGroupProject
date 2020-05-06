@@ -47,6 +47,16 @@ The Ardunio API webpage of M5 Stack:
 
 We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is set to send button signal. 
 
+### API used in this project
+
+M5.IMU.getAccelData(&accX, &accY, &accZ);
+
+Get accelerations from the sensor.
+
+M5.IMU.getAhrsData(&angle_1, &angle_2, &angle_3);
+
+Get Eular Angles from the sensor.
+
 ## <span id="M5communication">M5 Stack - Serial Communication
 
 A simple function called Serial.print() is used to send the string.
@@ -94,9 +104,27 @@ When user press the first button on the Stack, the programme will check the stat
 The defenifion of character states is
 > 0, the rectangle move
 > 1, the circle move
+
 The programme will switch between this two states. In state1, the rectangle will not move, and the circle can move four directions.
 
 ![circle state](./images/image_3.png)
+
+### Methods used in this part
+
+#### communication.ped
+
+##### ArrayList<ArrayList<Float>> calPitchMat(float[] datas)
+This method could calculate the Pitch transformation matrix. The first argument of this method is a array which contains eular angles.
+
+The transformation matrix is organised into a two-dimension ArrayList object.
+
+##### ArrayList<ArrayList<Float>> calRollMat(float[] datas)
+This method could calculate the Roll transformation matrix. The argument is same with calPitchMat()
+
+##### 
+
+##### convertCoorSystem()
+The function of this method is to 
 
 ### Space Coordinate transformation
 The main works of coordinate transformation are placed in the file called [communication.pde](./communication/communication.pde) and [simpleMat.pde](./communication/simpleMat.pde)
@@ -111,7 +139,7 @@ Cite from wikepedia - [wikepedia matrix](https://en.wikipedia.org/wiki/Rotation_
 
 In these two files above, some functions are used to transfrom the coordinate.
 
-### Combine M5 Stack with Desktop Application
+### Combining M5 Stack with Desktop Application
 The video below shows the game which combine the Desktop Application and M5 Stack.
 [The link to video](./piece.mp4)
 

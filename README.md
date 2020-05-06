@@ -1,5 +1,18 @@
 # TEAM6 -- BIG EATTER
 
+## Developers
+Kehan Du (mz19460)
+
+Rao Hu (ya19173)
+
+HoCheung Lee (ja19025)
+
+Ben Jin (tk19028)
+
+Yuxuan Qiu (ug19091)
+
+Shunyi Zhao (vt19049)
+
 ### **Content**
  * [Introduction](#Intro)
  * [System Design](#LinkToPart1)
