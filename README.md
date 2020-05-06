@@ -51,6 +51,9 @@ In the beginning, we are supposed to design a body sensing version of FRUIT NINJ
 the game would track the movement of M5 stack and cut fruits in the game.The paper prototype and processing prototype is in the folder with path ./example/example_1
 
 ![main GUI](./example/example_1/image_0.jpg)
+
+If the start button start is clicked, a game will start. And if the ? button is clicked, an instruction will be shown. The whole process of this version prototype is shown [here](./example/example_1/README.md)
+
 Then, we found that maybe this game is improper as it is not our own idea and therefore, we brought the idea to build a   
 really open game platform. Any game developers can register the accounts on our platform and are freely allowed to upload 
 their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has become quite popular in recent years.
@@ -62,13 +65,19 @@ right which is controlled by M5 stack. What’s more, there would be bonus gifts
 the character can click the button on M5 stack to turn into shoot mode and would get the bonus gift if the character 
 successfully shoots the subject. The game would end if the character touches the bomb.
 
+The paper prototype of this version is shown as below:
+
+![paperprotype_2](./Images/prototype/version_2/interface.JPG)
+
+The whole process of this version prototype is shown [here](./example/example_2/README.md)
+
 The structure of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
 The structure of our project is shown as update *fig.2*:
 
-![uml](./design_GUI/SE_UML.png)
+![uml](./Images/UML/SE_UML.png)
 
 ## <span id="LinkToPart2">System Implementation
 
