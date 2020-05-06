@@ -41,8 +41,7 @@ the game would track the movement of M5 stack and cut fruits in the game.The pap
 
 Then, we found that maybe this game is improper as it is not our own idea and therefore, we brought the idea to build a   
 really open game platform. Any game developers can register the accounts on our platform and are freely allowed to upload 
-their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has  
-become quite popular in recent years.
+their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has  become quite popular in recent years.
 However, through rounds of discussion and with the problems we met in the designing process, we found that it is too 
 difficult for us to realize such a platform. Hence, we went back to our original idea and designed a game BIGEATER.
 There are five conveyor belts for food. The character stands at the bottom of the conveyor belt and can only move left and 
