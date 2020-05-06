@@ -1,6 +1,42 @@
 # TEAM6 BIG EATER - M5 Stack and Serial Communication
 
-## M5 Stack - senors
+### **Content**
+ * [Structure](#structure)
+ * [M5 Stack - senors](#senors)
+ * [M5 Stack - Serial Communication](#M5communication)
+ * [Processing - Serial Communication](#ProcessingCommunication)
+ * [Character Control](#control)
+ * [Problems & limitations](#limitations)
+
+## <span id="structure">Folder Structure
+
+The M5_stack folder are following the structure below:
+```
+M5_Stack
+    |    README.md
+    |    piecd.mp4
+    └─── images (Storing images used in M5 README.md)
+         |    image_1.png
+         |    image_2.png
+         |    image_3.png
+         ...
+    |___ communication (commnunication files of processing)
+         |    communication.pde (communication functions and process)
+         |    Character.pde (set a rectangle to represent characters)
+         |    EllipseClass.pde (storing properties of a ellipse)
+         |    Entity.pde (basic class)
+         |    RectClass.pde (storing properties of a rectangle)
+         |    ShapeClass.pde (basic class of shapes)
+         |    simpleMat.pde (represent a simple mat)
+    |___ sensor_1 (communication files of Ardunio)
+         |    sensor_1.imo (programme written into M5 Stack)
+    |___ Blender (control character in Processing Programme using M5 Stack)
+         |___ BigEater (First version of combining the M5 Stack with Desktop Application)
+         |___ Untested (Second version of combining the M5 Satck with Desktop Application)
+
+```
+
+## <span id="senort">M5 Stack - senors
 
 The Ardunio API webpage of M5 Stack:
 
@@ -8,7 +44,7 @@ The Ardunio API webpage of M5 Stack:
 
 We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is set to send button signal. 
 
-## M5 Stack - Serial Communication
+## <span id="M5communication">M5 Stack - Serial Communication
 
 A simple function called Serial.print() is used to send the string.
 The format of this string is shown below:
@@ -29,7 +65,7 @@ In these two images, a problem which will be described detailed in the section [
 
 These string will be sent to the USB buffer.
 
-## Processing - Serial Communication
+## <span id="ProcessingCommunication">Processing - Serial Communication
 
 We use a function Class Serial.readStringUntil() to listen the string sent by M5 Stack. In the above string, the letter 'q' is the symbol 
 of the end of one commmand.
@@ -37,7 +73,7 @@ of the end of one commmand.
 In the first one hundred loop getting loops, perhaps the connection between the Stack and Desktop Application has not been built, so the
 processing programme will wait to this connection, and print "loop" to the command line. After getting this string, the processing programme will devide it to 6 substrings, and the letter 'q' will be removed from this string.
 
-## Processing - Character Control
+## <span id="control">Processing - Character Control
 
 Due to an unknown problem, the yaw of this sensor increases automaticlly. Although we have completed a series of simple version codes of matrix computation, we can not use them to calculate the true acceleration of the movements. So we used accelerations caused by angles and gravity to control the character in processing.
 
