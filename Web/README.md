@@ -110,7 +110,11 @@ After the player ends the game, the desktop application will send the player's p
 
 - The administrator's account cannot be registered.
 
+- For the part of Check Box, we haven't restricted only the player could submit the list of food that he/she chose. Thus, it will be a problem that everyone can submit the form.
+
 3.Design maturity
 
 - The design style of the game is moderately naive, and there is no perfected design style and color adaptation.
+
+- The background of each part are using an image instead of using css or Bootstrap4 library to build the background.
 
