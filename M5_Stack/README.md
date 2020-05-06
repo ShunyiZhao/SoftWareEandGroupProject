@@ -23,7 +23,7 @@ M5_Stack
          |    image_2.png
          |    image_3.png
          ...
-    |___ communication (commnunication files of processing)
+    └─── communication (commnunication files of processing)
          |    communication.pde (communication functions and process)
          |    Character.pde (set a rectangle to represent characters)
          |    EllipseClass.pde (storing properties of a ellipse)
@@ -31,11 +31,11 @@ M5_Stack
          |    RectClass.pde (storing properties of a rectangle)
          |    ShapeClass.pde (basic class of shapes)
          |    simpleMat.pde (represent a simple mat)
-    |___ sensor_1 (communication files of Ardunio)
+    └─── sensor_1 (communication files of Ardunio)
          |    sensor_1.imo (programme written into M5 Stack)
-    |___ Blender (control character in Processing Programme using M5 Stack)
-         |___ BigEater (First version of combining the M5 Stack with Desktop Application)
-         |___ Untested (Second version of combining the M5 Satck with Desktop Application)
+    └─── Blender (control character in Processing Programme using M5 Stack)
+         └─── BigEater (First version of combining the M5 Stack with Desktop Application)
+         └─── Untested (Second version of combining the M5 Satck with Desktop Application)
 
 ```
 

@@ -72,9 +72,19 @@ The structure of our project is shown as update *fig.2*:
 
 ## <span id="LinkToPart2">System Implementation
 
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder,
-Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben 
-Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
+### Folder Structure
+```
+SoftWareEandGroupProject
+    |   README.md (the front page of our project)
+    └───design_GUI (the images of the user and web application interface)
+    └───example (paper and processing prototype)
+    └───Images (storing the images cited in this file)
+    └───M5_Stack (works about M5_Stack)
+    └───Processing (works about Desktop Application)
+    └───Web (works about Web Application)
+```
+
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
 website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
 to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
 branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
