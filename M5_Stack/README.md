@@ -121,10 +121,22 @@ The transformation matrix is organised into a two-dimension ArrayList object.
 ##### ArrayList<ArrayList<Float>> calRollMat(float[] datas)
 This method could calculate the Roll transformation matrix. The argument is same with calPitchMat()
 
-##### 
+##### simpleMat getGravityMat()
+This method could generate a gravity matrix, which is (0, 0, 1).
 
-##### convertCoorSystem()
-The function of this method is to 
+##### void convertCoorSystem()
+The function of this method is to convert a gravity vector from the grand coordinate to the object coordinate.
+
+#### simpleMat
+
+##### simpleMat calMatProduct(simpleMat inputMat)
+This method could calculate the result of product between two matrices. 
+
+The result of product is organised into a simpleMat object.
+
+##### void printDatas()
+This method could print the data stored in a simpleMat object.
+
 
 ### Space Coordinate transformation
 The main works of coordinate transformation are placed in the file called [communication.pde](./communication/communication.pde) and [simpleMat.pde](./communication/simpleMat.pde)
