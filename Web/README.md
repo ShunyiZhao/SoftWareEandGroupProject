@@ -36,7 +36,7 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
     └───json -- Original program test data
     └───img --  All images that we have used in the web
     └───font -- fontawesome library
-    └───src -- processing Source code
+    └───src -- privacy.md
     └───js
     │    │
     │    └─── MQTT-client.js --- all
