@@ -82,7 +82,7 @@ quite well, everyone makes contributions and our teamwork ensures the smooth com
 
 ### IoT Device - M5 Stack
 Our IoT Device is M5 Stack.
-- [Details of M5 Stack](M5_Stack/README.md)
+- [Details of M5 Stack](M5_Stack/README.md)       
 M5 Stack is used by gamers as a controller and we build a serial communication between M5 Stack and Processing.
 API functions of IMU(Sensor MPU9250) is used to capture the accelerations and Euler Angels of M5 Stack, which is conducted 
 by gamers, and use a function Serial.print() to send strings of parameters to Processing. Then, processing receives the 
@@ -95,7 +95,7 @@ this is important to reduce our game display delay. However, sometimes game woul
 serial communication.
 
 ### Desktop Application - Processing
-- [Details of Processing](Processing/README.md)
+- [Details of Processing](Processing/README.md)      
 Desktop is where processing works.
 Firstly, as mentioned above, processing receives data from M5 Stack and control the character’s movement and shooting 
 behavior after some space coordinate calculation.
@@ -105,7 +105,7 @@ dealt and scoring rules is accordingly changed, which realize the interaction be
 Lastly, processing sends images to web to realize game displaying
   
 ### Web Application
-- [Details of web application](Web/README.md)
+- [Details of web application](Web/README.md)     
 Web is used to display the game, let interactive player make the recipe and data analysts can use it to obtain processed 
 data. 
 For gamers, web receives images from processing and acts as the screen for game playing. Also, it provides game information 
