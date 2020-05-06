@@ -1,6 +1,6 @@
 # Web Application
 
-Our website is mainly focusing on the **description of the game**, playing a **interact with desktop game** that allow other parties to join and providing a **visualized data** about analyzing player‘s behavior and preference.
+Our website is mainly focusing on the **description of the game**, playing a **interact with desktop game** and providing a **visualized data** about analyzing player‘s behavior and preference.
 
 The entire web application partly relies on the Bootstrap4 layout and references some font Awesome icons
 
@@ -19,17 +19,22 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
    * Administer is able to see the data that have been visualized.
   
 2. Users
-   * Users able to join the game (in the part of "Game")
    * Users can know the background of the game (in the part of "Intro Story")
+      > * Used a comic style to display the background of story
+   * Users are able to choose their favorite food that appear in the game (in the part of "CheckBox")
+      > * Used a check box style allow user to select the food they like and also, user can submit and send the data via  MQTT in JSON format
+   * Users able to join the game (in the part of "Game")
    * Users can know the instructions of the game (in the part of "Instruction")
+      > * Used slideshow style to display the instruction, the text below the picture will be moved with the picture simultaneously
    * User can learn some health tips (in the part of "Health Tips")
+      > * Used flipcard style to display the healthy tip for each food
   
 ## Application Structure
  ```
     web
     │   README.md
     └───json -- Original program test data
-    └───img --  
+    └───img --  All images that we have used in the web
     └───font -- fontawesome library
     └───src -- processing Source code
     └───js
@@ -39,7 +44,7 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
     │         login_MQTT.js --- login.html
     │         charts_MQTT.js --- index2.html
     │         index.js
-    │         script.js
+    │         script.js --- index.html
     │         init.js --- index2.html
     └───css
     │    │

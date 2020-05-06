@@ -15,49 +15,53 @@ private int[] lastCount;
 private boolean[] trackUsed;
 private boolean[] frameCountLock;
 private String[] names = {"cheese", "crab", "eggplant", "fish", 
-                          "pineapple", "salad", "virusA", "virusB"};
-private String filename = "user3.json";
+                          "pineapple", "salad", "virusA", "virusB"};    
+
+Adapter adapter = new Adapter();
 
 public void setup() {
     size(1280, 720);
     bg = new Background(startY, endY);
     data = new PlayerData(names);
-    data.getCurrentUser(filename);
     gift = new Gift();
     initialiseVariables();
     status = 0;
+    
+    
+    client = new MQTTClient(this, adapter);
+    String clientName = "group_big_eater" + random(0, 99999);
+    client.connect("mqtt://broker.mqttdashboard.com", clientName);
+    
 }
 
 public void draw() { 
     switch (status) {
         case 0:
             image(loadImage("data/BigEater.png"), 0, 0, 1280, 720);
-            if (keyPressed) status++;
+            if (keyPressed) {
+                data.getUserChoice(adapter.userChoice);
+                status++;
+            }
             break;
         case 1: 
             setGameStatus();
             if (keyPressed) status++;
             break;
         case 2:
-            try {
-                analyseData();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            analyseData();
             stop();
     }
   
 }
 
-private void analyseData() throws IOException {
-    int score = data.getScore();
-   
-    if (data.compareScore(score)) {
-        image(loadImage("data/Clear.png"), 0, 0, 1280, 720);
-    } 
-    else {
-        image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
-    } 
+private void analyseData() {
+    image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
+    //if (data.compareScore(score)) {
+    //    image(loadImage("data/Clear.png"), 0, 0, 1280, 720);
+    //} 
+    //else {
+    //    image(loadImage("data/Lose.png"), 0, 0, 1280, 720);
+    //} 
     
     data.saveUserData();
 }
