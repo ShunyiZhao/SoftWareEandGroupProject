@@ -63,6 +63,7 @@ The files described in the structure are original parts, and other unmentioned f
    "main":["Pienapple","Crab","Salad"]
 }
 ```
+The above json format is an example of the list of food, which is chosen by the player in the Web Page, send from the **check box (website)** to **the desktop (processing)**. The food that have been chosen will appear in the game.
 
 ```json
 {
