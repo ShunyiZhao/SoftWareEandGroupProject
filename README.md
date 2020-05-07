@@ -75,7 +75,7 @@ The structure of first version of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
-In this picture, 
+In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. 
 
 The structure of second version of our project is shown as update *fig.2*:
 
@@ -94,15 +94,6 @@ SoftWareEandGroupProject
     └───Processing (works about Desktop Application)
     └───Web (works about Web Application)
 ```
-
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
-website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
-to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
-branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
-clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
-are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
-quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
-
 
 ### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
  * M5 Stack GUI design
@@ -177,8 +168,8 @@ work in game industry or health management industry.
 Group memebers test the part they made by themselves separately, and the M5 Stack holder test the whole system.
 
 
-### Test Methodology
-
+### Outcome
+![M5 control](./Images/M5/M5.gif)
 
 
 ---
@@ -186,6 +177,7 @@ Group memebers test the part they made by themselves separately, and the M5 Stac
 ### The disadventages of our projects are shown as below
 1. The control of character ....
 2. xxxx
+
 ### Future Expectation
 For the future, we believe there is still a lot of improvement room for our software as we haven’t realized all the ideal 
 functions we want. First of all, we would like to realize the live broadcast function so that interactive player can watch the 
@@ -194,3 +186,12 @@ years, we would like to combine them and we think that it is a new and interesti
 Secondly, we want to build a game platform which allows game developers to upload their won games. Continuous innovation is a 
 key factor in gaming industry, especially for simple and small games where gamers may fell bored easily. Therefore, we would 
 love to provide an open platform for all game developers to show their talents.
+
+### Working Practice
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
+website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
+to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
+branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
+clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
+are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
+quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
