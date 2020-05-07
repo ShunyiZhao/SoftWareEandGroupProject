@@ -26,10 +26,13 @@ class PlayerData {
     
     public void recordPlayerMove(Drop currentClass) {
         println(currentClass.getClassName());
-        if (currentClass.getClassName().equalsIgnoreCase(userChoice.get(cnt))) {
-            cnt++;
+        if (!(userChoice == null || userChoice.size() == 0)) {
+            if (currentClass.getClassName().equalsIgnoreCase(userChoice.get(cnt))) {
+                cnt++;
+            }
         }
         else cnt = 0;
+        
         modifyCount(currentClass.getClassName());
         modifyScoreAndHealth(currentClass.getClassName());
     }

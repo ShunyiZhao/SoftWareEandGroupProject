@@ -193,7 +193,7 @@ private void setGameStatus() {
 private void displayGift() {
     if (gift.getGiftStatus(data)) {
         gift.display();
-        if (gift.pickUpGift()) {
+        if (gift.pickUpGift(initX, initY)) {
             data.getBonus();
         }
     }
