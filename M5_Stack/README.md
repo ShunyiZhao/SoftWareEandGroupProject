@@ -45,7 +45,7 @@ The Ardunio API webpage of M5 Stack:
 
 [M5 Stack Ardunio API](https://docs.m5stack.com/#/en/arduino/arduino_api)
 
-We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is set to send button signal. 
+We used API functions of IMU(Sensor MPU9250) to get the accelerations and Euler Angels. These parameters are organised in a string, with spaces between them. At the end of this string, a character is set to send a button signal. 
 
 ### API used in this project
 
@@ -80,19 +80,17 @@ These string will be sent to the USB buffer.
 
 ## <span id="ProcessingCommunication">Processing - Serial Communication
 
-We use a function Class Serial.readStringUntil() to listen the string sent by M5 Stack. In the above string, the letter 'q' is the symbol 
-of the end of one commmand.
+We use a function Class Serial.readStringUntil() to listen to the string sent by M5 Stack. In the above string, the letter 'q' is the symbol of the end of one command.
 
-In the first one hundred loop getting loops, perhaps the connection between the Stack and Desktop Application has not been built, so the
-processing programme will wait to this connection, and print "loop" to the command line. After getting this string, the processing programme will devide it to 6 substrings, and the letter 'q' will be removed from this string.
+In the first one hundred loop getting loops, perhaps the connection between the Stack and Desktop Application has not been built, so the processing program will wait to this connection, and print "loop" to the command line. After getting this string, the processing program will divide it to 6 substrings, and the letter 'q' will be removed from this string.
 
 ## <span id="control">Processing - Character Control
 
-Due to an unknown problem, the yaw of this sensor increases automaticlly. Although we have completed a series of simple version codes of matrix computation, we can not use them to calculate the true acceleration of the movements. So we used accelerations caused by angles and gravity to control the character in processing.
+Due to an unknown problem, the yaw of this sensor increases automatically. Although we have completed a series of simple version codes of matrix computation, we can not use them to calculate the true acceleration of the movements. So we used accelerations caused by angles and gravity to control the character in processing.
 
-We use a rectangle to simulate the character, and a circle is uesd to represent the pointer.
+We use a rectangle to simulate the character, and a circle is used to represent the pointer.
 
-The inital Interface of this communication program is shown below:
+The initial Interface of this communication program is shown below:
 
 ![inital interface](./images/image_2.png)
 
@@ -168,5 +166,5 @@ We thought some errors of lead to this problem. Thus, we gave up this transforma
 
 ### Limitations
 1. Sometimes, the serial communication would slow the processing application.
-2. The communication would accumulate at the buffer of serial port, and it would lead to the delay of controlling.
-3. A rectangle is placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which makes user difficult to see it.
+2. The communication would accumulate at the buffer of serial ports, and it would lead to the delay of controlling.
+3. A rectangle is placed on the screen of Stack to show the posture of Stack, but this rectangle twinkle at the edge of screen sometimes, which makes the user difficult to see it.
