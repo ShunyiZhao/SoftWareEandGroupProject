@@ -22,21 +22,25 @@ Shunyi Zhao (vt19049)
 ## <span id="Intro">Introduction
 Today, there are more than 2.5 billion gamers across the world and it is calculated that they spend around 152.1 billion 
 dollars on games in 2019, and the revenue of game industry is expected to be worth over 270 billion dollars by 2020. Moreover,
-data analysts predict that game industry will still experience constant growth in the upcoming years.    
+data analysts predict that game industry will still experience constant growth in the upcoming years.
+
 Coincidently, all of our group members are interested in computer games and software project gives us the chance to
 implement our ideas to practice. As one of the most primary entertainment mediums with huge growth potential, we therefore
 designed a multi-functional gaming BIGEATER which is aimed for gamers, game analysts and interactive players. We figured out a
-new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.   
+new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.
+
 First of all, BIGEATER is a simple and small game. The reason is that with fast pace and heavy pressure, gaming is a
 wonderful way to relax. Hence, we came up with the idea to design a simple and small game which do not require gamers to spend 
 a lot of time to learn and do not require the subtle skills to play, neither. In addition, we believe simple games would be 
-appeal to some potential gamers and therefore expand the audience.   
+appeal to some potential gamers and therefore expand the audience.
+
 Secondly, BIGEATER provides processed game-related data such as game duration and game hits for game analysts, so that they 
 can make decisions to optimize or promote the games. We think continuous improvement and innovation are the most significant 
 factors to maintain high competitiveness of a game. Especially as a simple game, gamers may feel bored with our games easily, 
 it is therefore more than important for our own game analysts to make accurate and instant decisions to perfection the flaws. 
-//Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
-industry’s development.   
+Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
+industry’s development.
+   
 Interactive players are third user of BIGEATER. They can be regarded as companions of gamers. Before the game begins, 
 interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they comb the food in 
 the recipe. In the beginning, we were supposed to make a live game broadcast so that interactive can watch the game as well as
