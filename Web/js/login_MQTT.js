@@ -1,5 +1,5 @@
 function add_richtext() {
-    window.location.href='index2.html';
+    window.location.href='/Web/index2.html';
 }
 // called when a message arrives
 client.onMessageArrived = function (message){
