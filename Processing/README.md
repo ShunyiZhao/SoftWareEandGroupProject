@@ -1,6 +1,12 @@
 # Desktop Application - Processing
 
 ## *Content*
+ * [Game Rules](#rules)
+ * [Code Structure](#structure)
+ * [Main Methods](#methods)
+ * [Connection Test](#connection)
+ * [Main Problem & Solution](#solutions)
+ * [Limitations](#limitations)
 
 Processing in Java is used as the main development tool in our BigEater game, having implemented:  
 - UI Drawing
@@ -18,7 +24,7 @@ This folder consists of two versions of the BigEater game, where names of sub-fo
 **@ Ben Jin (tk19028)**  
 **@ Rao Hu (ya19173)**  
 
-## Game Rules
+## <span id="rules">Game Rules
 Each player will get three hearts at the beginning. Every time he/she misses one kind of food or touches one kind of virus will make the number of hearts subtracted by one. The game will be over when the number of hearts reaches to zero.  
 
 Here are instructions of the game rules with example in different cases:
@@ -59,7 +65,7 @@ Here is an example of the whole process of BigEater game in double speed. It mig
 <img src="../Images/Processing/process.gif" width=400 height=225>
 
 
-## Code Structure
+## <span id="structure">Code Structure
 This introduction will mainly focus on the implementation of the BigEater game. Codes that realise the work of communicating with M5-Stack will be ignored. For more details of how M5-Stack works, please refer to  [M5_Stack_Control_Instruction](../M5_Stack/README.md).
 
 All used classes of the game are following the structure below:
@@ -87,7 +93,7 @@ BigEater.pde
 
 BigEater class will be the main entrance of the game, implementing instantiation work of all classes and more importantly, the initialisation work of MQTT client. Adapter class will focus on processing every possible situation that may happen during the communication with web applications. Background and Eater class will ensure the game UI and characters to be painted in every frame. PlayerData class will do statistics work along with the process of the game. Drop class is a superclass where all dropping item classes will inherit from it, reducing the repetition rate of codes.
 
-## Main Methods
+## <span id="methods">Main Methods
 
 ### BigEater.pde
 - **setup() :** The setup() method will only run once during the whole process and the main work of this method is to instantiate classes by constructors. Most importantly, the connection with HiveMQ will be created in this method with the following code:
@@ -144,7 +150,7 @@ BigEater class will be the main entrance of the game, implementing instantiation
     popMatrix();
 ```
 
-## Connection Test
+## <span id="connection">Connection Test
 
 The connection test consists of two tests with different directions of data flow. The first data to be transferred looks like this:
 ```
@@ -182,7 +188,7 @@ new message: /BigEater - {"datatype":"chart","main":{"score":14,"bonus":0,"combo
 ```
 
 
-## Main Problem & Solution
+## <span id="solutions">Main Problem & Solution
 
 **Q: Size of the image won't increase during the fall.**  
 A: The problem is caused by the floating rule of Processing. In this case, only one decimal will be retained. So, if we aim to pursue to reflect subtle changes in the size of the picture, the rate of change will remain zero because the decimals are automatically truncated by the program.   
@@ -193,7 +199,7 @@ A: The exception is thrown because of the loss of valid reference caused by re-i
 **Q: Functions of the project are unclear because of the lack of face-to-face talk.**  
 A: Due to the pandemic of COVID-19, we lost opportunities of joining formal workshops, causing the uncertainty on the structures and functions of the whole group work. The solution is to increase the frequency of online meeting via Skype-for-Business.  
 
-## Limitations
+## <span id="limitations">Limitations
 
 **1. Code Quality**  
 There is still a lot of room for improving code quality. Because of the particularity of Processing, convenience appears with troubles. The draw() method is not friendly for variable passing, causing a large number of tricky issues. We have to use flags in boolean type to mitigate the effect brought by repeatedly calling the same method, which reduces the readability and dryness of the code.
