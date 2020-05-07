@@ -90,6 +90,19 @@ In this image, a player could control the character in Desktop Application with 
 ---
 
 ### User Stories
+Gamers: 
+
+have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can switch between left-right movement mode and shoot mode. In left-right movement mode, gamers can slope the M5 Stack to control the character. In shoot mode, character would stand still and gamers can use M5 Stack as a cursor to shoot the bonus gift.
+
+As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat heathier.
+
+Interactive Players: 
+
+company the gamer and gain diet knowledge Interactive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
+
+Game Analyst:
+
+Our own analysts as well as other game analysts can register through our web and login to view our processed data. (currently we haven’t realized the registration function yet)
 
 ---
 
@@ -131,15 +144,6 @@ SoftWareEandGroupProject
     └───Processing (works about Desktop Application)
     └───Web (works about Web Application)
 ```
-
-### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
- * M5 Stack GUI design
- * M5 Stack programming of IMU sensor
- * M5 Stack programming of serial and LCD
- * Processing programming of serial communication
- * Design the GUI of desktop application
- * Dssign the GUI of web application
- * Communication between desktop application and web application
 
 ### IoT Device - M5 Stack
 Our IoT Device is M5 Stack.
@@ -270,10 +274,18 @@ key factor in gaming industry, especially for simple and small games where gamer
 love to provide an open platform for all game developers to show their talents.
 
 ### Working Practice
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
-website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
-to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
-branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
-clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
-are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
-quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+
+#### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
+ * M5 Stack GUI design
+ * M5 Stack programming of IMU sensor
+ * M5 Stack programming of serial and LCD
+ * Processing programming of serial communication
+ * Design the GUI of desktop application
+ * Dssign the GUI of web application
+ * Communication between desktop application and web application
+
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. All group members are collaborators of this repository. We can push our own work to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master branch is needed. For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
+
+We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+
+We can’t say we did everything well as there are still some ideal functions we haven’t realized yet. But as the first software project in our life time, as well as under the influence of coronavirus, we have tried our best.
