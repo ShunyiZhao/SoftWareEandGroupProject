@@ -179,6 +179,19 @@ In this short piece of video, the character is controlled by M5 Stack. When the 
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
 #### Desktop Application
+The effect of playing game developed by us with mouse and keyboard is shown below.
+
+Pressing enter on keyboard to start game:
+
+![Start Game](./Images/Processing/process.gif)
+
+Eating cheese:
+
+![Eating cheese](./Images/Processing/cheese.gif)
+
+Combo:
+
+![Combo](./Images/Processing/combo.gif)
 
 ---
 
