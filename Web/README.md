@@ -111,7 +111,7 @@ The web application will  ask Login  information from MQTT server if matched.
 {
     "datatype":"chart",
     "main":{
-        "score": 3,
+        "score": 276,
         "bonus": 1,
         "combo": 2,
         "salad": 1,

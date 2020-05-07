@@ -28,7 +28,7 @@ Coincidently, all of our group members are interested in computer games and soft
 implement our ideas to practice. As one of the most primary entertainment mediums with huge growth potential, we therefore
 designed a multi-functional gaming BIGEATER which is aimed for gamers, game analysts and interactive players. We figured out a
 new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.
-
+   
 First of all, BIGEATER is a simple and small game. The reason is that with fast pace and heavy pressure, gaming is a
 wonderful way to relax. Hence, we came up with the idea to design a simple and small game which do not require gamers to spend 
 a lot of time to learn and do not require the subtle skills to play, neither. In addition, we believe simple games would be 
@@ -90,19 +90,6 @@ In this image, a player could control the character in Desktop Application with 
 ---
 
 ### User Stories
-Gamers: 
-
-have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can switch between left-right movement mode and shoot mode. In left-right movement mode, gamers can slope the M5 Stack to control the character. In shoot mode, character would stand still and gamers can use M5 Stack as a cursor to shoot the bonus gift.
-
-As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat heathier.
-
-Interactive Players: 
-
-company the gamer and gain diet knowledge Interactive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
-
-Game Analyst:
-
-Our own analysts as well as other game analysts can register through our web and login to view our processed data. (currently we haven’t realized the registration function yet)
 
 ---
 
@@ -120,8 +107,6 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 ---
 
 ### Data Persistence
-
-- Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and the file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
 
 ---
 
@@ -144,6 +129,15 @@ SoftWareEandGroupProject
     └───Processing (works about Desktop Application)
     └───Web (works about Web Application)
 ```
+
+### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
+ * M5 Stack GUI design
+ * M5 Stack programming of IMU sensor
+ * M5 Stack programming of serial and LCD
+ * Processing programming of serial communication
+ * Design the GUI of desktop application
+ * Dssign the GUI of web application
+ * Communication between desktop application and web application
 
 ### IoT Device - M5 Stack
 Our IoT Device is M5 Stack.
@@ -274,18 +268,10 @@ key factor in gaming industry, especially for simple and small games where gamer
 love to provide an open platform for all game developers to show their talents.
 
 ### Working Practice
-
-#### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
- * M5 Stack GUI design
- * M5 Stack programming of IMU sensor
- * M5 Stack programming of serial and LCD
- * Processing programming of serial communication
- * Design the GUI of desktop application
- * Dssign the GUI of web application
- * Communication between desktop application and web application
-
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. All group members are collaborators of this repository. We can push our own work to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master branch is needed. For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
-
-We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
-
-We can’t say we did everything well as there are still some ideal functions we haven’t realized yet. But as the first software project in our life time, as well as under the influence of coronavirus, we have tried our best.
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
+website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
+to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
+branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
+clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
+are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
+quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
