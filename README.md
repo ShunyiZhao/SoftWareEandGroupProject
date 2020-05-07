@@ -212,6 +212,7 @@ Group memebers test the part they made by themselves separately, and the M5 Stac
 The effect of combining M5 Stack with Desktop Application is shown below.
 
 ![M5 control](./Images/M5/M5.gif)
+GIF1
 
 In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
@@ -224,14 +225,17 @@ The effect of playing game developed by us with mouse and keyboard is shown belo
 Pressing enter on keyboard to start game:
 
 ![Start Game](./Images/Processing/process.gif)
+GIF2: This gif shows the whole process of our game. Eating different food you will get corresponding scores. And if you hit viruses and lose all the 3 hearts you have at the beginning of the game, you will lose and be forced to quit this game.
 
 Eating cheese:
 
 ![Eating cheese](./Images/Processing/cheese.gif)
+GIF3: If you hit a piece of cheese, you will get 10 scores each time.
 
 Combo:
 
 ![Combo](./Images/Processing/combo.gif)
+GIF4: If you achieve a combo with a crab and cheese in order, you will be praised with 500 scores. 
 
 ---
 
