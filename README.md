@@ -233,23 +233,41 @@ Combo:
 ---
 
 #### Web Application
-The game is displayed on the web page, shown as below.
+Each sections of the web page are shown as below.
 
-Game Display:
+Introduction of Story: Background story of the game.
+
+![IntroStroy](./Images/Web/introStory.png)
+
+
+Check Box: allow interactive players to sumbit the recipe.
+
+![CheckBox](./Images/Web/checkbox.png)
+
+
+Game Display: providing a general idea of the game.
 
 ![Display](./Images/Web/gamedisplay.png)
 
-Instruction:
+
+Instruction: what player needs for playing the game and the rule of the game have been stated in this part.
 
 ![Instruction](./Images/Web/instruction.png)
 
-Administrator:
+
+Health Tips: providing some health tips for people.
+
+![HealthTips](./Images/Web/healthtips.png)
+
+
+Administrator Login: a page allows administrator to log in.
 
 ![Login](./Images/Web/login.png)
 
-Users' preference:
 
-![preference](./Images/Web/userpreference.png)
+Player's score & preference: providing visualised data about the player's score and preference.
+
+![Score&Preference](./Images/Web/userpreference.png)
 
 ---
 
