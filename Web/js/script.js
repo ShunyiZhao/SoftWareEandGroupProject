@@ -36,7 +36,7 @@ function changeTextImg (getValue) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "Eat as much as you can in order to increase your points. Each food do have a corresponding point, your points will not be deduced if you miss the food.";
     }
     else if (getValue == 3) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "Keep away from the bomb / virus otherwise you will die!!";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "Keep away from the bomb / virus otherwise your health point will be deduced. If you lose all the health points, the game will be ended!!";
     }
     else if (getValue == 4) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "If you see the gift appears, use the mouse pointer to point to the gift for shooting. You will get extra points.";
