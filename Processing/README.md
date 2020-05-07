@@ -16,8 +16,12 @@ This folder consists of two versions of the BigEater game, where names of sub-fo
 **@ Ben Jin (tk19028)**  
 **@ Rao Hu (ya19173)**  
 
-## Scoring Rule
+## Game Rules
 Each player will get three hearts at the beginning. Every time he/she misses one kind of food or touches one kind of virus will make the number of hearts subtracted by one. The game will be over when the number of hearts reaches to zero.  
+
+Here are instructions of the game rules with example in different cases:
+- Cheese values 10 points (840 -> 850)  
+![cheese](../Images/Processing/cheese.gif)
 
 Scores for each objective are as follows:
 - cheese / crab / eggplant / fish / pineapple / salad : +1 point
