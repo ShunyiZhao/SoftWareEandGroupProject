@@ -52,7 +52,7 @@ Here are instructions of the game rules with example in different cases:
 
 <img src="../Images/Processing/gift.gif" width=400 height=225>
 
-Here is an example of the whole process of BigEater game in double speed:
+Here is an example of the whole process of BigEater game in double speed。 It might take a bit longer time than expected because of the developer's excellent game skills.
 
 <img src="../Images/Processing/process.gif" width=400 height=225>
 
