@@ -1,5 +1,7 @@
 # TEAM6 -- BIG EATTER
 
+![display](/Images/display.gif)
+
 ## Members
 Kehan Du (mz19460)
 
