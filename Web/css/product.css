@@ -170,5 +170,10 @@ body {
     text-align: center;
   }
 
-
+  .site-mainshow{
+    background-image: url(/Images/M5/M5.gif);
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position:0% 88%;
+  }
   
