@@ -169,7 +169,14 @@ Group memebers test the part they made by themselves separately, and the M5 Stac
 
 
 ### Outcome
+
+#### Combining IoT Device With Desktop Application
+The effect of combining M5 Stack with Desktop Application is shown below.
+
 ![M5 control](./Images/M5/M5.gif)
+
+In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
+will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
 
 ---
