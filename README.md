@@ -108,6 +108,8 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 
 ### Data Persistence
 
+- Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and the file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
+
 ---
 
 ### Web technologies
@@ -234,23 +236,41 @@ Combo:
 ---
 
 #### Web Application
-The game is displayed on the web page, shown as below.
+Each sections on the web page are shown as below.
 
-Game Display:
+Introduction of Story: the background story of the game has been shown in here.
+
+![Introstory](./Images/Web/introStory.png)
+
+
+Check Box: is used to let interactive players to submit the receipt.
+
+![Checkbox](./Images/Web/checkbox.png)
+
+
+Game Display: the general idea of the game is displayed on the web page.
 
 ![Display](./Images/Web/gamedisplay.png)
 
-Instruction:
+
+Instruction: what the player needs for playing the game and the rule of the game have been stated in this part.
 
 ![Instruction](./Images/Web/instruction.png)
 
-Administrator:
+
+Health Tips: to give people to learn some health tips.
+
+![Healthtip](./Images/Web/healthtips.png)
+
+
+Administrative Login: is a page used for administrator to log in.
 
 ![Login](./Images/Web/login.png)
 
-Users' preference:
 
-![preference](./Images/Web/userpreference.png)
+Player's Score & Preference: providing a visualized data regarding to player’s score and their preference of food.
+
+![score&preference](./Images/Web/userpreference.png)
 
 ---
 
