@@ -1,6 +1,6 @@
 # TEAM6 -- BIG EATTER
 
-## Developers
+## Members
 Kehan Du (mz19460)
 
 Rao Hu (ya19173)
@@ -13,7 +13,7 @@ Yuxuan Qiu (ug19091)
 
 Shunyi Zhao (vt19049)
 
-### **Content**
+## **Content**
  * [Introduction](#Intro)
  * [System Design](#LinkToPart1)
  * [System Implementation](#LinkToPart2)
@@ -178,6 +178,7 @@ The effect of combining M5 Stack with Desktop Application is shown below.
 In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
+#### Desktop Application
 
 ---
 

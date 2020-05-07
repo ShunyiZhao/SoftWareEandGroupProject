@@ -1,5 +1,7 @@
 # Desktop Application - Processing
 
+## *Content*
+
 Processing in Java is used as the main development tool in our BigEater game, having implemented:  
 - UI Drawing
 - Character Movement
