@@ -143,6 +143,34 @@ For gamers, web receives images from processing and acts as the screen for game 
 of background story and instructions. Gamers can also learn about some health tips for proper recipe design which equips our 
 software some educational significance.
 
+### Details of how we evaluated our designs
+1. In the web application, we realised 3 main functions. First, providing a video to  demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
+
+Techniques used and limitations:
+  1). The HTML frame of this program is built with the help of Bootstrap4. We achieved a certain level of screen adaptation, but most of them have limited desktops and cannot provide services for mobile devices.
+
+  2). In terms of layout, CSS flex box is partly used, which means that IE browser is not well compatible.
+
+  3). Main front-end logics are implemented with JavaScript and jQuery, while some external libraries are used for specific functionalities (e.g. Echarts is used to Manager System for visualising user's preference and final score). As for the limitations, the administrator's account cannot be registered. Besides, the background of each part are using an image instead of using css or Bootstrap4 library to build the background.
+
+2. In the desktop application, processing in Java is used as the main development tool. So far, we implemented UI drawing, character movement, random food dropping, random gift appearance, data statistics and data communication with web application using MQTT.
+
+Limitations about code design and communication:
+  1). There is still a lot of room to improve the readability and dryness of the code. We have to use flags in boolean type to mitigate the effect brought by repeatedly calling the same method due to the particularity of Processing.
+
+  2). In current program, the computer needs to do a lot of calculations at the same time in one frame. Therefore, situations of delay and crash occur at a medium frequency.
+
+  3). Communication with other applications stays at a low level. We use string to transfer information, but serialisation or a real-time system may become a better message carrier.
+
+3. At last, we use M5 Stack and serial communication to communicate with the desktop application and thus control movement of the game player. We use Arduino API functions of IMU(Sensor MPU9250) to get the accelerations and Euler angels.
+
+Limitations about M5 Stack and serial communication:
+  1). Due to an unknown problem, the yaw of M5 Stack increases automatically and we can not calculate the true acceleration of the movements of the game player.
+
+  2). Sometimes, the serial communication would slow the processing application and accumulate at the buffer, so it would lead to the delay of controlling.
+
+  3). A rectangle is placed on the screen of Stack to show the posture of Stack, but it twinkles at the edge of screen sometimes, which makes user difficult to see the rectangle.
+
 ### Social and Ethnic Implication
 Basically, our project is a game with interactive and data analysis functions. Due to time and knowledge limitation, we didn’t 
 fulfill all the ideal functions we want. In this game, we are not only aimed at release people’s pressure and have fun, but 
