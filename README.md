@@ -279,13 +279,9 @@ Player's score & preference: providing visualised data about the player's score 
 3. [limitations of Web Application](./Web/README.md#limitations)
 
 ### Future Expectation
-For the future, we believe there is still a lot of improvement room for our software as we haven’t realized all the ideal 
-functions we want. First of all, we would like to realize the live broadcast function so that interactive player can watch the 
-game. Gaming is a traditional entertainment medium and live game broadcast is rising and becoming quite popular in recent 
-years, we would like to combine them and we think that it is a new and interesting idea to let watchers interact with gamers. 
-Secondly, we want to build a game platform which allows game developers to upload their won games. Continuous innovation is a 
-key factor in gaming industry, especially for simple and small games where gamers may fell bored easily. Therefore, we would 
-love to provide an open platform for all game developers to show their talents.
+For the future, we believe there is still a lot of improvement room for our software as we haven’t realized all the ideal functions we want. First of all, we would like to realize the live broadcast function so that an interactive player can watch the game. Gaming is a traditional entertainment medium and live game broadcast is rising and becoming quite popular in recent years, we would like to combine them and we think that it is a new and interesting idea to let watchers interact with gamers. 
+
+Secondly, we want to build a game platform that allows game developers to upload their own games. Continuous innovation is a key factor in the gaming industry, especially for simple and small games where gamers may feel bored easily. Therefore, we would love to provide an open platform for all game developers to show their talents.
 
 ### Working Practice
 
@@ -302,17 +298,27 @@ We used project function of Github to allocate tasks.
 
 #### Development Style - Agile
 We applied agile methodology throughout our developing process and this helped our project improving continuously and smoothly.
+
 Shunyi Zhao, who is the M5 Stack developer, chose Bluetooth to realise data transmission between M5 Stack and Processing, because it would be convenient to use wireless connection. After Zhao was done with this function, he tested it and found the delay problem was severe. This would definitely affect gamers’ gaming experience and give rise to dissatisfaction. Therefore, Zhao did some research and discovered that Serial Communication was a better choice to mitigate the delay problem.
 
 What’s more, agile methodology also worked in our project to improve data analysts’ use experience.
 We were supposed to visualise a statistical table of user data with Processing in the first draft. However, the outcome indicated that the statistical table was not very easy to read and catch the valuable information with first glance. Hence, Kehan Du and Ho Cheung Lee who are web developers searched on google and found that web can help to visualise the data elegantly with Echart Javascript API. Therefore, we amended the plan and visualised user data into histograms, which would allow data analysts to get information more efficiently compared with tables, in the web application. We are also intended to provide more advanced processed data to improve our data analysis system, maybe we would realise this after some data science course, but we don’t have enough time to do it within this project.
-<数据柱状图插图>
+
+![Data visualization by Echart](/Images/Web/userpreference.png)
 
 These are two examples that agile methodology made our project a better software as it makes us to think at user’s perspective. Due to the influence of coronavirus, we cannot let others to try out our software and collect feedbacks, but we are trying to reflect on our own performance theoretically. We also keep an eye on the excellent technologies which could help us to satisfy user’s needs and hold the faith to continuously perfect our software.
 
 #### Group Meeting
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. All group members are collaborators of this repository. We can push our own work to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master branch is needed. For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
+Because of the unforeseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. 
 
-We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+Git ensures transparency and the quality of agile development.
 
-We can’t say we did everything well as there are still some ideal functions we haven’t realized yet. But as the first software project in our life time, as well as under the influence of coronavirus, we have tried our best.
+Our teams created new branches for independent tasks of different user stories. Regardless of new features, bug fixes, or adjustments to existing code, every time the code changes, a new branch was created as a development branch. When we realized the function, we Pull Request to the dev branch. Finally, Merge permissions opened by the administrator, and other members conducted code review and eventually merged the code into the Master branch.
+
+Code merging means that while the code is completed, the work in the documents of different groups has been basically completed, which allows our team to perform frequent iterative updates quickly and confidently.
+
+For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
+
+We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss them in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+
+We can’t say we did everything well as there are still some ideal functions we haven’t realized yet. But as the first software project in our lifetime, as well as under the influence of coronavirus, we have tried our best.

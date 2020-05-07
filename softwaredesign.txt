@@ -22,5 +22,5 @@ Designers should know:
 a.Are controls always visible and/or enabled? 
 b.Under what conditions do their states change?
 c.What transitions occur between these states and views? And how should they be animated?
-@Du kehan&Alex
+@Du kehan & Alex
 
