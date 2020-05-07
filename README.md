@@ -144,7 +144,7 @@ of background story and instructions. Gamers can also learn about some health ti
 software some educational significance.
 
 ### Details of how we evaluated our designs
-1. In the web application, we realised 3 main functions. First, providing a video to  demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
+1. In the web application, we realised 3 main functions. First, providing an introductory video to  demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
 
    Techniques used and limitations:
    1). The HTML frame of this program is built with the help of Bootstrap4. We achieved a certain level of screen adaptation, but most of them have limited desktops and cannot provide services for mobile devices. 2). In terms of layout, CSS flex box is partly used, which means that IE browser is not well compatible. 3). Main front-end logics are implemented with JavaScript and jQuery, while some external libraries are used for specific functionalities (e.g. Echarts is used to Manager System for visualising user's preference and final score). As for the limitations, the administrator's account cannot be registered. Besides, the background of each part are using an image instead of using css or Bootstrap4 library to build the background.
