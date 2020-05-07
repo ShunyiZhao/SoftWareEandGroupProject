@@ -16,13 +16,46 @@ This folder consists of two versions of the BigEater game, where names of sub-fo
 **@ Ben Jin (tk19028)**  
 **@ Rao Hu (ya19173)**  
 
-## Scoring Rule
+## Game Rules
 Each player will get three hearts at the beginning. Every time he/she misses one kind of food or touches one kind of virus will make the number of hearts subtracted by one. The game will be over when the number of hearts reaches to zero.  
 
-Scores for each objective are as follows:
-- cheese / crab / eggplant / fish / pineapple / salad : +1 point
-- gift: +2 points or +1 heart, the possibilities are two-thirds and one-third respectively
-- combo: When the combo is reached, the player will get nine extra points as a reward.
+Here are instructions of the game rules with example in different cases:
+- Cheese values 10 points. (840 -> 850)  
+
+<img src="../Images/Processing/cheese.gif" width=400 height=225>
+
+- Crab values 15 points. (170 -> 185)
+
+<img src="../Images/Processing/crab.gif" width=400 height=225>
+
+- Eggplant values 20 points. (0 -> 20)
+
+<img src="../Images/Processing/eggplant.gif" width=400 height=225>
+
+- Fish values 30 points. (60 -> 90)
+
+<img src="../Images/Processing/fish.gif" width=400 height=225>
+
+- Salad values 35 points. (185 -> 220)
+
+<img src="../Images/Processing/salad.gif" width=400 height=225>
+
+- Pineapple values 40 points. (1550 -> 1590)
+
+<img src="../Images/Processing/pineapple.gif" width=400 height=225>
+
+- Combo bonus: At the beginning of BigEater game, a special food combination will be chosen as a combo of the current game. The player who achieves that combo by eating food in order can get 500 points. The number of food that makes up a combo is normally greater than three. To simplify explanations, the combo in the following example only consists of a crab and a cheese. (255 -> eat a crab -> 270 -> eat a piece of cheese -> combo achieved -> 770)
+
+<img src="../Images/Processing/combo.gif" width=400 height=225>
+
+- Gift bonus: A special gift appears only when the current score can be divided by 150. The player who touches the gift can be awarded by 200 points and 2 hearts. Note that the gift will disappear when the player gets his/her next food. (150 points -> 350 points, 2 hearts -> 4 hearts)
+
+<img src="../Images/Processing/gift.gif" width=400 height=225>
+
+Here is an example of the whole process of BigEater game in double speed. It might take a bit longer time than expected because of the developer's excellent game skills.
+
+<img src="../Images/Processing/process.gif" width=400 height=225>
+
 
 ## Code Structure
 This introduction will mainly focus on the implementation of the BigEater game. Codes that realise the work of communicating with M5-Stack will be ignored. For more details of how M5-Stack works, please refer to  [M5_Stack_Control_Instruction](../M5_Stack/README.md).
@@ -49,6 +82,8 @@ BigEater.pde
     |            VirusB.pde
 
 ```
+
+BigEater class will be the main entrance of the game, implementing instantiation work of all classes and more importantly, the initialisation work of MQTT client. Adapter class will focus on processing every possible situation that may happen during the communication with web applications. Background and Eater class will ensure the game UI and characters to be painted in every frame. PlayerData class will do statistics work along with the process of the game. Drop class is a superclass where all dropping item classes will inherit from it, reducing the repetition rate of codes.
 
 ## Main Methods
 

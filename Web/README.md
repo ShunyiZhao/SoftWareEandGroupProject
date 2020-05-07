@@ -1,6 +1,6 @@
 # Web Application
 
-Our website is mainly focusing on the **description of the game**, playing a **interaction with desktop game** and providing a **visualized data** about analyzing player‘s behavior and preference.
+Our website is mainly focusing on the **description of the game**, playing an **interaction with desktop game** and providing a **visualized data** about analyzing player‘s behavior and preference.
 
 The entire web application partly relies on the Bootstrap4 layout and references some font Awesome icons
 
