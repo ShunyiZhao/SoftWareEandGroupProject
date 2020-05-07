@@ -44,7 +44,7 @@ Here are instructions of the game rules with example in different cases:
 
 <img src="../Images/Processing/pineapple.gif" width=400 height=225>
 
-- Combo bonus: At the beginning of BigEater game, a special food combination will be chosen as a combo of the current game. The player who achieves that combo by eating food in order can get 500 points. The number of food that makes up a combo is normally greater than three. To simplify explanations, the combo in the following example only consists of a crab and a cheese. (255 -> eat a crab -> 270 -> eat a cheese -> combo achieved -> 770)
+- Combo bonus: At the beginning of BigEater game, a special food combination will be chosen as a combo of the current game. The player who achieves that combo by eating food in order can get 500 points. The number of food that makes up a combo is normally greater than three. To simplify explanations, the combo in the following example only consists of a crab and a cheese. (255 -> eat a crab -> 270 -> eat a piece of cheese -> combo achieved -> 770)
 
 <img src="../Images/Processing/combo.gif" width=400 height=225>
 
