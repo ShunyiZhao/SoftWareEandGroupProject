@@ -6,13 +6,20 @@ The entire web application partly relies on the Bootstrap4 layout and references
 
 Main front-end logics are implemented with JavaScript and JQuery, while some external libraries are used for specific functionalities (e.g. Echarts is used to Manager System for visualizing user's preference and final score).
 
+## *Content*
+ * [Function](#function)
+ * [Application Structure](#structure)
+ * [Communication Protocols](#protocols)
+ * [Datatype for MQTT](#type)
+ * [Limitations](#limitations)
+
 ## Developers
 
 **@ HoCheung Lee (ja19025)**
 
 **@ Kehan Du (mz19460)**
 
-## Function
+## <span id="function">Function
 
 1. Admin
    * Administer use the link **login** at the top of the navigation can access to Manager System
@@ -29,7 +36,7 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
    * User can learn some health tips (in the part of "Health Tips")
       > * Used flipcard style to display the healthy tip for each food
  
-## Application Structure
+## <span id="structure">Application Structure
  ```
     web
     │   README.md
@@ -54,7 +61,7 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
 ```
 The files described in the structure are original parts, and other unmentioned files are mostly library files that the program depends on.
 
-## Communication Protocols 
+## <span id="protocols">Communication Protocols 
 The web application is mainly responsible for communicating with processing (desktop). We chose MQTT as communication methods.
 
 Our communication achieved two main functions:
@@ -64,7 +71,7 @@ Our communication achieved two main functions:
 Because the data messages we communicate is time-sensitive and the message body is small, MQTT is the most convenient way to connect at both ends. We only need to subscribe to relevant topics to achieve.
 
 
-## Datatype for MQTT
+## <span id="type">Datatype for MQTT
 ```json
 {
    "datatype":"datatype_name",
@@ -119,7 +126,7 @@ The web application will  ask Login  information from MQTT server if matched.
 ```
 After the player ends the game, the desktop application will send the player's preference information to the MQTT agent server. The web application will get this information then visualising by Echart-Bar. 
 
-## Limitation
+## <span id="limitations">Limitations
 
 1.Program compatibility
 
