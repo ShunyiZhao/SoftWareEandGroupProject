@@ -12,9 +12,9 @@ class Gift {
         y = height / 3 + 50;
     }
     
-    public boolean pickUpGift() {
-        if (mouseX >= x - 50 && mouseX <= x + 50 
-              && mouseY >= y - 50 && mouseY <= y + 50) {  
+    public boolean pickUpGift(int xInput, int yInput) {
+        if (xInput >= x - 50 && xInput <= x + 50 
+              && yInput >= y - 50 && yInput <= y + 50) {  
                 status = false;    
                 return true;
         }
@@ -22,7 +22,7 @@ class Gift {
     }
     
     public boolean getGiftStatus(PlayerData data) {
-        if (status == false && data.getScore() != 0 && data.getScore() % 5 == 0) {
+        if (status == false && data.getScore() != 0 && data.getScore() % 150 == 0) {
             status = true;
             return true;
         }

@@ -26,13 +26,12 @@ class PlayerData {
     
     public void recordPlayerMove(Drop currentClass) {
         println(currentClass.getClassName());
-        if (!(userChoice == null || userChoice.size() == 0)) {
+        if(userChoice == null || userChoice.size() == 0){
             if (currentClass.getClassName().equalsIgnoreCase(userChoice.get(cnt))) {
                 cnt++;
             }
         }
-        else cnt = 0;
-        
+        cnt = 0;
         modifyCount(currentClass.getClassName());
         modifyScoreAndHealth(currentClass.getClassName());
     }
@@ -52,32 +51,10 @@ class PlayerData {
         if (cnt == userChoice.size()) {
             cnt = 0;
             combo++; 
-            score += 500;
+            score += 10;
         }
         else if (checkBadDropping(name)) health--;
-        else {
-            switch (name) {
-                case "pineapple": 
-                    score += 40;
-                    break;
-                case "crab":
-                    score += 15;
-                    break;
-                case "eggplant":
-                    score += 20;
-                    break;
-                case "salad":
-                    score += 35;
-                    break;
-                case "fish":
-                    score += 30;
-                    break;
-                case "cheese":
-                    score += 10;
-                    break;
-                default: score += 0;    
-            }
-        }
+        else score++; 
     }
     
     private void setCountMap(String[] names) {
@@ -97,8 +74,14 @@ class PlayerData {
     
     public void getBonus() { 
         bonus++;
-        health += 2;
-        score += 200;
+        int num = (int) random(3);
+        
+        if (num == 1) {
+            health += 1;
+        }   
+        else {
+            score += 2;
+        } 
     }
     
     private boolean checkBadDropping(String name) {

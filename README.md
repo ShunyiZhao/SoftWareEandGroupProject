@@ -1,5 +1,18 @@
 # TEAM6 -- BIG EATTER
 
+## Developers
+Kehan Du (mz19460)
+
+Rao Hu (ya19173)
+
+HoCheung Lee (ja19025)
+
+Ben Jin (tk19028)
+
+Yuxuan Qiu (ug19091)
+
+Shunyi Zhao (vt19049)
+
 ### **Content**
  * [Introduction](#Intro)
  * [System Design](#LinkToPart1)
@@ -38,6 +51,9 @@ In the beginning, we are supposed to design a body sensing version of FRUIT NINJ
 the game would track the movement of M5 stack and cut fruits in the game.The paper prototype and processing prototype is in the folder with path ./example/example_1
 
 ![main GUI](./example/example_1/image_0.jpg)
+
+If the start button start is clicked, a game will start. And if the ? button is clicked, an instruction will be shown. The whole process of this version prototype is shown [here](./example/example_1/README.md)
+
 Then, we found that maybe this game is improper as it is not our own idea and therefore, we brought the idea to build a   
 really open game platform. Any game developers can register the accounts on our platform and are freely allowed to upload 
 their games and gamers can choose any of games to play. And maybe make a combination of a live broadcast function which has become quite popular in recent years.
@@ -49,19 +65,35 @@ right which is controlled by M5 stack. What’s more, there would be bonus gifts
 the character can click the button on M5 stack to turn into shoot mode and would get the bonus gift if the character 
 successfully shoots the subject. The game would end if the character touches the bomb.
 
+The paper prototype of this version is shown as below:
+
+![paperprotype_2](./Images/prototype/version_2/interface.JPG)
+
+The whole process of this version prototype is shown [here](./example/example_2/README.md)
+
 The structure of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
 The structure of our project is shown as update *fig.2*:
 
-![uml](./design_GUI/SE_UML.png)
+![uml](./Images/UML/SE_UML.png)
 
 ## <span id="LinkToPart2">System Implementation
 
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder,
-Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben 
-Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
+### Folder Structure
+```
+SoftWareEandGroupProject
+    |   README.md (the front page of our project)
+    └───design_GUI (the images of the user and web application interface)
+    └───example (paper and processing prototype)
+    └───Images (storing the images cited in this file)
+    └───M5_Stack (works about M5_Stack)
+    └───Processing (works about Desktop Application)
+    └───Web (works about Web Application)
+```
+
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
 website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
 to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
 branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
