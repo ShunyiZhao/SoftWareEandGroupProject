@@ -178,6 +178,8 @@ The effect of combining M5 Stack with Desktop Application is shown below.
 In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
+---
+
 #### Desktop Application
 The effect of playing game developed by us with mouse and keyboard is shown below.
 
@@ -194,6 +196,8 @@ Combo:
 ![Combo](./Images/Processing/combo.gif)
 
 ---
+
+#### Web Application
 
 ### The disadventages of our projects are shown as below
 1. The control of character ....
