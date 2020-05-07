@@ -75,11 +75,21 @@ The structure of first version of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
-In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. 
+In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. A manager could see the data collected by desktop application, and change the type of food, or other properties of food and game. A audience could watch the process of gaming, and chat with player and other audiences.
 
 The structure of second version of our project is shown as update *fig.2*:
 
 ![uml](./Images/UML/SE_UML.png)
+
+In this image, a player could control the character in Desktop Application with a M5 Stack or a mouse. When the character touch the foods, the score will increase. They also could use the pointer to touch the gift, which will add their health or add score. A manager could see the data collected by application, including the plays' prefence, if he log in with an administrator account. The interactive player could choose combo in the website.
+
+---
+
+### User Stories
+
+### Communication Protocols
+
+---
 
 ## <span id="LinkToPart2">System Implementation
 
@@ -164,6 +174,7 @@ our game to assist their members. What’s more, our data analysis system is ope
 Although our analysis is simple currently, we would love to develop more advanced analysis algorithm and provide more diverse 
 data. Then, the data analysis system can be more significant and we hope it could provide useful information for analysts who 
 work in game industry or health management industry.
+
 ## <span id="LinkToPart3">Project Evaluation
 Group memebers test the part they made by themselves separately, and the M5 Stack holder test the whole system.
 
