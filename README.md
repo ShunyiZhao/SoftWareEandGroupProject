@@ -41,9 +41,9 @@ Interactive players are third user of BIGEATER. They can be regarded as companio
 interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they comb the food in 
 the recipe. In the beginning, we were supposed to make a live game broadcast so that interactive can watch the game as well as
 interact in the game. Unfortunately, we cannot figure out the live broadcast function and the interactive player’s role is 
-limited now. Maybe it can become a good game for parents to educate children to have a good diet habit.   
-  
-  Kehan Du, Rao Hu, HoCheung Lee, Ben Jin, Yuxuan Qiu and Shunyi Zhao compose our team.
+limited now. Maybe it can become a good game for parents to educate children to have a good diet habit.
+
+
 
 ## <span id="LinkToPart1">System Design
 
@@ -109,6 +109,7 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 ### Web technologies
 
 See them in the introduction of [Web README](./Web/README.md)
+
 ---
 
 ## <span id="LinkToPart2">System Implementation
