@@ -5,33 +5,24 @@ class PlayerData {
     private int score;
     private int health;
     private int bonus;
-    private int combo;
     private HashMap<String, Integer> count = new HashMap<String, Integer>();
-    private List<String> userChoice = new ArrayList<String>();
-    private int cnt = 0;
+    private String username;
     
     public PlayerData(String[] names) {
         score = 0;
         health = 3;
-        combo = 0;
         bonus = 0;
         setCountMap(names);
     }
     
-    public void getUserChoice(List<String> userChoice) {
-        this.userChoice = userChoice;
+    public void getCurrentUser(String filename) {
+        JSONObject json = loadJSONObject("signup" + File.separator + filename);
+        this.username = json.getString("username");
     }
     
     public boolean isAlive() { return health > 0; }
     
     public void recordPlayerMove(Drop currentClass) {
-        println(currentClass.getClassName());
-        if(!(userChoice == null || userChoice.size() == 0)){
-            if (currentClass.getClassName().equalsIgnoreCase(userChoice.get(cnt))) {
-                cnt++;
-            }
-        }
-        else cnt = 0;
         modifyCount(currentClass.getClassName());
         modifyScoreAndHealth(currentClass.getClassName());
     }
@@ -48,12 +39,7 @@ class PlayerData {
     }
     
     private void modifyScoreAndHealth(String name) {
-        if (cnt == userChoice.size()) {
-            cnt = 0;
-            combo++; 
-            score += 10;
-        }
-        else if (checkBadDropping(name)) health--;
+        if (checkBadDropping(name)) health--;
         else score++; 
     }
     
@@ -89,40 +75,29 @@ class PlayerData {
                 "bomb".equals(name);
     }
     
-    public void saveUserData() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("{\"datatype\":\"chart\",\"main\"::");
-        sb.append("{\"score\":" + score + ",");
-        sb.append("\"bonus\":" + bonus + ",");
-        sb.append("\"combo\":" + combo + ",");
-        int cnt = 0;
+    public void saveUserData() throws IOException {
+        JSONObject json = new JSONObject();
+        json.setInt("score", score);
         for (String attribute : count.keySet()) {
-            if ((cnt++) != 6) {
-                sb.append("\"" + attribute + "\":" + count.get(attribute) + ",");
-            }
-            else {
-                sb.append("\"" + attribute + "\":" + count.get(attribute) + "}");
-            }
+            json.setInt(attribute, count.get(attribute));
         }
-        sb.append("}");
+        json.setInt("bonus", bonus);
+        String fileName = "user" + File.separator + username + ".json";
+        saveJSONObject(json, fileName);
         
-        client.publish("/BigEater", processMessageToBePublished(sb.toString()), 0, true);
+        String rankFile = "user" + File.separator + "rank.json";
+        json = loadJSONObject(rankFile);
+        json.setInt(username, score);
+        int previousScore = json.getInt("highest_score");
+        json.setInt("highest_score", Math.max(score, previousScore));
+        saveJSONObject(json, rankFile);
     }
     
-    
-    
-    private String processMessageToBePublished(String string) {
-        StringBuilder sb = new StringBuilder("{");
-        for (int i = 1; i < string.length() - 1; ++i) {
-            if (string.charAt(i) == '\\') { continue; }
-            if (string.charAt(i) == 'n' && string.charAt(i - 1) == '\\') { continue; }
-            if (string.charAt(i + 1) == '{') { continue; }
-            if (string.charAt(i - 1) == '}') { continue; }
-            sb.append(String.valueOf(string.charAt(i)));
-        }
+    public boolean compareScore(int score) {
+        JSONObject json = loadJSONObject("user" + File.separator + "rank.json");
+        int previousScore = json.getInt("highest_score");
         
-        sb.append("}");
-        return sb.toString();
+        return score > previousScore;
     }
     
 }
