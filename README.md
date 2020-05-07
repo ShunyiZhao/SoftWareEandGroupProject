@@ -67,7 +67,7 @@ successfully shoots the subject. The game would end if the character touches the
 
 The paper prototype of this version is shown as below:
 
-![paperprotype_2](./Images/prototype/version_2/interface.JPG)
+![paperprotype_2](./Images/prototype/version_2/interface_2.JPG)
 
 The whole process of this version prototype is shown [here](./example/example_2/README.md)
 
