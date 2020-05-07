@@ -54,8 +54,6 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
 ```
 The files described in the structure are original parts, and other unmentioned files are mostly library files that the program depends on.
 
-## Web 
-
 ## Communication Protocols 
 The web application is mainly responsible for communicating with processing (desktop). We chose MQTT as communication methods.
 
