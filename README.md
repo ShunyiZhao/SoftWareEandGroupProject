@@ -108,6 +108,7 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 
 ### Web technologies
 
+See them in the introduction of [Web README](./Web/README.md)
 ---
 
 ## <span id="LinkToPart2">System Implementation
