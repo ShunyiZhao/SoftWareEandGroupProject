@@ -1,5 +1,13 @@
 # Desktop Application - Processing
 
+## *Content*
+ * [Game Rules](#rules)
+ * [Code Structure](#structure)
+ * [Main Methods](#methods)
+ * [Connection Test](#connection)
+ * [Main Problem & Solution](#solutions)
+ * [Limitations](#limitations)
+
 Processing in Java is used as the main development tool in our BigEater game, having implemented:  
 - UI Drawing
 - Character Movement
@@ -16,15 +24,48 @@ This folder consists of two versions of the BigEater game, where names of sub-fo
 **@ Ben Jin (tk19028)**  
 **@ Rao Hu (ya19173)**  
 
-## Scoring Rule
+## <span id="rules">Game Rules
 Each player will get three hearts at the beginning. Every time he/she misses one kind of food or touches one kind of virus will make the number of hearts subtracted by one. The game will be over when the number of hearts reaches to zero.  
 
-Scores for each objective are as follows:
-- cheese / crab / eggplant / fish / pineapple / salad : +1 point
-- gift: +2 points or +1 heart, the possibilities are two-thirds and one-third respectively
-- combo: When the combo is reached, the player will get nine extra points as a reward.
+Here are instructions of the game rules with example in different cases:
+- Cheese values 10 points. (840 -> 850)  
 
-## Code Structure
+<img src="../Images/Processing/cheese.gif" width=400 height=225>
+
+- Crab values 15 points. (170 -> 185)
+
+<img src="../Images/Processing/crab.gif" width=400 height=225>
+
+- Eggplant values 20 points. (0 -> 20)
+
+<img src="../Images/Processing/eggplant.gif" width=400 height=225>
+
+- Fish values 30 points. (60 -> 90)
+
+<img src="../Images/Processing/fish.gif" width=400 height=225>
+
+- Salad values 35 points. (185 -> 220)
+
+<img src="../Images/Processing/salad.gif" width=400 height=225>
+
+- Pineapple values 40 points. (1550 -> 1590)
+
+<img src="../Images/Processing/pineapple.gif" width=400 height=225>
+
+- Combo bonus: At the beginning of BigEater game, a special food combination will be chosen as a combo of the current game. The player who achieves that combo by eating food in order can get 500 points. The number of food that makes up a combo is normally greater than three. To simplify explanations, the combo in the following example only consists of a crab and a cheese. (255 -> eat a crab -> 270 -> eat a piece of cheese -> combo achieved -> 770)
+
+<img src="../Images/Processing/combo.gif" width=400 height=225>
+
+- Gift bonus: A special gift appears only when the current score can be divided by 150. The player who touches the gift can be awarded by 200 points and 2 hearts. Note that the gift will disappear when the player gets his/her next food. (150 points -> 350 points, 2 hearts -> 4 hearts)
+
+<img src="../Images/Processing/gift.gif" width=400 height=225>
+
+Here is an example of the whole process of BigEater game in double speed. It might take a bit longer time than expected because of the developer's excellent game skills.
+
+<img src="../Images/Processing/process.gif" width=400 height=225>
+
+
+## <span id="structure">Code Structure
 This introduction will mainly focus on the implementation of the BigEater game. Codes that realise the work of communicating with M5-Stack will be ignored. For more details of how M5-Stack works, please refer to  [M5_Stack_Control_Instruction](../M5_Stack/README.md).
 
 All used classes of the game are following the structure below:
@@ -50,7 +91,9 @@ BigEater.pde
 
 ```
 
-## Main Methods
+BigEater class will be the main entrance of the game, implementing instantiation work of all classes and more importantly, the initialisation work of MQTT client. Adapter class will focus on processing every possible situation that may happen during the communication with web applications. Background and Eater class will ensure the game UI and characters to be painted in every frame. PlayerData class will do statistics work along with the process of the game. Drop class is a superclass where all dropping item classes will inherit from it, reducing the repetition rate of codes.
+
+## <span id="methods">Main Methods
 
 ### BigEater.pde
 - **setup() :** The setup() method will only run once during the whole process and the main work of this method is to instantiate classes by constructors. Most importantly, the connection with HiveMQ will be created in this method with the following code:
@@ -107,7 +150,7 @@ BigEater.pde
     popMatrix();
 ```
 
-## Connection Test
+## <span id="connection">Connection Test
 
 The connection test consists of two tests with different directions of data flow. The first data to be transferred looks like this:
 ```
@@ -145,7 +188,7 @@ new message: /BigEater - {"datatype":"chart","main":{"score":14,"bonus":0,"combo
 ```
 
 
-## Main Problem & Solution
+## <span id="solutions">Main Problem & Solution
 
 **Q: Size of the image won't increase during the fall.**  
 A: The problem is caused by the floating rule of Processing. In this case, only one decimal will be retained. So, if we aim to pursue to reflect subtle changes in the size of the picture, the rate of change will remain zero because the decimals are automatically truncated by the program.   
@@ -156,7 +199,7 @@ A: The exception is thrown because of the loss of valid reference caused by re-i
 **Q: Functions of the project are unclear because of the lack of face-to-face talk.**  
 A: Due to the pandemic of COVID-19, we lost opportunities of joining formal workshops, causing the uncertainty on the structures and functions of the whole group work. The solution is to increase the frequency of online meeting via Skype-for-Business.  
 
-## Limitations
+## <span id="limitations">Limitations
 
 **1. Code Quality**  
 There is still a lot of room for improving code quality. Because of the particularity of Processing, convenience appears with troubles. The draw() method is not friendly for variable passing, causing a large number of tricky issues. We have to use flags in boolean type to mitigate the effect brought by repeatedly calling the same method, which reduces the readability and dryness of the code.

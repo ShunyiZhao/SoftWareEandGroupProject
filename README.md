@@ -1,6 +1,6 @@
 # TEAM6 -- BIG EATTER
 
-## Developers
+## Members
 Kehan Du (mz19460)
 
 Rao Hu (ya19173)
@@ -13,7 +13,7 @@ Yuxuan Qiu (ug19091)
 
 Shunyi Zhao (vt19049)
 
-### **Content**
+## **Content**
  * [Introduction](#Intro)
  * [System Design](#LinkToPart1)
  * [System Implementation](#LinkToPart2)
@@ -67,15 +67,17 @@ successfully shoots the subject. The game would end if the character touches the
 
 The paper prototype of this version is shown as below:
 
-![paperprotype_2](./Images/prototype/version_2/interface.JPG)
+![paperprotype_2](./Images/prototype/version_2/interface_2.JPG)
 
 The whole process of this version prototype is shown [here](./example/example_2/README.md)
 
-The structure of our project is shown as below *fig.1*:
+The structure of first version of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
-The structure of our project is shown as update *fig.2*:
+In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. 
+
+The structure of second version of our project is shown as update *fig.2*:
 
 ![uml](./Images/UML/SE_UML.png)
 
@@ -92,15 +94,6 @@ SoftWareEandGroupProject
     └───Processing (works about Desktop Application)
     └───Web (works about Web Application)
 ```
-
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
-website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
-to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
-branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
-clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
-are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
-quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
-
 
 ### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
  * M5 Stack GUI design
@@ -143,6 +136,22 @@ For gamers, web receives images from processing and acts as the screen for game 
 of background story and instructions. Gamers can also learn about some health tips for proper recipe design which equips our 
 software some educational significance.
 
+### Details of how we evaluated our designs
+1. In the web application, we realised 3 main functions. First, providing an introductory video to  demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
+
+   Techniques used and limitations:
+   1). The HTML frame of this program is built with the help of Bootstrap4. We achieved a certain level of screen adaptation, but most of them have limited desktops and cannot provide services for mobile devices. 2). In terms of layout, CSS flex box is partly used, which means that IE browser is not well compatible. 3). Main front-end logics are implemented with JavaScript and jQuery, while some external libraries are used for specific functionalities (e.g. Echarts is used to Manager System for visualising user's preference and final score). As for the limitations, the administrator's account cannot be registered. Besides, the background of each part are using an image instead of using css or Bootstrap4 library to build the background.
+
+2. In the desktop application, processing in Java is used as the main development tool. So far, we implemented UI drawing, character movement, random food dropping, random gift appearance, data statistics and data communication with web application using MQTT.
+
+   Limitations about code design and communication:
+   1). There is still a lot of room to improve the readability and dryness of the code. We have to use flags in boolean type to mitigate the effect brought by repeatedly calling the same method due to the particularity of Processing. 2). In current program, the computer needs to do a lot of calculations at the same time in one frame. Therefore, situations of delay and crash occur at a medium frequency. 3). Communication with other applications stays at a low level. We use string to transfer information, but serialisation or a real-time system may become a better message carrier.
+
+3. At last, we use M5 Stack and serial communication to communicate with the desktop application and thus control movement of the game player. We use Arduino API functions of IMU(Sensor MPU9250) to get the accelerations and Euler angels.
+
+   Limitations about M5 Stack and serial communication:
+   1). Due to an unknown problem, the yaw of M5 Stack increases automatically and we can not calculate the true acceleration of the movements of the game player. 2). Sometimes, the serial communication would slow the processing application and accumulate at the buffer, so it would lead to the delay of controlling. 3). A rectangle is placed on the screen of Stack to show the posture of Stack, but it twinkles at the edge of screen sometimes, which makes user difficult to see the rectangle.
+
 ### Social and Ethnic Implication
 Basically, our project is a game with interactive and data analysis functions. Due to time and knowledge limitation, we didn’t 
 fulfill all the ideal functions we want. In this game, we are not only aimed at release people’s pressure and have fun, but 
@@ -159,15 +168,24 @@ work in game industry or health management industry.
 Group memebers test the part they made by themselves separately, and the M5 Stack holder test the whole system.
 
 
-### Test Methodology
+### Outcome
 
+#### Combining IoT Device With Desktop Application
+The effect of combining M5 Stack with Desktop Application is shown below.
 
+![M5 control](./Images/M5/M5.gif)
+
+In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
+will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
+
+#### Desktop Application
 
 ---
 
 ### The disadventages of our projects are shown as below
 1. The control of character ....
 2. xxxx
+
 ### Future Expectation
 For the future, we believe there is still a lot of improvement room for our software as we haven’t realized all the ideal 
 functions we want. First of all, we would like to realize the live broadcast function so that interactive player can watch the 
@@ -176,3 +194,12 @@ years, we would like to combine them and we think that it is a new and interesti
 Secondly, we want to build a game platform which allows game developers to upload their won games. Continuous innovation is a 
 key factor in gaming industry, especially for simple and small games where gamers may fell bored easily. Therefore, we would 
 love to provide an open platform for all game developers to show their talents.
+
+### Working Practice
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
+website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
+to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
+branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
+clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
+are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
+quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.

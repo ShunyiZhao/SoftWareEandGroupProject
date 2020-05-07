@@ -22,7 +22,7 @@ class Gift {
     }
     
     public boolean getGiftStatus(PlayerData data) {
-        if (status == false && data.getScore() != 0 && data.getScore() % 5 == 0) {
+        if (status == false && data.getScore() != 0 && data.getScore() % 150 == 0) {
             status = true;
             return true;
         }
