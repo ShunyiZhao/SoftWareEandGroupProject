@@ -236,21 +236,39 @@ Combo:
 ---
 
 #### Web Application
-The game is displayed on the web page, shown as below.
+Each sections on the web page are shown as below.
 
-Game Display:
+In the section of "IntroStory", the background story of the game has been shown in here.
+
+![Introstory](./Images/Web/introStory.png)
+
+
+The section of “check box” is used to let interactive players to submit the receipt.
+
+![Checkbox](./Images/Web/checkbox.png)
+
+
+In the section of "Game Display", the general idea of the game is displayed on the web page.
 
 ![Display](./Images/Web/gamedisplay.png)
 
-Instruction:
+
+In the section of "Instruction", what the player needs for playing the game and the rule of the game have been stated in this part.
 
 ![Instruction](./Images/Web/instruction.png)
 
-Administrator:
+
+Here is a part to give people to learn some healthy tips.
+
+![Healthtip](./Images/Web/healthtips.png)
+
+
+Here is a page used for administrator to log in.
 
 ![Login](./Images/Web/login.png)
 
-Users' preference:
+
+Here is a part of providing a visualized data regarding to player’s score and their preference of food.
 
 ![preference](./Images/Web/userpreference.png)
 
