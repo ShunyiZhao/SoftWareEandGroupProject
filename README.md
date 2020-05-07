@@ -198,8 +198,27 @@ Combo:
 ---
 
 #### Web Application
+The game is displayed on the web page, shown as below.
 
-### The disadventages of our projects are shown as below
+Game Display:
+
+![Display](./Images/Web/gamedisplay.png)
+
+Instruction:
+
+![Instruction](./Images/Web/instruction.png)
+
+Administrator:
+
+![Login](./Images/Web/login.png)
+
+Users' preference:
+
+![preference](./Images/Web/userpreference.png)
+
+---
+
+### Disadvantages & Limitations
 1. The control of character ....
 2. xxxx
 
