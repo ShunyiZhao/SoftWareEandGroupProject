@@ -170,7 +170,7 @@ For gamers, web receives images from processing and acts as the screen for game 
 of background story and instructions. Gamers can also learn about some health tips for proper recipe design which equips our 
 software some educational significance.
 
-### Details of how we evaluated our designs
+### Design evaluation details
 1. In the web application, we realised 3 main functions. First, providing an introductory stories to demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
 
    Techniques used and limitations:
@@ -210,6 +210,7 @@ The effect of combining M5 Stack with Desktop Application is shown below.
 
 ![M5 control](./Images/M5/M5.gif)
 
+GIF1
 In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
@@ -222,13 +223,19 @@ Pressing enter on keyboard to start game:
 
 ![Start Game](./Images/Processing/process.gif)
 
+GIF2: This gif shows the whole process of our game. Eating different food you will get corresponding scores. And if you hit viruses and lose all the 3 hearts you have at the beginning of the game, you will lose and be forced to quit this game.
+
 Eating cheese:
 
 ![Eating cheese](./Images/Processing/cheese.gif)
 
+GIF3: If you hit a piece of cheese, you will get 10 scores each time.
+
 Combo:
 
 ![Combo](./Images/Processing/combo.gif)
+
+GIF4: If you achieve a combo with a crab and a piece of cheese in order, you will be rewarded with 500 scores.
 
 ---
 
