@@ -136,15 +136,6 @@ SoftWareEandGroupProject
     └───Web (works about Web Application)
 ```
 
-### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
- * M5 Stack GUI design
- * M5 Stack programming of IMU sensor
- * M5 Stack programming of serial and LCD
- * Processing programming of serial communication
- * Design the GUI of desktop application
- * Dssign the GUI of web application
- * Communication between desktop application and web application
-
 ### IoT Device - M5 Stack
 Our IoT Device is M5 Stack.
 - [Details of M5 Stack](M5_Stack/README.md)       
@@ -274,6 +265,18 @@ key factor in gaming industry, especially for simple and small games where gamer
 love to provide an open platform for all game developers to show their talents.
 
 ### Working Practice
+
+#### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
+ * M5 Stack GUI design
+ * M5 Stack programming of IMU sensor
+ * M5 Stack programming of serial and LCD
+ * Processing programming of serial communication
+ * Design the GUI of desktop application
+ * Dssign the GUI of web application
+ * Communication between desktop application and web application
+
+We used project function of Github to allocate tasks.
+
 Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. All group members are collaborators of this repository. We can push our own work to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master branch is needed. For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
 
 We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
