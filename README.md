@@ -32,22 +32,22 @@ designed a multi-functional gaming BIGEATER which is aimed for gamers, game anal
 new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.
 
 First of all, BIGEATER is a simple and small game. The reason is that with fast pace and heavy pressure, gaming is a
-wonderful way to relax. Hence, we came up with the idea to design a simple and small game which do not require gamers to spend 
-a lot of time to learn and do not require the subtle skills to play, neither. In addition, we believe simple games would be 
-appeal to some potential gamers and therefore expand the audience.
+wonderful way to relax. Hence, we came up with the idea to design a simple and small game which does not require gamers to spend 
+a lot of time to learn and does not require the subtle skills to play, neither. In addition, we believe simple games would be 
+appealing to some potential gamers and therefore expand the audience.
 
 Secondly, BIGEATER provides processed game-related data such as game duration and game hits for game analysts, so that they 
 can make decisions to optimize or promote the games. We think continuous improvement and innovation are the most significant 
 factors to maintain high competitiveness of a game. Especially as a simple game, gamers may feel bored with our games easily, 
-it is therefore more than important for our own game analysts to make accurate and instant decisions to perfection the flaws. 
-Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
-industry’s development.
+it is therefore more important for our own game analysts to make accurate and instant decisions to perfection the flaws. 
+Also, other game analysts could use our software to know about the trend of popular games and help to promote the development of
+game industry.
 
-Interactive players are third user of BIGEATER. They can be regarded as companions of gamers. Before the game begins, 
-interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they comb the food in 
-the recipe. In the beginning, we were supposed to make a live game broadcast so that interactive can watch the game as well as
-interact in the game. Unfortunately, we cannot figure out the live broadcast function and the interactive player’s role is 
-limited now. Maybe it can become a good game for parents to educate children to have a good diet habit.
+Interactive players are the third user of BIGEATER. They can be regarded as companions of gamers. Before the game begins, 
+interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they combo the food in 
+the recipe. At the beginning, we supposed to make a live game broadcast so that interactive players can watch the game as well as
+interact in the game. Unfortunately, we cannot realize the live broadcast function, so the interactive player’s role is 
+limited now. We believe it can become a good game for parents to educate children to have a good diet habit.
 
 
 
@@ -91,9 +91,9 @@ In this image, a player could control the character in Desktop Application with 
 
 ### User Stories
 
-Gamers (player in fig 2): have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can slope the M5 Stack to control the movement of character. If the bonus gift appear, player can get bonus point by using the mouse pointer to point to the bonus gift. As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat heathy.
+Gamers (player in fig 2): have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can slope the M5 Stack to control the movement of character. If the bonus gift appears, player can get bonus point by using the mouse pointer to point to the bonus gift. As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow our recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat healthy.
 
-Interactive Players: company the gamer and gain diet knowledgeInteractive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
+Interactive Players: company the gamer and gain diet knowledge. Interactive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
 
 Game Analyst (manager in figure 2): Our own analysts as well as other game analysts can register through our web and login to view our processed data. (currently we haven’t realized the registration function yet)
 
@@ -102,7 +102,7 @@ Game Analyst (manager in figure 2): Our own analysts as well as other game analy
 ### Communication Protocols
 We use serial communication and MQTT in our project.
 
-A example of serial communication is shown below:
+An example of serial communication is shown below:
 
 ![After press button](./Images/M5/afterPressButton.png)
 
@@ -114,7 +114,7 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 
 ### Data Persistence
 
-Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and the file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
+Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and this file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
 
 ---
 
@@ -304,11 +304,11 @@ We applied agile methodology throughout our developing process and this helped o
 Shunyi Zhao, who is the M5 Stack developer, chose Bluetooth to realise data transmission between M5 Stack and Processing, because it would be convenient to use wireless connection. After a discussion, we thought the delay problem was severe. This would definitely affect gamers’ gaming experience and give rise to dissatisfaction. Therefore, Zhao did some research and discovered that Serial Communication was a better choice to mitigate the delay problem.
 
 What’s more, agile methodology also worked in our project to improve data analysts’ use experience.
-We were supposed to visualise a statistical table of user data with Processing in the first draft. However, the outcome indicated that the statistical table was not very easy to read and catch the valuable information with first glance. Hence, Kehan Du and Ho Cheung Lee who are web developers searched on google and found that web can help to visualise the data elegantly with Echart Javascript API. Therefore, we amended the plan and visualised user data into histograms, which would allow data analysts to get information more efficiently compared with tables, in the web application. We are also intended to provide more advanced processed data to improve our data analysis system, maybe we would realise this after some data science course, but we don’t have enough time to do it within this project.
+We supposed to visualise a statistical table of user data with Processing in the first draft. However, the outcome indicated that the statistical table was not very easy to read and could not catch the valuable information at first glance. Hence, Kehan Du and Ho Cheung Lee who are web developers searched on google and found that web can help to visualise the data elegantly with Echart Javascript API. Therefore, we amended the plan and visualised user data into histograms, which would allow data analysts to get information more efficiently compared with tables, in the web application. We also intended to provide more advanced processed data to improve our data analysis system, maybe we would realise this after some data science course, but we don’t have enough time to do it within this project.
 
 ![Data visualization by Echart](/Images/Web/userpreference.png)
 
-These are two examples that agile methodology made our project a better software as it makes us to think at user’s perspective. Due to the influence of coronavirus, we cannot let others to try out our software and collect feedbacks, but we are trying to reflect on our own performance theoretically. We also keep an eye on the excellent technologies which could help us to satisfy user’s needs and hold the faith to continuously perfect our software.
+These are two examples that agile methodology made our project better as it makes us to think at user’s perspective. Due to the influence of coronavirus, we cannot let others try out our software and collect feedbacks, but we are trying to reflect on our own performance theoretically. We also keep an eye on the excellent technologies which could help us to satisfy user’s needs and hold the faith to continuously perfect our software.
 
 #### Group Meeting
 Because of the unforeseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. 
