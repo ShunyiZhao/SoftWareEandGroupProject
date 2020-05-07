@@ -21,7 +21,8 @@ Each player will get three hearts at the beginning. Every time he/she misses one
 
 Here are instructions of the game rules with example in different cases:
 - Cheese values 10 points (840 -> 850)  
-![cheese](../Images/Processing/cheese.gif)
+
+<img src="../Images/Processing/cheese.gif" width=400 height=225>
 
 Scores for each objective are as follows:
 - cheese / crab / eggplant / fish / pineapple / salad : +1 point
