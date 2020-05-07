@@ -22,28 +22,32 @@ Shunyi Zhao (vt19049)
 ## <span id="Intro">Introduction
 Today, there are more than 2.5 billion gamers across the world and it is calculated that they spend around 152.1 billion 
 dollars on games in 2019, and the revenue of game industry is expected to be worth over 270 billion dollars by 2020. Moreover,
-data analysts predict that game industry will still experience constant growth in the upcoming years.    
+data analysts predict that game industry will still experience constant growth in the upcoming years.
+
 Coincidently, all of our group members are interested in computer games and software project gives us the chance to
 implement our ideas to practice. As one of the most primary entertainment mediums with huge growth potential, we therefore
 designed a multi-functional gaming BIGEATER which is aimed for gamers, game analysts and interactive players. We figured out a
-new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.   
+new mode of gaming and hope it could be attractive for gamers and become successful in gaming industry.
+   
 First of all, BIGEATER is a simple and small game. The reason is that with fast pace and heavy pressure, gaming is a
 wonderful way to relax. Hence, we came up with the idea to design a simple and small game which do not require gamers to spend 
 a lot of time to learn and do not require the subtle skills to play, neither. In addition, we believe simple games would be 
-appeal to some potential gamers and therefore expand the audience.   
+appeal to some potential gamers and therefore expand the audience.
+
 Secondly, BIGEATER provides processed game-related data such as game duration and game hits for game analysts, so that they 
 can make decisions to optimize or promote the games. We think continuous improvement and innovation are the most significant 
 factors to maintain high competitiveness of a game. Especially as a simple game, gamers may feel bored with our games easily, 
 it is therefore more than important for our own game analysts to make accurate and instant decisions to perfection the flaws. 
-//Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
-industry’s development.   
+Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
+industry’s development.
+
 Interactive players are third user of BIGEATER. They can be regarded as companions of gamers. Before the game begins, 
 interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they comb the food in 
 the recipe. In the beginning, we were supposed to make a live game broadcast so that interactive can watch the game as well as
 interact in the game. Unfortunately, we cannot figure out the live broadcast function and the interactive player’s role is 
-limited now. Maybe it can become a good game for parents to educate children to have a good diet habit.   
-  
-  Kehan Du, Rao Hu, HoCheung Lee, Ben Jin, Yuxuan Qiu and Shunyi Zhao compose our team.
+limited now. Maybe it can become a good game for parents to educate children to have a good diet habit.
+
+
 
 ## <span id="LinkToPart1">System Design
 
@@ -75,11 +79,50 @@ The structure of first version of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
-In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. 
+In this image, a player could use the M5 Stack to simulate a pointer in desktop application. The fruits are droped from the top of the screen, player could use this pointer cut fruits and obtain scores. A manager could see the data collected by desktop application, and change the type of food, or other properties of food and game. A audience could watch the process of gaming, and chat with player and other audiences.
 
 The structure of second version of our project is shown as update *fig.2*:
 
 ![uml](./Images/UML/SE_UML.png)
+
+In this image, a player could control the character in Desktop Application with a M5 Stack or a mouse. When the character touch the foods, the score will increase. They also could use the pointer to touch the gift, which will add their health or add score. A manager could see the data collected by application, including the plays' prefence, if he log in with an administrator account. The interactive player could choose combo in the website.
+
+---
+
+### User Stories
+
+Gamers (player in fig 2): have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can switch between left-right movement mode and shoot mode. In left-right movement mode, gamers can slope the M5 Stack to control the character. In shoot mode, character would stand still and gamers can use M5 Stack as a cursor to shoot the bonus gift. As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat heathier.
+
+Interactive Players: company the gamer and gain diet knowledgeInteractive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
+
+Game Analyst (manager in figure 2): Our own analysts as well as other game analysts can register through our web and login to view our processed data. (currently we haven’t realized the registration function yet)
+
+---
+
+### Communication Protocols
+We use serial communication and MQTT in our project.
+
+A example of serial communication is shown below:
+
+![After press button](./Images/M5/afterPressButton.png)
+
+In this image, letter a or b is used to send button signal of M5 Stack, six numbers are used to send accelerations and angles, letter q is the symbol of the end of string. You can see details in section 'M5 Stack - Serial Communication' in [M5 README](./M5_Stack/README.md)
+
+Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in [Web README](./Web/README.md)
+
+---
+
+### Data Persistence
+
+Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and the file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
+
+---
+
+### Web technologies
+
+See them in the introduction of [Web README](./Web/README.md)
+
+---
 
 ## <span id="LinkToPart2">System Implementation
 
@@ -94,15 +137,6 @@ SoftWareEandGroupProject
     └───Processing (works about Desktop Application)
     └───Web (works about Web Application)
 ```
-
-### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
- * M5 Stack GUI design
- * M5 Stack programming of IMU sensor
- * M5 Stack programming of serial and LCD
- * Processing programming of serial communication
- * Design the GUI of desktop application
- * Dssign the GUI of web application
- * Communication between desktop application and web application
 
 ### IoT Device - M5 Stack
 Our IoT Device is M5 Stack.
@@ -136,8 +170,8 @@ For gamers, web receives images from processing and acts as the screen for game 
 of background story and instructions. Gamers can also learn about some health tips for proper recipe design which equips our 
 software some educational significance.
 
-### Details of how we evaluated our designs
-1. In the web application, we realised 3 main functions. First, providing an introductory video to  demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
+### Design evaluation details
+1. In the web application, we realised 3 main functions. First, providing an introductory stories to demonstrate how to play our game. Second, realising the interaction with desktop game. And last, providing a visualised data about analysing player‘s behaviour and preference.
 
    Techniques used and limitations:
    1). The HTML frame of this program is built with the help of Bootstrap4. We achieved a certain level of screen adaptation, but most of them have limited desktops and cannot provide services for mobile devices. 2). In terms of layout, CSS flex box is partly used, which means that IE browser is not well compatible. 3). Main front-end logics are implemented with JavaScript and jQuery, while some external libraries are used for specific functionalities (e.g. Echarts is used to Manager System for visualising user's preference and final score). As for the limitations, the administrator's account cannot be registered. Besides, the background of each part are using an image instead of using css or Bootstrap4 library to build the background.
@@ -164,6 +198,7 @@ our game to assist their members. What’s more, our data analysis system is ope
 Although our analysis is simple currently, we would love to develop more advanced analysis algorithm and provide more diverse 
 data. Then, the data analysis system can be more significant and we hope it could provide useful information for analysts who 
 work in game industry or health management industry.
+
 ## <span id="LinkToPart3">Project Evaluation
 Group memebers test the part they made by themselves separately, and the M5 Stack holder test the whole system.
 
@@ -175,16 +210,78 @@ The effect of combining M5 Stack with Desktop Application is shown below.
 
 ![M5 control](./Images/M5/M5.gif)
 
+GIF1
 In this short piece of video, the character is controlled by M5 Stack. When the character touches the food, the score of player
 will increase. The whole video of this combining is placed [here](./M5_Stack/piece.mp4)
 
+---
+
 #### Desktop Application
+The effect of playing game developed by us with mouse and keyboard is shown below.
+
+Pressing enter on keyboard to start game:
+
+![Start Game](./Images/Processing/process.gif)
+
+GIF2: This gif shows the whole process of our game. Eating different food you will get corresponding scores. And if you hit viruses and lose all the 3 hearts you have at the beginning of the game, you will lose and be forced to quit this game.
+
+Eating cheese:
+
+![Eating cheese](./Images/Processing/cheese.gif)
+
+GIF3: If you hit a piece of cheese, you will get 10 scores each time.
+
+Combo:
+
+![Combo](./Images/Processing/combo.gif)
+
+GIF4: If you achieve a combo with a crab and a piece of cheese in order, you will be rewarded with 500 scores.
 
 ---
 
-### The disadventages of our projects are shown as below
-1. The control of character ....
-2. xxxx
+#### Web Application
+Each sections of the web page are shown as below.
+
+Introduction of Story: Background story of the game.
+
+![IntroStroy](./Images/Web/introStory.png)
+
+
+Check Box: allow interactive players to sumbit the recipe.
+
+![CheckBox](./Images/Web/checkbox.png)
+
+
+Game Display: providing a general idea of the game.
+
+![Display](./Images/Web/gamedisplay.png)
+
+
+Instruction: what player needs for playing the game and the rule of the game have been stated in this part.
+
+![Instruction](./Images/Web/instruction.png)
+
+
+Health Tips: providing some health tips for people.
+
+![HealthTips](./Images/Web/healthtips.png)
+
+
+Administrator Login: a page allows administrator to log in.
+
+![Login](./Images/Web/login.png)
+
+
+Player's score & preference: providing visualised data about the player's score and preference.
+
+![Score&Preference](./Images/Web/userpreference.png)
+
+---
+
+### Disadvantages & Limitations
+1. [limitations of M5 part](./M5_Stack/README.md#limitations)
+2. [limitations of Desktop Application](./Processing/README.md#limitations)
+3. [limitations of Web Application](./Web/README.md#limitations)
 
 ### Future Expectation
 For the future, we believe there is still a lot of improvement room for our software as we haven’t realized all the ideal 
@@ -196,10 +293,20 @@ key factor in gaming industry, especially for simple and small games where gamer
 love to provide an open platform for all game developers to show their talents.
 
 ### Working Practice
-Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our 
-website and developed the web pages. All group members are collaborators of this repository. They could push works they done 
-to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master 
-branch is needed. We have an online meeting on Skype for Business every week to see what we did in the past week and make it 
-clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there 
-are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together 
-quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+
+#### The works of IoT device, development of processing programme and development of Web are broken down to some simple problems:
+ * M5 Stack GUI design
+ * M5 Stack programming of IMU sensor
+ * M5 Stack programming of serial and LCD
+ * Processing programming of serial communication
+ * Design the GUI of desktop application
+ * Dssign the GUI of web application
+ * Communication between desktop application and web application
+
+We used project function of Github to allocate tasks.
+
+Because of the unforseen circumstances of COVID-19, we have to work together online. So the M5 Stack holder, Shunyi Zhao do the works about M5 Stack and the communications between the M5 Stack and desktop application. Yuxuan Qiu, Ben Jin and Rao Hu completed the main functions of desktop application. Kehan Du and HoCheung Lee designed the layout of our website and developed the web pages. All group members are collaborators of this repository. We can push our own work to the dev branch of this repository directly without review of changes in file, but a pull request from dev branch to master branch is needed. For job allocation, we use Todolist function to choose our own parts, and we can know about the progress of each member’s work through this.
+
+We have an online meeting on Skype for Business every week to see what we did in the past week and make it clear what we are going to do in the next week. Also, our team uses a group chat on social media to keep in touch. When there are unsolvable problems, we would discuss in the group chat and try to figure them out as soon as possible. We work together quite well, everyone makes contributions and our teamwork ensures the smooth completion of this project.
+
+We can’t say we did everything well as there are still some ideal functions we haven’t realized yet. But as the first software project in our life time, as well as under the influence of coronavirus, we have tried our best.

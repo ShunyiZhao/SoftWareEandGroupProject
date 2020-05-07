@@ -30,7 +30,8 @@ Main front-end logics are implemented with JavaScript and JQuery, while some ext
       > * Used a comic style to display the background of story
    * Interactive players are able to choose their favorite food that appear in the desktop game (in the part of "CheckBox")
       > * Used a check box style allow interactive players to select the food they like and also, they can submit and send the data via  MQTT in JSON format, which the food they chose will appear in the game
-   * Interactive players able to join the game (in the part of "Game")
+   * Users are able to get a general idea of the game (in the part of "Game Display")
+      > * Used GIF to display how the game actually works
    * Users can know the instructions of the game (in the part of "Instruction")
       > * Used slideshow style to display the instruction, the text below the picture will be moved with the picture simultaneously
    * User can learn some health tips (in the part of "Health Tips")
@@ -111,7 +112,7 @@ The web application will  ask Login  information from MQTT server if matched.
 {
     "datatype":"chart",
     "main":{
-        "score": 3,
+        "score": 276,
         "bonus": 1,
         "combo": 2,
         "salad": 1,
