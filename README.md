@@ -114,6 +114,8 @@ Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in
 
 ### Data Persistence
 
+Processing: The initial design of data persistence is based on the serialisation of Java classes. Classes with important game data will be stored in a binary file and the file can be read automatically by the server, reducing the initialisation time. However, due to the changes in project structure and the failure of class serialisation in Processing, a real-time system replaces the position. Game configurations are no longer stored in the local memory. Before starting the game, the application will ask web applications for a JSON format string as the combo set. This setting will then convert to an array and affect the process of BigEater game. All configurations and settings will be removed when the game is over.
+
 ---
 
 ### Web technologies
