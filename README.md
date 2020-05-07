@@ -40,7 +40,7 @@ factors to maintain high competitiveness of a game. Especially as a simple game,
 it is therefore more than important for our own game analysts to make accurate and instant decisions to perfection the flaws. 
 Also, other game analysts could use our software to know about the trend of popular games and help to improve game 
 industry’s development.
-   
+
 Interactive players are third user of BIGEATER. They can be regarded as companions of gamers. Before the game begins, 
 interactive players can operate in the web and make a recipe for gamers. Gamers can gain bonus marks if they comb the food in 
 the recipe. In the beginning, we were supposed to make a live game broadcast so that interactive can watch the game as well as
@@ -90,6 +90,12 @@ In this image, a player could control the character in Desktop Application with 
 ---
 
 ### User Stories
+
+Gamers (player in fig 2): have fun and gain diet knowledge at the same time Gamers would use the web to start the game and hold M5 Stack to choose the settings and control the character in the game. They can choose level of difficulty and view instructions as well. When game starts, gamers can switch between left-right movement mode and shoot mode. In left-right movement mode, gamers can slope the M5 Stack to control the character. In shoot mode, character would stand still and gamers can use M5 Stack as a cursor to shoot the bonus gift. As a game, we intend to help gamers have some fun and hopefully release from pressure. Besides, gamers would get bonus marks if they follow recipe’s ingredients, so that they can gain some diet knowledge during the game. We hope that gamers can be affected unconsciously and eat heathier.
+
+Interactive Players: company the gamer and gain diet knowledgeInteractive players would use the web to make recipe for the gamers and our game would provide nutrition information of food and help them to design healthy and balanced recipes. Then, web would send recipe information to processing and game’s content would be changed accordingly. 
+
+Game Analyst (manager in figure 2): Our own analysts as well as other game analysts can register through our web and login to view our processed data. (currently we haven’t realized the registration function yet)
 
 ---
 
