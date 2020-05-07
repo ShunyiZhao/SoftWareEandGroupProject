@@ -71,11 +71,13 @@ The paper prototype of this version is shown as below:
 
 The whole process of this version prototype is shown [here](./example/example_2/README.md)
 
-The structure of our project is shown as below *fig.1*:
+The structure of first version of our project is shown as below *fig.1*:
 
 ![uml](./design_GUI/uml.jpg)
 
-The structure of our project is shown as update *fig.2*:
+In this picture, 
+
+The structure of second version of our project is shown as update *fig.2*:
 
 ![uml](./Images/UML/SE_UML.png)
 
