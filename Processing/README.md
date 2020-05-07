@@ -20,27 +20,27 @@ This folder consists of two versions of the BigEater game, where names of sub-fo
 Each player will get three hearts at the beginning. Every time he/she misses one kind of food or touches one kind of virus will make the number of hearts subtracted by one. The game will be over when the number of hearts reaches to zero.  
 
 Here are instructions of the game rules with example in different cases:
-- Cheese values 10 points (840 -> 850)  
+- Cheese values 10 points. (840 -> 850)  
 
 <img src="../Images/Processing/cheese.gif" width=400 height=225>
 
-- Crab values 15 points (170 -> 185)
+- Crab values 15 points. (170 -> 185)
 
 <img src="../Images/Processing/crab.gif" width=400 height=225>
 
-- Eggplant values 20 points (0 -> 20)
+- Eggplant values 20 points. (0 -> 20)
 
 <img src="../Images/Processing/eggplant.gif" width=400 height=225>
 
-- Fish values 30 points (60 -> 90)
+- Fish values 30 points. (60 -> 90)
 
 <img src="../Images/Processing/fish.gif" width=400 height=225>
 
-- Salad values 35 points (185 -> 220)
+- Salad values 35 points. (185 -> 220)
 
 <img src="../Images/Processing/salad.gif" width=400 height=225>
 
-- Pineapple values 40 points (1550 -> 1590)
+- Pineapple values 40 points. (1550 -> 1590)
 
 <img src="../Images/Processing/pineapple.gif" width=400 height=225>
 
@@ -52,7 +52,7 @@ Here are instructions of the game rules with example in different cases:
 
 <img src="../Images/Processing/gift.gif" width=400 height=225>
 
-Here is an example of the whole process of BigEater game in double speed。 It might take a bit longer time than expected because of the developer's excellent game skills.
+Here is an example of the whole process of BigEater game in double speed. It might take a bit longer time than expected because of the developer's excellent game skills.
 
 <img src="../Images/Processing/process.gif" width=400 height=225>
 
