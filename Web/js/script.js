@@ -39,7 +39,7 @@ function changeTextImg (getValue) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "Keep away from the bomb / virus otherwise you will die!!";
     }
     else if (getValue == 4) {
-        carousel.getElementsByClassName("instruction")[0].innerHTML = "If you see the gift appears, use the pointer (white square) to point to the gift for shooting. You will get extra points.";
+        carousel.getElementsByClassName("instruction")[0].innerHTML = "If you see the gift appears, use the mouse pointer to point to the gift for shooting. You will get extra points.";
     }
     else if (getValue == 5) {
         carousel.getElementsByClassName("instruction")[0].innerHTML = "Each food has a corresponding points.";
