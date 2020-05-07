@@ -87,7 +87,26 @@ In this image, a player could control the character in Desktop Application with 
 
 ### User Stories
 
+---
+
 ### Communication Protocols
+We use serial communication and MQTT in our project.
+
+A example of serial communication is shown below:
+
+![After press button](./Images/M5/afterPressButton.png)
+
+In this image, letter a or b is used to send button signal of M5 Stack, six numbers are used to send accelerations and angles, letter q is the symbol of the end of string. You can see details in section 'M5 Stack - Serial Communication' in [M5 README](./M5_Stack/README.md)
+
+Details about MQTT: Section 'Communication Protocols' and 'Datatype for MQTT' in [Web README](./Web/README.md)
+
+---
+
+### Data Persistence
+
+---
+
+### Web technologies
 
 ---
 
